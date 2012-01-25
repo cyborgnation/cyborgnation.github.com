@@ -1,0 +1,34 @@
+html, body { background-color: #efefef; }
+#header, #work { margin-bottom: 30px; }
+#header .networks {
+  overflow: hidden;
+  padding-left: 26px;
+  margin-bottom: 3px;
+  width: 190px;
+}
+#header .networks li {
+  list-style-type: none;
+  float: left;
+  width: 46px; height: 46px;
+}
+#header p {
+  font-size: 23px;
+  margin: 0;
+  text-align: center;
+}
+#header a { font-style: italic; color: black; text-decoration: none; }
+#header a:hover { font-style: normal; }
+#title {
+  background: transparent url(../images/hello.png) no-repeat scroll top left;
+  text-indent: -10000px;
+  width: 181px; height: 181px;
+}
+#work > div > div { margin-top: 2.5px; }
+
+#work img {
+  opacity: 0.45;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+#work img:hover { opacity: 1; }
