@@ -1,0 +1,50 @@
+.thingbox{
+	width: 980px;
+	height: 350px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.33);
+	-moz-box-shadow: 0 1px 5px rgba(0,0,0,.33);
+	box-shadow: 0 1px 5px rgba(0,0,0,.33);
+	margin left: auto;
+	margin right: auto;
+}
+
+h1{
+	font-family: "Source Sans Pro";
+	font-size: 70px;
+	font-weight: 700;
+	color: #e0e0e0;
+	text-shadow: 0 -1px #b7b7b7;
+}
+
+h3{
+	font-family: "Source Sans Pro";
+	font-size: 40px;
+	font-weight: 200;
+	color: #e0e0e0;	
+}
+
+.title{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+img.project{
+	width: 944; 
+	height: 304;
+	margin: 41px 0 0 0;
+}
+
+p<
+
+#container{
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	width: 980px;
+}
+
+
+
+
+		
