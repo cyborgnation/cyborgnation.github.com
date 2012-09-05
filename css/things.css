@@ -5,8 +5,7 @@
 	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.33);
 	-moz-box-shadow: 0 1px 5px rgba(0,0,0,.33);
 	box-shadow: 0 1px 5px rgba(0,0,0,.33);
-	margin left: auto;
-	margin right: auto;
+	margin: 0 auto;
 }
 
 h1{
@@ -36,7 +35,6 @@ img.project{
 	margin: 41px 0 0 0;
 }
 
-p<
 
 #container{
 	margin: 0 auto;
@@ -44,6 +42,16 @@ p<
 	width: 980px;
 }
 
+span{
+	font-family: "Source Sans Pro";
+	font-size: 30px;
+	font-weight: 400;
+	color: #e0e0e0;	
+}
+
+span.project{
+	margin: 30px 0 0 15px; 
+}
 
 
 
