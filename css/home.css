@@ -13,55 +13,28 @@ html, body {
 	margin: 40px 0 50px;
 }
 
-.title h1{
-	font-size: 70px;
-	font-weight: 700;
-	color: #e0e0e0;
-	text-shadow: 0 -1px #b7b7b7;
-	margin: 0;
+
+.iamjoe{
+	margin-top: 100px;
+	text-align:center;	
 }
 
-.title h2 {
-	font-size: 40px;
-	font-weight: 200;
-	color: #e0e0e0;	
-	margin: 0;
-}
 
-.project {
-	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.33);
-	-moz-box-shadow: 0 1px 5px rgba(0,0,0,.33);
-	box-shadow: 0 1px 5px rgba(0,0,0,.33);
-	margin: 0 auto 100px;
-}
-.project.logo{
-	margin: 10px auto;
-}
-.project h3 {
-	color: #e0e0e0;
-	font-size: 30px;
-	font-weight: 400;
-	padding: 5px 0 0 15px;
-	margin: 0;
-}
-.project img {
-	margin: 10px 0 0 0;
-	padding: 0;
-}
 	
 /*Social Buttons*/
 
 .social{
-	position: absolute;
-	margin: 10px 10px 0 0;
-	right: 10px;
-	top: 10px;
+	margin: 40px auto;
+	text-aling: center;
+	width:250px;
+	padding: 10px 10px 10px 10px;
 }
 .dribbble {
-	float:right;
+	margin:0 auto;
+	float: left;
 	display: block;
 	width: 50px;
-	height: 50x;
+	height: 50px;
 	text-indent: -9999px;
 	overflow: hidden;
 	background:url(../images/drib.png) no-repeat left top;
@@ -79,7 +52,8 @@ html, body {
 
 	
 .twitter {
-	float:right;
+	margin:0 auto;
+	float: left;
 	display: block;
 	width: 50px;
 	height: 50x;
@@ -98,7 +72,8 @@ html, body {
 	}
 	
 .instagram {
-	float:right;
+	margin:0 auto;
+	float: left;
 	display: block;
 	width: 50px;
 	height: 50x;
@@ -118,7 +93,8 @@ html, body {
 	
 	
 .linkedin {
-	float:right;
+	margin:0 auto;
+	float: left;
 	display: block;
 	width: 50px;
 	height: 50x;
@@ -137,7 +113,8 @@ html, body {
 	}
 	
 .rdio {
-	float:right;
+	margin:0 auto;
+	float: left;
 	display: block;
 	width: 50px;
 	height: 50x;
