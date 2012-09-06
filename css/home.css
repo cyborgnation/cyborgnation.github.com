@@ -6,6 +6,12 @@ html, body {
 	margin: 0 auto;
 	padding: 0;
 	width: 980px;
+	height: 231px;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin-left: -490px;
+	margin-top: -115px;
 }
 
 .title{
@@ -16,7 +22,8 @@ html, body {
 
 .iamjoe{
 	margin-top: 100px;
-	text-align:center;	
+	text-align:center;
+		
 }
 
 
