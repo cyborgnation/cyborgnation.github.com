@@ -48,59 +48,108 @@ html, body {
 	margin: 10px 0 0 0;
 	padding: 0;
 }
-
-.dribbble {
-	position:relative;
-	display: block;
-	background:url(/images/drib.png)no-repeat;
-	transition:all 0.4s linear;
-	-webkit-transition:all 0.4s linear;
-	-moz-transition:all 0.4s linear;
-	-o-transition:all 0.4s linear;
-	}
-	.dribbble a{
-		display: block;
-		transition:all 0.2s linear;
-		-webkit-transition:all 0.2s linear;
-		-moz-transition:all 0.2s linear;
-		-o-transition:all 0.2s linear;
-		}
-	.arrow a:hover{
-	background:url(/images/dribhov.png)no-repeat;
-	}
 	
-.arrow span {
-	position:absolute;
-	top:1px;
-	right:0;
-	background:url(/about/img/arrows-hover.png)no-repeat right;
-	display:block;
-	width:35px;
-	height:35px;
-	opacity:0;
-	transition:opacity 0.4s;
-	-webkit-transition:opacity 0.4s;
-	-moz-transition:opacity 0.4s;
-	-o-transition:opacity 0.4s;
-	}
-	.page:hover span{opacity:1.0;}h2{
-		vertical-align:text-bottom;
-		font-size: 14px;
-		font-weight:200; 
-		transition:all 0.4s linear;
-		-webkit-transition:all 0.4s linear;
-		-moz-transition:all 0.4s linear;
-		-o-transition:all 0.4s linear;
-		}
+/*Social Buttons*/
 
-
-a.dribbble {
+.social{
+	width: 50%;
+	margin: 0 auto;
+}
+.dribbble {
+	float:left;
 	display: block;
 	width: 50px;
 	height: 50x;
-	background:url(/images/drib.png);
+	text-indent: -9999px;
+	overflow: hidden;
+	background:url(../images/drib.png) no-repeat left top;
 	}
 
-a.dribbble:hover {
-	background:url(/images/dribhov.png);
+.dribbble a {
+	display: block;	
+	height: 50px;
+}
+
+.dribbble a:hover {
+	background:url(../images/dribhov.png) no-repeat left top;
 	}
+	
+
+	
+.twitter {
+	float:left;
+	display: block;
+	width: 50px;
+	height: 50x;
+	text-indent: -9999px;
+	overflow: hidden;
+	background:url(../images/twit.png) no-repeat left top;
+	}
+
+.twitter a {
+	display: block;	
+	height: 50px;
+}
+
+.twitter a:hover {
+	background:url(../images/twithov.png) no-repeat left top;
+	}
+	
+.instagram {
+	float:left;
+	display: block;
+	width: 50px;
+	height: 50x;
+	text-indent: -9999px;
+	overflow: hidden;
+	background:url(../images/insta.png) no-repeat left top;
+	}
+
+.instagram a {
+	display: block;	
+	height: 50px;
+}
+
+.instagram a:hover {
+	background:url(../images/instahov.png) no-repeat left top;
+	}
+	
+	
+.linkedin {
+	float:left;
+	display: block;
+	width: 50px;
+	height: 50x;
+	text-indent: -9999px;
+	overflow: hidden;
+	background:url(../images/in.png) no-repeat left top;
+	}
+
+.linkedin a {
+	display: block;	
+	height: 50px;
+}
+
+.linkedin a:hover {
+	background:url(../images/inhov.png) no-repeat left top;
+	}
+	
+.rdio {
+	float:left;
+	display: block;
+	width: 50px;
+	height: 50x;
+	text-indent: -9999px;
+	overflow: hidden;
+	background:url(../images/rdio.png) no-repeat left top;
+	}
+
+.rdio a {
+	display: block;	
+	height: 50px;
+}
+
+.rdio a:hover {
+	background:url(../images/rdiohov.png) no-repeat left top;
+	}
+
