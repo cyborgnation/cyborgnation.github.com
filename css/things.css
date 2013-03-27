@@ -16,29 +16,32 @@ html, body {
 .title h1{
 	font-size: 70px;
 	font-weight: 700;
-	color: #e0e0e0;
-	text-shadow: 0 -1px #b7b7b7;
+	color: #555;
 	margin: 0;
 }
 
 .title h2 {
 	font-size: 40px;
 	font-weight: 200;
-	color: #e0e0e0;	
+	color: #555;	
 	margin: 0;
 }
 
 .project {
-	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.33);
-	-moz-box-shadow: 0 1px 5px rgba(0,0,0,.33);
-	box-shadow: 0 1px 5px rgba(0,0,0,.33);
-	margin: 0 auto 100px;
+   border: 1px solid #b6b6b6;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.33);
+   -moz-box-shadow: 0 1px 5px rgba(0,0,0,.33);
+   box-shadow: 0 1px 5px rgba(0,0,0,.33);
+   margin: 0 auto 100px;
 }
 .project.logo{
 	margin: 10px auto;
 }
 .project h3 {
-	color: #e0e0e0;
+	color: #555;
 	font-size: 30px;
 	font-weight: 400;
 	padding: 5px 0 0 15px;
