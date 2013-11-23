@@ -1,2 +1,1102 @@
+/**
+ * Adobe Edge: symbol definitions
+ */
+(function($, Edge, compId){
+//images folder
+var im='images/';
 
-(function($,Edge,compId){var _=null,y=true,n=false,e172='${_ronswanson2}',x138='ellipse',x43='-455px',x34='rgb(0, 0, 0)',x2='2.0.1',e173='${_tomhaverford2}',x71='95px',e175='${_Text6Copy11}',x98='RoundRectCopy',x91='-125px',d='display',e231='${_GROUP_Lil_Sebastian}',x153='239px',x110='GROUP_Lil_Sebastian',x26='-572',e189='${_leslieknope2}',x210='rgba(0,174,239,0)',x164='thumb2',x58='rgba(51,51,51,1.00)',x150='Text12',x95='jeanralphio2',fs='font-size',e203='${_RoundRectCopy2}',x133='rgba(0,0,0,0.65)',e204='${_RoundRectCopy4}',x78='GROUP_Chris_Traeger',x130='tomhaverford2',c='color',x99='Text6Copy7',zx='scaleX',x162='Text13Copy',e22='${_Text4}',x70='437px',e177='${_RoundRectCopy9}',x144='140px',x111='-15px',e234='${_Text9}',x62='GROUP_April_Ludgate',x166='-8px',o='opacity',x55='106px',x32='88px',x167='132px',qod='easeOutCirc',qq='easeInOutQuad',x208='rgba(0,174,239,1)',x105='RoundRectCopy2',x116='19px',e199='${_Text6Copy5}',x49='RoundRect',x92='RoundRectCopy6',b='block',x219='rgb(0,174,255)',qs='easeInOutSine',x169='Directory',x108='leslieknope2',x127='RoundRectCopy3',x209='rgba(0,174,239,0.00)',s='style',x128='Text6Copy',lf='left',x139='Ellipse2',x104='-345px',x155='rgba(0,174,255,1.00)',x113='Text6Copy5',x29='auto',e198='${_jeanralphio2}',x85='RoundRectCopy4',tp='top',x10='rgba(0,174,239,1.00)',e14='${_start_screen}',ov='overflow',x135='Text6Copy3',qk='easeInOutBack',t='transform',e211='${_Text13Copy}',x220='rgba(0,0,0,0.36)',x5='rgba(0,0,0,0)',x17='rgba(243,243,243,1.00)',x118='GROUP_Ron_Swanson',x60='Text6',x140='annperkins2',x63='-235px',x51='andydwyer2',x159='rect(0px 20pxpx 67pxpx 0px)',m='rect',h='height',e183='${_Text6Copy12}',e181='${_RoundRectCopy5}',x137='50%',x79='RoundRectCopy11',e230='${_GROUP_Ben_Wyatt}',x27='1024',x134='RoundRectCopy7',ff='font-family',e206='${_GROUP_Donna_Meagle}',e170='${_RoundRectCopy3}',e171='${_RoundRectCopy8}',x97='GROUP_Jerry_Gergich',x160='482px',x152='rect(0px 330pxpx 80pxpx 0px)',e178='${_Text6Copy}',x86='Text6Copy9',x67='aprilludgate2',x4='2.0.1.268',e236='${_GROUP_Leslie_Knope}',e185='${_aprilludgate2}',x72='RoundRectCopy10',e190='${_hello_logo2}',e215='${_GROUP_Chris_Traeger}',x36='hello_logo2',x143='-121px',x106='Text6Copy8',x65='Text6Copy2',x35='rgba(255,255,255,1)',e200='${_christraeger2}',x148='-106px',e18='${_Stage}',x74='Text6Copy12',e205='${_Text6Copy2}',e207='${_Ellipse2}',e213='${_Text6Copy3}',x33='Rectangle',x218='rgba(0,0,0,0.00)',x76='Benwyatt2',x37='40px',x48='10px',x52='20px',e180='${_RoundRectCopy6}',x3='2.0.0',x227='1040.4769287109px 103.00003433227px',x237='pulse_glow',x31='1024px',p='px',x154='-120px',e191='${symbolSelector}',e196='${_Text6Copy10}',x82='christraeger2',e225='${_GROUP_Andy_Dwyer_}',x12='24',e202='${_Text6Copy7}',e222='${_GROUP_Menu_Bar}',e235='${_annperkins2}',x25='-95',a='Base State',x112='RoundRectCopy9',x19='hidden',x121='Text6Copy11',x115='lilsebastian2',x147='260px',dt='Default Timeline',e194='${_RoundRect}',e228='${_Text13}',e226='${_thumb2}',x46='460px',e224='${_GROUP_Jerry_Gergich}',qid='easeInCirc',e223='${_GROUP_Tom_Haverford}',e20='${_Text3}',x103='GROUP_Leslie_Knope',e21='${_hello_big2}',e221='${_GROUP_April_Ludgate}',x120='31px',x124='22px',x119='RoundRectCopy8',e192='${_RoundRectCopy10}',x149='80px',x101='jgergich2',x53='60px',bg='background-color',x='text',e15='${_Ellipse}',e216='${_RoundRectCopy7}',x84='GROUP_Donna_Meagle',x56='330px',x132='GROUP_Ann_Perkins',x42='-66px',x156='400',x59='300',x9='200',x80='Text6Copy6',i='none',x41='GROUP_Andy_Dwyer_',zy='scaleY',e233='${_GROUP_Ron_Swanson}',x142='355px',x157='Text13',l='normal',cl='clip',e214='${_GROUP_Jean_Ralphio}',x212='rect(@@0@@px @@1@@px @@2@@px @@3@@px)',g='image',qd='easeInOutCirc',e197='${_Text6}',xc='rgba(0,0,0,1)',x47='100px',x13='stage',x93='Text6Copy10',x123='ronswanson2',x39='83px',e176='${_andydwyer2}',e201='${_RoundRectCopy11}',x161='-77px',x45='100',e229='${_GROUP_Ann_Perkins}',e193='${_Rectangle}',x30='0px',x16='pointer',e188='${_Text6Copy9}',e187='${_jgergich2}',x126='GROUP_Tom_Haverford',e184='${_Benwyatt2}',e182='${_RoundRectCopy}',x23='GROUP_Menu_Bar',e186='${_Text6Copy8}',x64='RoundRectCopy5',x24='group',e179='${_Text6Copy6}',x88='donnameagle2',e174='${_lilsebastian2}',x8='48',x38='29px',x165='946px',x28='88',x50='rgba(255,255,255,1.00)',x73='110px',e195='${_donnameagle2}',x145='Text9',x57='41px',x44='460',x1='source-sans-pro, sans-serif',x90='GROUP_Jean_Ralphio',x217='rgba(0,174,255,0.00)',e232='${_Text12}',x69='GROUP_Ben_Wyatt',w='width';var im='images/';var g125='ronswanson.png',g77='Benwyatt.png',g109='leslieknope.png',g40='hello_logo.png',g54='andydwyer.png',g6='hello_big.png',g83='christraeger.png',g102='jgergich.png',g117='lilsebastian.png',g141='annperkins.png',g68='aprilludgate.png',g168='thumb.png',g131='tomhaverford.png',g89='donnameagle.png',g96='jeanralphio.png';var s94="Jean Ralphio",s107="Leslie Knope",s100="Jerry Gergich",s11="tap to start<br>",s7="Who are you here to see?",s61="Andy Dwyer",s81="Chris Traeger<br>",s122="Ron Swanson",s163="”",s66="April Ludgate<br>",s75="Ben Wyatt",s158="“",s146="Contacting...",s136="Ann Perkins",s87="Donna Meagle",s129="Tom Haverford",s151="Hey Chris, I\'m eating a waffle. Just come on back.",s114="Li\'l Sebastian";var fonts={};fonts[x1]='<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>';var P=Edge.P,T=Edge.T,A=Edge.A;var resources=[];var symbols={"stage":{v:x2,mv:x3,b:x4,bS:a,iS:a,gpu:n,rI:n,cn:{dom:[{id:'start_screen',t:'group',r:['270','175px','483','418','auto','auto'],c:[{id:'hello_big2',t:g,r:['72px','0px','340px','118px','auto','auto'],f:[x5,im+g6,'0px','0px']},{id:'Text3',t:x,r:['0px','167px','483px','67px','auto','auto'],text:s7,align:"left",n:[x1,x8,"rgba(0,174,239,1.00)",x9,i,l]},{id:'Ellipse',t:'ellipse',r:['192px','317px','101px','101px','auto','auto'],cu:['pointer'],br:["50%","50%","50%","50%"],f:[x10],s:[0,xc,i]},{id:'Text4',t:x,r:['187px','265px','110px','33px','auto','auto'],text:s11,align:"left",n:[x1,x12,"rgba(0,174,239,1)",x9,i,l]}]},{id:'Directory',t:m,r:['96','573','auto','auto','auto','auto']}],sI:[{id:'Directory',sN:'Directory'}]},s:{},tl:{"Default Timeline":{fS:a,tS:"",d:0,a:y,tt:[{id:"eid119",tr:[function(e,d){this.eSA(e,d);},['stop','${_Directory}',[]],""],p:0}]}}},"Directory":{v:x2,mv:x3,b:x4,bS:a,iS:a,gpu:n,rI:n,cn:{dom:[{id:x23,t:x24,r:[x25,x26,x27,x28,x29,x29],c:[{r:[x30,x30,x31,x32,x29,x29],id:x33,s:[0,x34,i],t:m,f:[x35]},{id:x36,t:g,r:[x37,x38,x39,x38,x29,x29],f:[x5,im+g40,x30,x30]}]},{id:x41,t:x24,r:[x42,x43,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x49,s:[0,x34,i],t:m,f:[x50]},{id:x51,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g54,x30,x30]},{r:[x55,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x60,text:s61,align:lf,t:x}]},{id:x62,t:x24,r:[x42,x63,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x64,s:[0,x34,i],t:m,f:[x50]},{r:[x55,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x65,text:s66,align:lf,t:x},{id:x67,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g68,x30,x30]}]},{id:x69,t:x24,r:[x70,x71,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x72,s:[0,x34,i],t:m,f:[x50]},{r:[x73,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x74,text:s75,align:lf,t:x},{id:x76,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g77,x30,x30]}]},{id:x78,t:x24,r:[x42,x71,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x79,s:[0,x34,i],t:m,f:[x50]},{r:[x55,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x80,text:s81,align:lf,t:x},{id:x82,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g83,x30,x30]}]},{id:x84,t:x24,r:[x70,x63,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x85,s:[0,x34,i],t:m,f:[x50]},{r:[x73,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x86,text:s87,align:lf,t:x},{id:x88,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g89,x30,x30]}]},{id:x90,t:x24,r:[x70,x91,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x92,s:[0,x34,i],t:m,f:[x50]},{r:[x73,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x93,text:s94,align:lf,t:x},{id:x95,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g96,x30,x30]}]},{id:x97,t:x24,r:[x70,x43,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x98,s:[0,x34,i],t:m,f:[x50]},{r:[x73,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x99,text:s100,align:lf,t:x},{id:x101,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g102,x30,x30]}]},{id:x103,t:x24,r:[x70,x104,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x105,s:[0,x34,i],t:m,f:[x50]},{r:[x73,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x106,text:s107,align:lf,t:x},{id:x108,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g109,x30,x30]}]},{id:x110,t:x24,r:[x42,x111,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x112,s:[0,x34,i],t:m,f:[x50]},{r:[x55,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x113,text:s114,align:lf,t:x},{id:x115,t:g,r:[x52,x116,x53,x53,x29,x29],f:[x5,im+g117,x30,x30]}]},{id:x118,t:x24,r:[x70,x111,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x119,s:[0,x34,i],t:m,f:[x50]},{r:[x73,x120,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x121,text:s122,align:lf,t:x},{id:x123,t:g,r:[x52,x124,x53,x53,x29,x29],f:[x5,im+g125,x30,x30]}]},{id:x126,t:x24,r:[x42,x104,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],id:x127,s:[0,x34,i],t:m,f:[x50]},{r:[x55,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x128,text:s129,align:lf,t:x},{id:x130,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g131,x30,x30]}]},{id:x132,t:x24,r:[x42,x91,x44,x45,x29,x29],c:[{r:[x30,x30,x46,x47,x29,x29],br:[x48,x48,x48,x48],boxShadow:['',3,3,3,0,x133],id:x134,s:[0,x34,i],t:m,f:[x50]},{r:[x55,x38,x56,x57,x29,x29],n:[x1,32,x58,x59,i,l],id:x135,text:s136,align:lf,t:x},{boxShadow:['',0,0,3,1,x10],r:[x30,x30,x53,x53,x29,x29],br:[x137,x137,x137,x137],t:x138,id:x139,s:[0,x34,i],v:i,f:[x35]},{id:x140,t:g,r:[x52,x52,x53,x53,x29,x29],f:[x5,im+g141,x30,x30]}]},{r:[x142,x143,x144,x53,x29,x29],n:[x1,32,x10,x45,i,l],id:x145,text:s146,align:lf,t:x},{r:[x147,x148,x56,x149,x29,x29],n:[x1,28,x58,x45,i,l],align:lf,id:x150,text:s151,cl:[x152],t:x},{r:[x153,x154,x29,x29,x29,x29],n:[x1,48,x155,x156,i,l],align:lf,id:x157,text:s158,cl:[x159],t:x},{r:[x160,x161,x29,x29,x29,x29],n:[x1,48,x155,x156,i,l],align:lf,id:x162,text:s163,cl:[x159],t:x},{id:x164,t:g,r:[x165,x166,x167,x167,x29,x29],f:[x5,im+g168,x30,x30]}],sI:[]},s:{},tl:{"Default Timeline":{fS:a,tS:"",d:9000,a:y,tt:[]}}},"pulse_glow":{v:x2,mv:x3,b:x4,bS:a,iS:a,gpu:n,rI:n,cn:{dom:[{r:[x30,x30,x53,x53,x29,x29],br:[x137,x137,x137,x137],boxShadow:['',0,0,3,1,x10],id:x139,s:[0,x34,i],t:x138,f:[x35]}],sI:[]},s:{},tl:{"Default Timeline":{fS:a,tS:"",d:4500,a:n,tt:[]}}}};var S1=symbols[x13];var tl0=S1.tl[dt].tt,st1=S1.s[a]={},A1=A(_,tl0,st1);A1.A(e14).P(tp,175);A1.A(e15).P(tp,317).P("cursor",x16).P(lf,192).P(bg,x10,c);A1.A(e18).P(bg,x17,c).P(w,1024).P(h,768).P(ov,x19);A1.A(e20).P(tp,167).P(w,483).P(ff,x1).P(c,x10,c).P("font-weight",200,_,_,"").P(lf,0,_,_,p).P(fs,48);A1.A(e21).P(lf,72).P(tp,0);A1.A(e22).P(tp,265).P(h,33).P(fs,24).P(lf,187).P(w,110);var S2=symbols[x169];var tl1=S2.tl[dt].tt,st2=S2.s[a]={},A2=A(_,tl1,st2);A2.A(e170).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e171).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e172).P(tp,22).P(lf,20);A2.A(e173).P(lf,20).P(tp,20);A2.A(e174).P(lf,20).P(tp,19);A2.A(e175).P(tp,31).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,110,_,_,p).P(fs,32);A2.A(e176).P(lf,20).P(tp,20);A2.A(e177).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e178).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,106,_,_,p).P(fs,32);A2.A(e179).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,106,_,_,p).P(fs,32);A2.A(e180).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e181).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e182).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e183).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,110,_,_,p).P(fs,32);A2.A(e184).P(lf,20).P(tp,20);A2.A(e185).P(lf,20).P(tp,20);A2.A(e186).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,110,_,_,p).P(fs,32);A2.A(e187).P(tp,20).P(lf,20);A2.A(e188).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,110,_,_,p).P(fs,32);A2.A(e189).P(tp,20).P(lf,20);A2.A(e190).P(lf,40).P(tp,29);A2.A(e191).P(h,67).P(w,302);A2.A(e192).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e193).P(lf,0).P(tp,0);A2.A(e194).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e195).P(lf,20).P(tp,20);A2.A(e196).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,110,_,_,p).P(fs,32);A2.A(e197).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,106,_,_,p).P(fs,32);A2.A(e198).P(tp,20).P(lf,20);A2.A(e199).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,106,_,_,p).P(fs,32);A2.A(e200).P(lf,20).P(tp,20);A2.A(e201).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e202).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,110,_,_,p).P(fs,32);A2.A(e203).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e204).P(tp,0).P(h,100).P(bg,x50,c).P(lf,0).P(w,460);A2.A(e205).P(tp,29).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(lf,106,_,_,p).P(fs,32);A2.A(e206).P(tp,439).T(0.103,-235,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,438,_,_,p).T(0.103,437,0.5);A2.A(e207).P(tp,65).P("boxShadow.offsetV",0,"subproperty").P(lf,117).P("boxShadow.offsetH",0,"subproperty").P(d,i).T(3.431,b).T(8.088,i).P("boxShadow.spread",2,"subproperty").T(3.431,2).P("boxShadow.color",x208,"subproperty").T(3.431,x209,0.5,qs).T(3.931,x10,0.5,_,x210).T(4.431,x209,0.5,_,x208).T(4.931,x10,0.5,_,x210).T(5.431,x209,0.5,_,x208).T(5.931,x10,0.5,_,x210).T(6.431,x209,0.5,_,x208).T(6.931,x10,0.5,_,x210).T(7.431,x209,0.5,_,x208).P("boxShadow.blur",15,"subproperty").T(3.431,15);A2.A(e211).P(tp,-77).P(o,1,_,_,"").P("font-weight",400).P(c,x155,c).P(ff,x1).P(fs,48,_,_,p).P(lf,81).T(8.405,482,0.595,qd).P(cl,[0,334,67,334],_,x212).T(8.66,[0,20,67,0],0.096,qod,[0,37.906005859375,67,19.0465145111084]);A2.A(e213).P(w,153).P(h,41).P(c,x58,c).P("font-weight",300,_,_,"").P(fs,32,_,_,p).P(tp,29).T(3.2,74,0.181,qq).T(8.25,19,0.5,qd).P(lf,106).T(3.2,203,0.181,qq).T(8.25,96,0.5,qd);A2.A(e214).P(tp,549).T(0.152,-125,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,438,_,_,p).T(0.152,437,0.5);A2.A(e215).P(tp,769).T(0.25,95,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,-65,_,_,p).T(0.25,-66,0.5);A2.A(e216).P(bg,x50,c).P(lf,0).P(w,460).P(tp,0).P("boxShadow.color",x217,"subproperty").T(2.389,x155,0.185,qq).T(2.573,x218,0.177,_,x219).T(2.75,x220,0.148,_,x5).P(zy,1,t,_,"").T(2.389,0.96,0.185).T(2.573,1,0.177).P("boxShadow.blur",5,"subproperty",_,p).T(2.573,29,0.325).P(h,100).T(3.2,180,0.181).T(8.25,217,0.427,qd).P(zx,1,t,_,"").T(2.389,0.96,0.185,qq).T(2.573,1,0.177).P("boxShadow.offsetV",0,"subproperty",_,p).T(2.389,0).P("boxShadow.offsetH",0,"subproperty").T(2.389,0).P("boxShadow.spread",1,"subproperty").T(2.389,1).T(2.75,9,0.148);A2.A(e221).P(tp,439).T(0.103,-235,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,-65,_,_,p).T(0.103,-66,0.5);A2.A(e222).P(lf,-95).T(0.325,-95).P(tp,-662).T(0,-572,0.325,qs);A2.A(e223).P(tp,329).T(0.05,-345,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,-65,_,_,p).T(0.05,-66,0.5);A2.A(e224).P(tp,219).T(0,-455,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,438,_,_,p).T(0,437,0.5);A2.A(e225).P(tp,219).T(0,-455,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,-65,_,_,p).T(0,-66,0.5);A2.A(e226).P(tp,-8).P(lf,946).P(zy,1,t,_,"").T(2.389,0.8,0.184,qq).T(2.573,1,0.177).P(d,b).T(2.969,i).P(o,1).T(2.75,0,0.196).P("location",x227,"motion").T(0.875,[[1040.48,103,0,0],[880.71,-158.37,-7.17,-7.56,-156.95,-165.64],[511.44,-320.08,-627.3,-182.2,-521.86,-151.58],[47.13,-385,0,0]],0.57).T(1.588,[[47.13,-385,0,0],[30.15,-279,-6.33,297.43,-2.98,140.13],[40,-50,0,0]],0.538).T(2.126,[[40,-50,0,0],[12.69,-52.89,-36.96,-6.9,-35.27,-6.59],[-8.18,-59,0,0]],0.204).P(zx,1,t).T(2.389,0.8,0.184).T(2.573,1,0.177);A2.A(e228).P(tp,-120).P(o,1,_,_,"").P("font-weight",400).P(c,x155,c).P(ff,x1).P(fs,48,_,_,p).P(lf,-162).T(8.405,239,0.595,qd).P(cl,[0,334,67,334],_,x212).T(8.782,[0,20,67,0],0.122,qod,[0,36.83736801147461,67,17.90981101989746]).T(9,[0,20,67,0]);A2.A(e229).P(tp,549).T(0.152,-125,0.5,qq).T(2.75,-205,0.531).P(lf,-65).T(0.152,-66,0.5).T(2.75,195,0.531);A2.A(e230).P(tp,769).T(0.25,95,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,438,_,_,p).T(0.25,437,0.5);A2.A(e231).P(tp,659).T(0.2,-15,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,-65,_,_,p).T(0.2,-66,0.5);A2.A(e232).P(tp,-106).P(h,80).P(fs,28).P(c,x58,c).P(o,1,_,_,"").P(w,330,_,_,p).P(lf,-141).T(8.405,260,0.595,qd).P(cl,[0,334,67,324],_,x212).T(8.508,[0,333.98516845703,67.048194885254,316],0.028,qid).T(8.536,[0,333.80813598633,67.623558044434,297],0.045,qod).T(8.581,[0,332.76550292969,71.01212310791,291],0.011).T(8.592,[0,331.87191772461,73.916320800781,277],0.024).T(8.616,[0,331.4892578125,75.159927368164,258],0.024).T(8.64,[0,331.32406616211,75.696769714355,216],0.037).T(8.677,[0,331.32406616211,75.696769714355,184],0.017,_,[0,331.3240661621094,75.69676971435547,216]).T(8.694,[0,331.32406616211,75.696769714355,82],0.02,_,[0,331.3240661621094,75.69676971435547,184]).T(8.714,[0,331.32406616211,75.696769714355,28],0.036,_,[0,331.3240661621094,75.69676971435547,82]).T(8.75,[0,331.32406616211,75.696769714355,0],0.032,_,[0,331.3240661621094,75.69676971435547,28]);A2.A(e233).P(tp,659).T(0.2,-15,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,438,_,_,p).T(0.2,437,0.5);A2.A(e234).P("font-weight",100,_,_,"").P(c,x10,c).P(tp,-195,_,_,p).T(3.476,-195).T(8.25,-290,0.25,qd).P(o,0,_,_,"").T(3.326,1,0.15).T(8.25,0,0.191).P(lf,343,_,_,p).T(3.476,343).T(8.25,357,0.25).P(w,178).T(3.476,178);A2.A(e235).P(lf,20).T(3.2,117,0.181,qq).T(8.25,10,0.5).P(tp,20).T(3.2,65,0.181).T(8.25,10,0.5);A2.A(e236).P(tp,329).T(0.05,-345,0.5,qk).P(o,1,_,_,"").T(2.75,0.49,0.196).P(lf,438,_,_,p).T(0.05,437,0.5);var S3=symbols[x237];var tl2=S3.tl[dt].tt,st3=S3.s[a]={},A3=A(_,tl2,st3);A3.A(e191).P(h,60).P(w,60);A3.A(e207).P(tp,0).P("boxShadow.blur",3,"subproperty").P("boxShadow.spread",1,"subproperty").P("boxShadow.offsetV",0,"subproperty").P("boxShadow.offsetH",0,"subproperty").P(lf,0).T(0.5,0).P("boxShadow.color",x10,"subproperty").T(0,x209,0.5,qs,x208).T(0.5,x10,0.5,_,x210).T(1,x209,0.5,_,x208).T(1.5,x10,0.5,_,x210).T(2,x209,0.5,_,x208).T(2.5,x10,0.5,_,x210).T(3,x209,0.5,_,x208).T(3.5,x10,0.5,_,x210).T(4,x209,0.5,_,x208);Edge.registerCompositionDefn(compId,symbols,fonts,resources);$(window).ready(function(){Edge.launchComposition(compId);});})(jQuery,AdobeEdge,"EDGE-120170250");
+var fonts = {};
+   fonts['source-sans-pro, sans-serif']='<script src=\"http://use.edgefonts.net/source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js\"></script>';
+
+
+var resources = [
+];
+var symbols = {
+"stage": {
+   version: "2.0.1",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.1.268",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+         dom: [
+         {
+            id:'start_screen',
+            type:'group',
+            rect:['270','175px','483','418','auto','auto'],
+            c:[
+            {
+               id:'hello_big2',
+               type:'image',
+               rect:['72px','0px','340px','118px','auto','auto'],
+               fill:["rgba(0,0,0,0)",im+"hello_big.png",'0px','0px']
+            },
+            {
+               id:'Text3',
+               type:'text',
+               rect:['0px','167px','483px','67px','auto','auto'],
+               text:"Who are you here to see?",
+               align:"left",
+               font:['source-sans-pro, sans-serif',48,"rgba(0,174,239,1.00)","200","none","normal"]
+            },
+            {
+               id:'Ellipse',
+               type:'ellipse',
+               rect:['192px','317px','101px','101px','auto','auto'],
+               cursor:['pointer'],
+               borderRadius:["50%","50%","50%","50%"],
+               fill:["rgba(0,174,239,1.00)"],
+               stroke:[0,"rgba(0,0,0,1)","none"]
+            },
+            {
+               id:'Text4',
+               type:'text',
+               rect:['187px','265px','110px','33px','auto','auto'],
+               text:"tap to start<br>",
+               align:"left",
+               font:['source-sans-pro, sans-serif',24,"rgba(0,174,239,1)","200","none","normal"]
+            }]
+         },
+         {
+            id:'Directory',
+            type:'rect',
+            rect:['96','573','auto','auto','auto','auto']
+         }],
+         symbolInstances: [
+         {
+            id:'Directory',
+            symbolName:'Directory'
+         }
+         ]
+      },
+   states: {
+      "Base State": {
+         "${_start_screen}": [
+            ["style", "top", '175px']
+         ],
+         "${_Ellipse}": [
+            ["style", "top", '317px'],
+            ["style", "cursor", 'pointer'],
+            ["style", "left", '192px'],
+            ["color", "background-color", 'rgba(0,174,239,1.00)']
+         ],
+         "${_Stage}": [
+            ["color", "background-color", 'rgba(243,243,243,1.00)'],
+            ["style", "width", '1024px'],
+            ["style", "height", '768px'],
+            ["style", "overflow", 'hidden']
+         ],
+         "${_Text3}": [
+            ["style", "top", '167px'],
+            ["style", "width", '483px'],
+            ["style", "font-family", 'source-sans-pro, sans-serif'],
+            ["color", "color", 'rgba(0,174,239,1.00)'],
+            ["style", "font-weight", '200'],
+            ["style", "left", '0px'],
+            ["style", "font-size", '48px']
+         ],
+         "${_hello_big2}": [
+            ["style", "left", '72px'],
+            ["style", "top", '0px']
+         ],
+         "${_Text4}": [
+            ["style", "top", '265px'],
+            ["style", "height", '33px'],
+            ["style", "font-size", '24px'],
+            ["style", "left", '187px'],
+            ["style", "width", '110px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 0,
+         autoPlay: true,
+         timeline: [
+            { id: "eid119", trigger: [ function executeSymbolFunction(e, data) { this._executeSymbolAction(e, data); }, ['stop', '${_Directory}', [] ], ""], position: 0 }         ]
+      }
+   }
+},
+"Directory": {
+   version: "2.0.1",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.1.268",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+   dom: [
+   {
+      id: 'GROUP_Menu_Bar',
+      type: 'group',
+      rect: ['-95','-572','1024','88','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','1024px','88px','auto','auto'],
+         id: 'Rectangle',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1)']
+      },
+      {
+         id: 'hello_logo2',
+         type: 'image',
+         rect: ['40px','29px','83px','29px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/hello_logo.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Andy_Dwyer_',
+      type: 'group',
+      rect: ['-66px','-455px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRect',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         id: 'andydwyer2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/andydwyer.png','0px','0px']
+      },
+      {
+         rect: ['106px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6',
+         text: 'Andy Dwyer',
+         align: 'left',
+         type: 'text'
+      }]
+   },
+   {
+      id: 'GROUP_April_Ludgate',
+      type: 'group',
+      rect: ['-66px','-235px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy5',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['106px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy2',
+         text: 'April Ludgate<br>',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'aprilludgate2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/aprilludgate.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Ben_Wyatt',
+      type: 'group',
+      rect: ['437px','95px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy10',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['110px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy12',
+         text: 'Ben Wyatt',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'Benwyatt2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/Benwyatt.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Chris_Traeger',
+      type: 'group',
+      rect: ['-66px','95px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy11',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['106px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy6',
+         text: 'Chris Traeger<br>',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'christraeger2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/christraeger.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Donna_Meagle',
+      type: 'group',
+      rect: ['437px','-235px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy4',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['110px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy9',
+         text: 'Donna Meagle',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'donnameagle2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/donnameagle.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Jean_Ralphio',
+      type: 'group',
+      rect: ['437px','-125px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy6',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['110px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy10',
+         text: 'Jean Ralphio',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'jeanralphio2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/jeanralphio.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Jerry_Gergich',
+      type: 'group',
+      rect: ['437px','-455px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['110px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy7',
+         text: 'Jerry Gergich',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'jgergich2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/jgergich.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Leslie_Knope',
+      type: 'group',
+      rect: ['437px','-345px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy2',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['110px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy8',
+         text: 'Leslie Knope',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'leslieknope2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/leslieknope.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Lil_Sebastian',
+      type: 'group',
+      rect: ['-66px','-15px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy9',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['106px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy5',
+         text: 'Li\'l Sebastian',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'lilsebastian2',
+         type: 'image',
+         rect: ['20px','19px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/lilsebastian.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Ron_Swanson',
+      type: 'group',
+      rect: ['437px','-15px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy8',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['110px','31px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy11',
+         text: 'Ron Swanson',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'ronswanson2',
+         type: 'image',
+         rect: ['20px','22px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/ronswanson.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Tom_Haverford',
+      type: 'group',
+      rect: ['-66px','-345px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         id: 'RoundRectCopy3',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['106px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy',
+         text: 'Tom Haverford',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         id: 'tomhaverford2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/tomhaverford.png','0px','0px']
+      }]
+   },
+   {
+      id: 'GROUP_Ann_Perkins',
+      type: 'group',
+      rect: ['-66px','-125px','460','100','auto','auto'],
+      c: [
+      {
+         rect: ['0px','0px','460px','100px','auto','auto'],
+         borderRadius: ['10px','10px','10px','10px'],
+         boxShadow: ['',3,3,3,0,'rgba(0,0,0,0.65)'],
+         id: 'RoundRectCopy7',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         type: 'rect',
+         fill: ['rgba(255,255,255,1.00)']
+      },
+      {
+         rect: ['106px','29px','330px','41px','auto','auto'],
+         font: ['source-sans-pro, sans-serif',32,'rgba(51,51,51,1.00)','300','none','normal'],
+         id: 'Text6Copy3',
+         text: 'Ann Perkins',
+         align: 'left',
+         type: 'text'
+      },
+      {
+         boxShadow: ['',0,0,3,1,'rgba(0,174,239,1.00)'],
+         rect: ['0px','0px','60px','60px','auto','auto'],
+         borderRadius: ['50%','50%','50%','50%'],
+         type: 'ellipse',
+         id: 'Ellipse2',
+         stroke: [0,'rgb(0, 0, 0)','none'],
+         display: 'none',
+         fill: ['rgba(255,255,255,1)']
+      },
+      {
+         id: 'annperkins2',
+         type: 'image',
+         rect: ['20px','20px','60px','60px','auto','auto'],
+         fill: ['rgba(0,0,0,0)','images/annperkins.png','0px','0px']
+      }]
+   },
+   {
+      rect: ['355px','-121px','140px','60px','auto','auto'],
+      font: ['source-sans-pro, sans-serif',32,'rgba(0,174,239,1.00)','100','none','normal'],
+      id: 'Text9',
+      text: 'Contacting...',
+      align: 'left',
+      type: 'text'
+   },
+   {
+      rect: ['260px','-106px','330px','80px','auto','auto'],
+      font: ['source-sans-pro, sans-serif',28,'rgba(51,51,51,1.00)','100','none','normal'],
+      align: 'left',
+      id: 'Text12',
+      text: 'Hey Chris, I\'m eating a waffle. Just come on back.',
+      clip: ['rect(0px 330pxpx 80pxpx 0px)'],
+      type: 'text'
+   },
+   {
+      rect: ['239px','-120px','auto','auto','auto','auto'],
+      font: ['source-sans-pro, sans-serif',48,'rgba(0,174,255,1.00)','400','none','normal'],
+      align: 'left',
+      id: 'Text13',
+      text: '“',
+      clip: ['rect(0px 20pxpx 67pxpx 0px)'],
+      type: 'text'
+   },
+   {
+      rect: ['482px','-77px','auto','auto','auto','auto'],
+      font: ['source-sans-pro, sans-serif',48,'rgba(0,174,255,1.00)','400','none','normal'],
+      align: 'left',
+      id: 'Text13Copy',
+      text: '”',
+      clip: ['rect(0px 20pxpx 67pxpx 0px)'],
+      type: 'text'
+   },
+   {
+      id: 'thumb2',
+      type: 'image',
+      rect: ['946px','-8px','132px','132px','auto','auto'],
+      fill: ['rgba(0,0,0,0)','images/thumb.png','0px','0px']
+   }],
+   symbolInstances: [
+   ]
+   },
+   states: {
+      "Base State": {
+         "${_GROUP_Donna_Meagle}": [
+            ["style", "top", '439px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '438px']
+         ],
+         "${_GROUP_Ron_Swanson}": [
+            ["style", "top", '659px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '438px']
+         ],
+         "${_RoundRectCopy3}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_Text6Copy3}": [
+            ["style", "top", '29px'],
+            ["style", "width", '153px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '106px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_RoundRectCopy8}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_Text13Copy}": [
+            ["style", "top", '-77px'],
+            ["style", "clip", [0,334,67,334], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+            ["style", "opacity", '1'],
+            ["style", "font-weight", '400'],
+            ["color", "color", 'rgba(0,174,255,1.00)'],
+            ["style", "font-family", 'source-sans-pro, sans-serif'],
+            ["style", "left", '81px'],
+            ["style", "font-size", '48px']
+         ],
+         "${_GROUP_Jean_Ralphio}": [
+            ["style", "top", '549px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '438px']
+         ],
+         "${_ronswanson2}": [
+            ["style", "top", '22px'],
+            ["style", "left", '20px']
+         ],
+         "${_Text12}": [
+            ["style", "top", '-106px'],
+            ["style", "clip", [0,334,67,324], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+            ["style", "height", '80px'],
+            ["style", "font-size", '28px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "opacity", '1'],
+            ["style", "left", '-141px'],
+            ["style", "width", '330px']
+         ],
+         "${_Ellipse2}": [
+            ["style", "top", '65px'],
+            ["subproperty", "boxShadow.offsetV", '0px'],
+            ["subproperty", "boxShadow.color", 'rgba(0,174,239,1)'],
+            ["style", "left", '117px'],
+            ["style", "display", 'none'],
+            ["subproperty", "boxShadow.spread", '2px'],
+            ["subproperty", "boxShadow.offsetH", '0px'],
+            ["subproperty", "boxShadow.blur", '15px']
+         ],
+         "${_Text9}": [
+            ["style", "top", '-195px'],
+            ["style", "font-weight", '100'],
+            ["color", "color", 'rgba(0,174,239,1.00)'],
+            ["style", "opacity", '0'],
+            ["style", "left", '343px'],
+            ["style", "width", '178px']
+         ],
+         "${_tomhaverford2}": [
+            ["style", "left", '20px'],
+            ["style", "top", '20px']
+         ],
+         "${_lilsebastian2}": [
+            ["style", "left", '20px'],
+            ["style", "top", '19px']
+         ],
+         "${_Text6Copy11}": [
+            ["style", "top", '31px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '110px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_andydwyer2}": [
+            ["style", "left", '20px'],
+            ["style", "top", '20px']
+         ],
+         "${_RoundRectCopy9}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_Text6Copy}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '106px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_thumb2}": [
+            ["style", "top", '-8px'],
+            ["transform", "scaleY", '1'],
+            ["style", "display", 'block'],
+            ["motion", "location", '1040.4769287109px 103.00003433227px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '946px'],
+            ["transform", "scaleX", '1']
+         ],
+         "${_Text6Copy6}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '106px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_GROUP_Ann_Perkins}": [
+            ["style", "left", '-65px'],
+            ["style", "top", '549px']
+         ],
+         "${_RoundRectCopy6}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_annperkins2}": [
+            ["style", "top", '20px'],
+            ["style", "left", '20px']
+         ],
+         "${_RoundRectCopy5}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_RoundRectCopy}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_Text6Copy12}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '110px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_GROUP_Andy_Dwyer_}": [
+            ["style", "top", '219px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '-65px']
+         ],
+         "${_Benwyatt2}": [
+            ["style", "left", '20px'],
+            ["style", "top", '20px']
+         ],
+         "${_GROUP_April_Ludgate}": [
+            ["style", "top", '439px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '-65px']
+         ],
+         "${_aprilludgate2}": [
+            ["style", "left", '20px'],
+            ["style", "top", '20px']
+         ],
+         "${_Text6Copy8}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '110px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_jgergich2}": [
+            ["style", "top", '20px'],
+            ["style", "left", '20px']
+         ],
+         "${_GROUP_Jerry_Gergich}": [
+            ["style", "top", '219px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '438px']
+         ],
+         "${_GROUP_Leslie_Knope}": [
+            ["style", "top", '329px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '438px']
+         ],
+         "${_Text6Copy9}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '110px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_GROUP_Lil_Sebastian}": [
+            ["style", "top", '659px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '-65px']
+         ],
+         "${_leslieknope2}": [
+            ["style", "top", '20px'],
+            ["style", "left", '20px']
+         ],
+         "${_hello_logo2}": [
+            ["style", "left", '40px'],
+            ["style", "top", '29px']
+         ],
+         "${_GROUP_Chris_Traeger}": [
+            ["style", "top", '769px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '-65px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '67px'],
+            ["style", "width", '302px']
+         ],
+         "${_RoundRectCopy10}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_Rectangle}": [
+            ["style", "left", '0px'],
+            ["style", "top", '0px']
+         ],
+         "${_RoundRect}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_donnameagle2}": [
+            ["style", "left", '20px'],
+            ["style", "top", '20px']
+         ],
+         "${_Text6Copy10}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '110px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_Text6}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '106px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_RoundRectCopy7}": [
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["subproperty", "boxShadow.blur", '5px'],
+            ["transform", "scaleX", '1'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px'],
+            ["style", "top", '0px'],
+            ["transform", "scaleY", '1'],
+            ["subproperty", "boxShadow.spread", '1px'],
+            ["style", "height", '100px'],
+            ["subproperty", "boxShadow.offsetV", '0px'],
+            ["subproperty", "boxShadow.offsetH", '0px'],
+            ["subproperty", "boxShadow.color", 'rgba(0,174,255,0.00)']
+         ],
+         "${_GROUP_Tom_Haverford}": [
+            ["style", "top", '329px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '-65px']
+         ],
+         "${_jeanralphio2}": [
+            ["style", "top", '20px'],
+            ["style", "left", '20px']
+         ],
+         "${_GROUP_Ben_Wyatt}": [
+            ["style", "top", '769px'],
+            ["style", "opacity", '1'],
+            ["style", "left", '438px']
+         ],
+         "${_Text6Copy5}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '106px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_Text13}": [
+            ["style", "top", '-120px'],
+            ["style", "clip", [0,334,67,334], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
+            ["style", "opacity", '1'],
+            ["style", "font-weight", '400'],
+            ["color", "color", 'rgba(0,174,255,1.00)'],
+            ["style", "font-family", 'source-sans-pro, sans-serif'],
+            ["style", "left", '-162px'],
+            ["style", "font-size", '48px']
+         ],
+         "${_christraeger2}": [
+            ["style", "left", '20px'],
+            ["style", "top", '20px']
+         ],
+         "${_RoundRectCopy11}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_Text6Copy7}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '110px'],
+            ["style", "font-size", '32px']
+         ],
+         "${_RoundRectCopy2}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_GROUP_Menu_Bar}": [
+            ["style", "left", '-95px'],
+            ["style", "top", '-662px']
+         ],
+         "${_RoundRectCopy4}": [
+            ["style", "top", '0px'],
+            ["style", "height", '100px'],
+            ["color", "background-color", 'rgba(255,255,255,1.00)'],
+            ["style", "left", '0px'],
+            ["style", "width", '460px']
+         ],
+         "${_Text6Copy2}": [
+            ["style", "top", '29px'],
+            ["style", "height", '41px'],
+            ["color", "color", 'rgba(51,51,51,1.00)'],
+            ["style", "font-weight", '300'],
+            ["style", "left", '106px'],
+            ["style", "font-size", '32px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 9000,
+         autoPlay: true,
+         timeline: [
+            { id: "eid249", tween: [ "style", "${_Text9}", "width", '178px', { fromValue: '178px'}], position: 3476, duration: 0, easing: "easeInOutBack" },
+            { id: "eid466", tween: [ "subproperty", "${_RoundRectCopy7}", "boxShadow.blur", '29px', { fromValue: '5px'}], position: 2573, duration: 325, easing: "easeInOutQuad" },
+            { id: "eid300", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 3431, duration: 500, easing: "easeInOutSine" },
+            { id: "eid301", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,1.00)', { fromValue: 'rgba(0,174,239,0)'}], position: 3931, duration: 500, easing: "easeInOutSine" },
+            { id: "eid302", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 4431, duration: 500, easing: "easeInOutSine" },
+            { id: "eid303", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,1.00)', { fromValue: 'rgba(0,174,239,0)'}], position: 4931, duration: 500, easing: "easeInOutSine" },
+            { id: "eid304", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 5431, duration: 500, easing: "easeInOutSine" },
+            { id: "eid305", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,1.00)', { fromValue: 'rgba(0,174,239,0)'}], position: 5931, duration: 500, easing: "easeInOutSine" },
+            { id: "eid306", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 6431, duration: 500, easing: "easeInOutSine" },
+            { id: "eid307", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,1.00)', { fromValue: 'rgba(0,174,239,0)'}], position: 6931, duration: 500, easing: "easeInOutSine" },
+            { id: "eid308", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 7431, duration: 500, easing: "easeInOutSine" },
+            { id: "eid195", tween: [ "style", "${_GROUP_Ron_Swanson}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid196", tween: [ "style", "${_GROUP_Andy_Dwyer_}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid344", tween: [ "style", "${_Text13}", "left", '239px', { fromValue: '-162px'}], position: 8405, duration: 595, easing: "easeInOutCirc" },
+            { id: "eid198", tween: [ "style", "${_GROUP_April_Ludgate}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid84", tween: [ "style", "${_GROUP_Donna_Meagle}", "left", '437px', { fromValue: '438px'}], position: 103, duration: 500, easing: "easeInOutBack" },
+            { id: "eid90", tween: [ "style", "${_GROUP_Chris_Traeger}", "left", '-66px', { fromValue: '-65px'}], position: 250, duration: 500, easing: "easeInOutBack" },
+            { id: "eid138", tween: [ "transform", "${_RoundRectCopy7}", "scaleX", '0.96', { fromValue: '1'}], position: 2389, duration: 185, easing: "easeInOutQuad" },
+            { id: "eid162", tween: [ "transform", "${_RoundRectCopy7}", "scaleX", '1', { fromValue: '0.96'}], position: 2573, duration: 177, easing: "easeInOutQuad" },
+            { id: "eid251", tween: [ "style", "${_Text9}", "top", '-195px', { fromValue: '-195px'}], position: 3476, duration: 0, easing: "easeInOutBack" },
+            { id: "eid336", tween: [ "style", "${_Text9}", "top", '-290px', { fromValue: '-195px'}], position: 8250, duration: 250, easing: "easeInOutCirc" },
+            { id: "eid78", tween: [ "style", "${_GROUP_Lil_Sebastian}", "left", '-66px', { fromValue: '-65px'}], position: 200, duration: 500, easing: "easeInOutBack" },
+            { id: "eid345", tween: [ "style", "${_Text13Copy}", "left", '482px', { fromValue: '81px'}], position: 8405, duration: 595, easing: "easeInOutCirc" },
+            { id: "eid200", tween: [ "style", "${_GROUP_Chris_Traeger}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid143", tween: [ "subproperty", "${_RoundRectCopy7}", "boxShadow.spread", '1px', { fromValue: '1px'}], position: 2389, duration: 0, easing: "easeInOutBack" },
+            { id: "eid463", tween: [ "subproperty", "${_RoundRectCopy7}", "boxShadow.spread", '9px', { fromValue: '1px'}], position: 2750, duration: 148, easing: "easeInOutQuad" },
+            { id: "eid76", tween: [ "style", "${_GROUP_Jean_Ralphio}", "left", '437px', { fromValue: '438px'}], position: 152, duration: 500, easing: "easeInOutBack" },
+            { id: "eid470", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.spread", '2px', { fromValue: '2px'}], position: 3431, duration: 0, easing: "easeInOutQuad" },
+            { id: "eid220", tween: [ "style", "${_annperkins2}", "left", '117px', { fromValue: '20px'}], position: 3200, duration: 181, easing: "easeInOutQuad" },
+            { id: "eid322", tween: [ "style", "${_annperkins2}", "left", '10px', { fromValue: '117px'}], position: 8250, duration: 500, easing: "easeInOutQuad" },
+            { id: "eid194", tween: [ "style", "${_GROUP_Tom_Haverford}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid88", tween: [ "style", "${_GROUP_Ron_Swanson}", "left", '437px', { fromValue: '438px'}], position: 200, duration: 500, easing: "easeInOutBack" },
+            { id: "eid82", tween: [ "style", "${_GROUP_April_Ludgate}", "left", '-66px', { fromValue: '-65px'}], position: 103, duration: 500, easing: "easeInOutBack" },
+            { id: "eid136", tween: [ "subproperty", "${_RoundRectCopy7}", "boxShadow.offsetV", '0px', { fromValue: '0px'}], position: 2389, duration: 0, easing: "easeInOutBack" },
+            { id: "eid85", tween: [ "style", "${_GROUP_Donna_Meagle}", "top", '-235px', { fromValue: '439px'}], position: 103, duration: 500, easing: "easeInOutBack" },
+            { id: "eid404", tween: [ "style", "${_Text13}", "clip", [0,20,67,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,36.83736801147461,67,17.90981101989746]}], position: 8782, duration: 122, easing: "easeOutCirc" },
+            { id: "eid405", tween: [ "style", "${_Text13}", "clip", [0,20,67,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,20,67,0]}], position: 9000, duration: 0, easing: "easeOutCirc" },
+            { id: "eid314", tween: [ "style", "${_Ellipse2}", "display", 'block', { fromValue: 'none'}], position: 3431, duration: 0, easing: "easeInOutSine" },
+            { id: "eid329", tween: [ "style", "${_Ellipse2}", "display", 'none', { fromValue: 'block'}], position: 8088, duration: 0, easing: "easeInOutSine" },
+            { id: "eid89", tween: [ "style", "${_GROUP_Ron_Swanson}", "top", '-15px', { fromValue: '659px'}], position: 200, duration: 500, easing: "easeInOutBack" },
+            { id: "eid96", tween: [ "style", "${_GROUP_Jerry_Gergich}", "left", '437px', { fromValue: '438px'}], position: 0, duration: 500, easing: "easeInOutBack" },
+            { id: "eid343", tween: [ "style", "${_Text12}", "left", '260px', { fromValue: '-141px'}], position: 8405, duration: 595, easing: "easeInOutCirc" },
+            { id: "eid202", tween: [ "style", "${_GROUP_Leslie_Knope}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid403", tween: [ "style", "${_Text13Copy}", "clip", [0,20,67,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,37.906005859375,67,19.0465145111084]}], position: 8660, duration: 96, easing: "easeOutCirc" },
+            { id: "eid87", tween: [ "style", "${_GROUP_Leslie_Knope}", "top", '-345px', { fromValue: '329px'}], position: 50, duration: 500, easing: "easeInOutBack" },
+            { id: "eid442", tween: [ "style", "${_thumb2}", "opacity", '0', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutQuad" },
+            { id: "eid430", tween: [ "transform", "${_thumb2}", "scaleX", '0.8', { fromValue: '1'}], position: 2389, duration: 184, easing: "easeInOutQuad" },
+            { id: "eid432", tween: [ "transform", "${_thumb2}", "scaleX", '1', { fromValue: '0.8'}], position: 2573, duration: 177, easing: "easeInOutQuad" },
+            { id: "eid204", tween: [ "style", "${_GROUP_Jean_Ralphio}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid97", tween: [ "style", "${_GROUP_Jerry_Gergich}", "top", '-455px', { fromValue: '219px'}], position: 0, duration: 500, easing: "easeInOutBack" },
+            { id: "eid201", tween: [ "style", "${_GROUP_Jerry_Gergich}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid75", tween: [ "style", "${_GROUP_Tom_Haverford}", "top", '-345px', { fromValue: '329px'}], position: 50, duration: 500, easing: "easeInOutBack" },
+            { id: "eid80", tween: [ "style", "${_GROUP_Andy_Dwyer_}", "left", '-66px', { fromValue: '-65px'}], position: 0, duration: 500, easing: "easeInOutBack" },
+            { id: "eid236", tween: [ "style", "${_Text6Copy3}", "top", '74px', { fromValue: '29px'}], position: 3200, duration: 181, easing: "easeInOutQuad" },
+            { id: "eid325", tween: [ "style", "${_Text6Copy3}", "top", '19px', { fromValue: '74px'}], position: 8250, duration: 500, easing: "easeInOutCirc" },
+            { id: "eid141", tween: [ "subproperty", "${_RoundRectCopy7}", "boxShadow.color", 'rgba(0,174,255,1.00)', { fromValue: 'rgba(0,174,255,0.00)'}], position: 2389, duration: 185, easing: "easeInOutQuad" },
+            { id: "eid165", tween: [ "subproperty", "${_RoundRectCopy7}", "boxShadow.color", 'rgba(0,0,0,0.00)', { fromValue: 'rgb(0,174,255)'}], position: 2573, duration: 177, easing: "easeInOutQuad" },
+            { id: "eid451", tween: [ "subproperty", "${_RoundRectCopy7}", "boxShadow.color", 'rgba(0,0,0,0.36)', { fromValue: 'rgba(0,0,0,0)'}], position: 2750, duration: 148, easing: "easeInOutQuad" },
+            { id: "eid211", tween: [ "style", "${_RoundRectCopy7}", "height", '180px', { fromValue: '100px'}], position: 3200, duration: 181, easing: "easeInOutQuad" },
+            { id: "eid339", tween: [ "style", "${_RoundRectCopy7}", "height", '217px', { fromValue: '180px'}], position: 8250, duration: 427, easing: "easeInOutCirc" },
+            { id: "eid93", tween: [ "style", "${_GROUP_Ben_Wyatt}", "top", '95px', { fromValue: '769px'}], position: 250, duration: 500, easing: "easeInOutBack" },
+            { id: "eid74", tween: [ "style", "${_GROUP_Tom_Haverford}", "left", '-66px', { fromValue: '-65px'}], position: 50, duration: 500, easing: "easeInOutBack" },
+            { id: "eid219", tween: [ "style", "${_Text6Copy3}", "left", '203px', { fromValue: '106px'}], position: 3200, duration: 181, easing: "easeInOutQuad" },
+            { id: "eid324", tween: [ "style", "${_Text6Copy3}", "left", '96px', { fromValue: '203px'}], position: 8250, duration: 500, easing: "easeInOutCirc" },
+            { id: "eid235", tween: [ "style", "${_annperkins2}", "top", '65px', { fromValue: '20px'}], position: 3200, duration: 181, easing: "easeInOutQuad" },
+            { id: "eid323", tween: [ "style", "${_annperkins2}", "top", '10px', { fromValue: '65px'}], position: 8250, duration: 500, easing: "easeInOutQuad" },
+            { id: "eid199", tween: [ "style", "${_GROUP_Lil_Sebastian}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid438", tween: [ "style", "${_thumb2}", "display", 'none', { fromValue: 'block'}], position: 2969, duration: 0, easing: "easeInOutQuad" },
+            { id: "eid223", tween: [ "style", "${_Text9}", "opacity", '1', { fromValue: '0'}], position: 3326, duration: 150, easing: "easeInOutCirc" },
+            { id: "eid328", tween: [ "style", "${_Text9}", "opacity", '0', { fromValue: '1'}], position: 8250, duration: 191, easing: "easeInOutCirc" },
+            { id: "eid250", tween: [ "style", "${_Text9}", "left", '343px', { fromValue: '343px'}], position: 3476, duration: 0, easing: "easeInOutBack" },
+            { id: "eid337", tween: [ "style", "${_Text9}", "left", '357px', { fromValue: '343px'}], position: 8250, duration: 250, easing: "easeInOutCirc" },
+            { id: "eid81", tween: [ "style", "${_GROUP_Andy_Dwyer_}", "top", '-455px', { fromValue: '219px'}], position: 0, duration: 500, easing: "easeInOutBack" },
+            { id: "eid91", tween: [ "style", "${_GROUP_Chris_Traeger}", "top", '95px', { fromValue: '769px'}], position: 250, duration: 500, easing: "easeInOutBack" },
+            { id: "eid139", tween: [ "transform", "${_RoundRectCopy7}", "scaleY", '0.96', { fromValue: '1'}], position: 2389, duration: 185, easing: "easeInOutQuad" },
+            { id: "eid163", tween: [ "transform", "${_RoundRectCopy7}", "scaleY", '1', { fromValue: '0.96'}], position: 2573, duration: 177, easing: "easeInOutQuad" },
+            { id: "eid203", tween: [ "style", "${_GROUP_Donna_Meagle}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid79", tween: [ "style", "${_GROUP_Lil_Sebastian}", "top", '-15px', { fromValue: '659px'}], position: 200, duration: 500, easing: "easeInOutBack" },
+            { id: "eid197", tween: [ "style", "${_GROUP_Ben_Wyatt}", "opacity", '0.49221801757812', { fromValue: '1'}], position: 2750, duration: 196, easing: "easeInOutBack" },
+            { id: "eid137", tween: [ "subproperty", "${_RoundRectCopy7}", "boxShadow.offsetH", '0px', { fromValue: '0px'}], position: 2389, duration: 0, easing: "easeInOutBack" },
+            { id: "eid431", tween: [ "transform", "${_thumb2}", "scaleY", '0.8', { fromValue: '1'}], position: 2389, duration: 184, easing: "easeInOutQuad" },
+            { id: "eid433", tween: [ "transform", "${_thumb2}", "scaleY", '1', { fromValue: '0.8'}], position: 2573, duration: 177, easing: "easeInOutQuad" },
+            { id: "eid120", tween: [ "style", "${_GROUP_Menu_Bar}", "left", '-95px', { fromValue: '-95px'}], position: 325, duration: 0, easing: "easeInOutBack" },
+            { id: "eid471", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.blur", '15px', { fromValue: '15px'}], position: 3431, duration: 0, easing: "easeInOutQuad" },
+            { id: "eid83", tween: [ "style", "${_GROUP_April_Ludgate}", "top", '-235px', { fromValue: '439px'}], position: 103, duration: 500, easing: "easeInOutBack" },
+            { id: "eid95", tween: [ "style", "${_GROUP_Ann_Perkins}", "top", '-125px', { fromValue: '549px'}], position: 152, duration: 500, easing: "easeInOutQuad" },
+            { id: "eid208", tween: [ "style", "${_GROUP_Ann_Perkins}", "top", '-205px', { fromValue: '-125px'}], position: 2750, duration: 531, easing: "easeInOutQuad" },
+            { id: "eid400", tween: [ "style", "${_Text12}", "clip", [0,333.98516845703,67.048194885254,316], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,334,67,324]}], position: 8508, duration: 28, easing: "easeInCirc" },
+            { id: "eid409", tween: [ "style", "${_Text12}", "clip", [0,333.80813598633,67.623558044434,297], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,333.98516845703,67.048194885254,316]}], position: 8536, duration: 45, easing: "easeOutCirc" },
+            { id: "eid408", tween: [ "style", "${_Text12}", "clip", [0,332.76550292969,71.01212310791,291], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,333.80813598633,67.623558044434,297]}], position: 8581, duration: 11, easing: "easeOutCirc" },
+            { id: "eid410", tween: [ "style", "${_Text12}", "clip", [0,331.87191772461,73.916320800781,277], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,332.76550292969,71.01212310791,291]}], position: 8592, duration: 24, easing: "easeOutCirc" },
+            { id: "eid411", tween: [ "style", "${_Text12}", "clip", [0,331.4892578125,75.159927368164,258], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,331.87191772461,73.916320800781,277]}], position: 8616, duration: 24, easing: "easeOutCirc" },
+            { id: "eid412", tween: [ "style", "${_Text12}", "clip", [0,331.32406616211,75.696769714355,216], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,331.4892578125,75.159927368164,258]}], position: 8640, duration: 37, easing: "easeOutCirc" },
+            { id: "eid414", tween: [ "style", "${_Text12}", "clip", [0,331.32406616211,75.696769714355,184], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,331.3240661621094,75.69676971435547,216]}], position: 8677, duration: 17, easing: "easeOutCirc" },
+            { id: "eid416", tween: [ "style", "${_Text12}", "clip", [0,331.32406616211,75.696769714355,82], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,331.3240661621094,75.69676971435547,184]}], position: 8694, duration: 20, easing: "easeOutCirc" },
+            { id: "eid417", tween: [ "style", "${_Text12}", "clip", [0,331.32406616211,75.696769714355,28], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,331.3240661621094,75.69676971435547,82]}], position: 8714, duration: 36, easing: "easeOutCirc" },
+            { id: "eid418", tween: [ "style", "${_Text12}", "clip", [0,331.32406616211,75.696769714355,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,331.3240661621094,75.69676971435547,28]}], position: 8750, duration: 32, easing: "easeOutCirc" },
+            { id: "eid94", tween: [ "style", "${_GROUP_Ann_Perkins}", "left", '-66px', { fromValue: '-65px'}], position: 152, duration: 500, easing: "easeInOutQuad" },
+            { id: "eid207", tween: [ "style", "${_GROUP_Ann_Perkins}", "left", '195px', { fromValue: '-66px'}], position: 2750, duration: 531, easing: "easeInOutQuad" },
+            { id: "eid424", tween: [ "motion", "${_thumb2}", [[1040.48,103,0,0],[880.71,-158.37,-7.17,-7.56,-156.95,-165.64],[511.44,-320.08,-627.3,-182.2,-521.86,-151.58],[47.13,-385,0,0]]], position: 875, duration: 570, easing: "easeInOutQuad" },
+            { id: "eid436", tween: [ "motion", "${_thumb2}", [[47.13,-385,0,0],[30.15,-279,-6.33,297.43,-2.98,140.13],[40,-50,0,0]]], position: 1588, duration: 538, easing: "easeInOutQuad" },
+            { id: "eid437", tween: [ "motion", "${_thumb2}", [[40,-50,0,0],[12.69,-52.89,-36.96,-6.9,-35.27,-6.59],[-8.18,-59,0,0]]], position: 2126, duration: 204, easing: "easeInOutQuad" },
+            { id: "eid92", tween: [ "style", "${_GROUP_Ben_Wyatt}", "left", '437px', { fromValue: '438px'}], position: 250, duration: 500, easing: "easeInOutBack" },
+            { id: "eid77", tween: [ "style", "${_GROUP_Jean_Ralphio}", "top", '-125px', { fromValue: '549px'}], position: 152, duration: 500, easing: "easeInOutBack" },
+            { id: "eid122", tween: [ "style", "${_GROUP_Menu_Bar}", "top", '-572px', { fromValue: '-662px'}], position: 0, duration: 325, easing: "easeInOutSine" },
+            { id: "eid86", tween: [ "style", "${_GROUP_Leslie_Knope}", "left", '437px', { fromValue: '438px'}], position: 50, duration: 500, easing: "easeInOutBack" }         ]
+      }
+   }
+},
+"pulse_glow": {
+   version: "2.0.1",
+   minimumCompatibleVersion: "2.0.0",
+   build: "2.0.1.268",
+   baseState: "Base State",
+   initialState: "Base State",
+   gpuAccelerate: false,
+   resizeInstances: false,
+   content: {
+   dom: [
+   {
+      rect: ['0px','0px','60px','60px','auto','auto'],
+      borderRadius: ['50%','50%','50%','50%'],
+      boxShadow: ['',0,0,3,1,'rgba(0,174,239,1.00)'],
+      id: 'Ellipse2',
+      stroke: [0,'rgb(0, 0, 0)','none'],
+      type: 'ellipse',
+      fill: ['rgba(255,255,255,1)']
+   }],
+   symbolInstances: [
+   ]
+   },
+   states: {
+      "Base State": {
+         "${_Ellipse2}": [
+            ["style", "top", '0px'],
+            ["subproperty", "boxShadow.blur", '3px'],
+            ["subproperty", "boxShadow.spread", '1px'],
+            ["subproperty", "boxShadow.color", 'rgba(0,174,239,1.00)'],
+            ["subproperty", "boxShadow.offsetV", '0px'],
+            ["subproperty", "boxShadow.offsetH", '0px'],
+            ["style", "left", '0px']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '60px'],
+            ["style", "width", '60px']
+         ]
+      }
+   },
+   timelines: {
+      "Default Timeline": {
+         fromState: "Base State",
+         toState: "",
+         duration: 4500,
+         autoPlay: false,
+         timeline: [
+            { id: "eid285", tween: [ "style", "${_Ellipse2}", "left", '0px', { fromValue: '0px'}], position: 500, duration: 0, easing: "easeInOutBack" },
+            { id: "eid281", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 0, duration: 500, easing: "easeInOutSine" },
+            { id: "eid283", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,1.00)', { fromValue: 'rgba(0,174,239,0)'}], position: 500, duration: 500, easing: "easeInOutSine" },
+            { id: "eid286", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 1000, duration: 500, easing: "easeInOutSine" },
+            { id: "eid287", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,1.00)', { fromValue: 'rgba(0,174,239,0)'}], position: 1500, duration: 500, easing: "easeInOutSine" },
+            { id: "eid288", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 2000, duration: 500, easing: "easeInOutSine" },
+            { id: "eid289", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,1.00)', { fromValue: 'rgba(0,174,239,0)'}], position: 2500, duration: 500, easing: "easeInOutSine" },
+            { id: "eid292", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 3000, duration: 500, easing: "easeInOutSine" },
+            { id: "eid293", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,1.00)', { fromValue: 'rgba(0,174,239,0)'}], position: 3500, duration: 500, easing: "easeInOutSine" },
+            { id: "eid294", tween: [ "subproperty", "${_Ellipse2}", "boxShadow.color", 'rgba(0,174,239,0.00)', { fromValue: 'rgba(0,174,239,1)'}], position: 4000, duration: 500, easing: "easeInOutSine" }         ]
+      }
+   }
+}
+};
+
+
+Edge.registerCompositionDefn(compId, symbols, fonts, resources);
+
+/**
+ * Adobe Edge DOM Ready Event Handler
+ */
+$(window).ready(function() {
+     Edge.launchComposition(compId);
+});
+})(jQuery, AdobeEdge, "EDGE-120170250");
