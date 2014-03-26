@@ -1,0 +1,74 @@
+html, body {
+	font-family: "Source Sans Pro";
+	padding: 0; 
+	margin: 0; 
+}
+
+#container{
+	background-color: #5d7678;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.header{
+	margin-top: 300px;
+	text-align: center;
+	font-size: 40px;
+	color: #f6f7e7;
+	font-weight: 600; 
+}
+
+.categories{
+	margin: 50px auto;
+	display: block;
+	width: 381px;
+	text-align: center;
+	font-size: 16px;
+	color: #f6f7e7;
+	font-weight: 400; 
+
+}
+
+.projects{
+	-webkit-transition: all .2s ease-in-out;
+}
+
+#computer{
+	position: relative;
+	margin-right: 90px;
+	-webkit-transition: all .2s ease-in-out;
+}
+
+#computer:hover{
+	-webkit-transform: scale(1.1);
+}
+.projects .text {
+	position:relative;
+	visibility: hidden;
+}
+
+.projects:hover .text {
+	visibility: visible;
+}
+
+#about{
+	position: relative;
+	margin-right: 90px;
+	-webkit-transition: all .2s ease-in-out;
+}
+
+#about:hover{
+	-webkit-transform: scale(1.1);
+}
+
+
+
+#concepts{
+	position: relative;
+	-webkit-transition: all .2s ease-in-out;
+}
+
+#concepts:hover{
+	-webkit-transform: scale(1.1);
+}
