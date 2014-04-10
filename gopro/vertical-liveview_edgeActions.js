@@ -1,11 +1,7 @@
 
 (function($,Edge,compId){var Composition=Edge.Composition,Symbol=Edge.Symbol;
 //Edge symbol: 'stage'
-(function(symbolName){Symbol.bindElementAction(compId,symbolName,"${_Rectangle2}","click",function(sym,e){sym.play();});
-//Edge binding end
-Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",0,function(sym,e){sym.stop();});
-//Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_Resolution2}","click",function(sym,e){var mySymbolObject=sym.getSymbol("Resolution2").play();});
+(function(symbolName){Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",0,function(sym,e){sym.stop();});
 //Edge binding end
 })("stage");
 //Edge symbol end:'stage'
@@ -47,4 +43,16 @@ Symbol.bindElementAction(compId,symbolName,"${_Resolution2}","click",function(sy
 //Edge symbol: 'settings'
 (function(symbolName){})("settings");
 //Edge symbol end:'settings'
+
+//=========================================================
+
+//Edge symbol: 'Symbol_1'
+(function(symbolName){Symbol.bindElementAction(compId,symbolName,"${_Rectangle2}","click",function(sym,e){sym.play();});
+//Edge binding end
+Symbol.bindElementAction(compId,symbolName,"${_Resolution2}","click",function(sym,e){var mySymbolObject=sym.getSymbol("Resolution2").play();});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",0,function(sym,e){sym.stop();});
+//Edge binding end
+})("Symbol_1");
+//Edge symbol end:'Symbol_1'
 })(jQuery,AdobeEdge,"EDGE-264160235");
