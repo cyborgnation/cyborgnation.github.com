@@ -1,34 +1,129 @@
-html, body { background-color: #efefef; }
-#header, #work { margin-bottom: 30px; }
-#header .networks {
-  overflow: hidden;
-  padding-left: 26px;
-  margin-bottom: 3px;
-  width: 190px;
+.html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    font-family: "Source Sans Pro";
+    padding: 0px; 
+    margin: 0px; 
 }
-#header .networks li {
-  list-style-type: none;
-  float: left;
-  width: 46px; height: 46px;
-}
-#header p {
-  font-size: 23px;
-  margin: 0;
-  text-align: center;
-}
-#header a { font-style: italic; color: black; text-decoration: none; }
-#header a:hover { font-style: normal; }
-#title {
-  background: transparent url(../images/hello.png) no-repeat scroll top left;
-  text-indent: -10000px;
-  width: 181px; height: 181px;
-}
-#work > div > div { margin-top: 2.5px; }
 
-#work img {
-  opacity: 0.45;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+a{
+    text-decoration: none;
+    color:#333;
 }
-#work img:hover { opacity: 1; }
+
+body{
+    font-weight:400;
+    color: #333;
+}
+
+
+h1{
+    font-weight: 900;
+    font-size: 160px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.ct{
+    text-align: center;
+}
+.smug-remarks{
+    color: #fff;
+    font-size: 36px;
+}
+.lg-margin-start{
+    margin: 300px 0;
+}
+
+.lg-margin{
+    margin: 500px 0;
+}
+
+.lg-margin p{
+    font-size: 36px;
+}
+
+.md-margin{
+    margin: 200px;
+    font-size: 36px;
+}
+
+.srslybg{
+    font-size: 280px;
+}
+
+.folio{
+    width: 100%;
+    height: 660px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.folio-item{
+    width: 1000px;
+
+    margin: 0 auto;
+}
+
+.folio-item img{
+    margin: 60px 0;
+}
+
+
+
+.folio-text{
+    text-align: left;
+    margin: -40px 0;
+}
+
+.folio-text p{
+    margin: 10px 0;
+}
+
+.folio-text a{
+    text-align: right;
+    margin: 20px 0; 
+}
+.swag{
+    background-color: #068ad8;
+    color:#fff;
+}
+
+.ziibra{
+    background-color: #f8f8f8;
+    color:##323132;
+}
+
+.ziibra a{
+    color:#c521de;
+}
+
+.hello{
+    background-color: #00aeef;
+    color: #fff;
+}
+
+.hello a{
+    color: #fff;
+}
+
+.l5{
+    background-color: #ff5533;
+    color: #fff;
+}
+
+.l5 a{
+    color: #fff;
+}
+
+
+.dribbble a{
+    color: #ea4c89;
+}
+
+.twitter a{
+    color: #55acee;
+}
+
