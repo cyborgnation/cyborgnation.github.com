@@ -138,3 +138,21 @@ h1{
     color: #55acee;
 }
 
+.footer{
+    width: 1000px;
+    margin: 40 auto;
+}
+
+.footer h2{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.footer span{
+    font-weight: 400;
+}
+
+.footer a{
+    color:#55acee;
+}
+
