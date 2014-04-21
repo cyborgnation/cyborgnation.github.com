@@ -140,7 +140,8 @@ h1{
 
 .footer{
     width: 1000px;
-    margin: 40 auto;
+    margin: 0 auto;
+    padding-bottom: 200px;
 }
 
 .footer h2{
