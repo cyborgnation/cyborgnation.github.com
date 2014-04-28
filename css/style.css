@@ -138,6 +138,14 @@ h1{
     color: #55acee;
 }
 
+.medium a{
+    color: #333332;
+}
+
+.medium a:hover{
+    border-bottom: 6px solid #57ad68;
+}
+
 .footer{
     width: 1000px;
     margin: 0 auto;
