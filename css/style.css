@@ -130,42 +130,45 @@ h1{
     color: #fff;
 }
 
-.section{
+.links{
     width: 100%;
     height: 1000px;
     font-size: 24px;
     font-weight: 300;
     text-align: center;
-    line-height: 1000px;
     display: block;
-    background-color: white;
+}
+
+.dribbble{
+    display: block;
+    height: 100%;
+    line-height: 1000px;
+    color: #ea4c89;
     -webkit-transition:0.3s ease-in-out;
     -moz-transition:0.3s ease-in-out;
     -o-transition:0.3s ease-in-out;
     transition:0.3s ease-in-out;
 }
 
-.section.hoverd a{
-    color: white;
+.dribbble:hover{
+    background-color: #ea4c89;
+    color:#fff; 
 }
 
-section.dribbble a{
+
+.twitter{
+    color: #55acee;
     display: block;
     height: 100%;
-    color: #ea4c89;
+    line-height: 1000px;
+    -webkit-transition:0.3s ease-in-out;
+    -moz-transition:0.3s ease-in-out;
+    -o-transition:0.3s ease-in-out;
+    transition:0.3s ease-in-out;
 }
 
-section.dribbble.hovered{
-    background-color: #ea4c89;
-}
-
-.section.twitter a{
-    display: block;
-    color: #55acee;
-    line-height: 1000px
-}
-
-.section.twitter.hovered{
+.twitter:hover{
+    color:#fff;
     background-color: #55acee;
 }
 
