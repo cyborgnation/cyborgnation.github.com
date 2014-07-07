@@ -55,7 +55,16 @@ h1{
 
 .folio{
     width: 100%;
-    height: 1000px;
+    height: 900px;
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+}
+
+.foliolong{
+    width: 100%;
+    height: 1100px;
     font-size: 24px;
     font-weight: 300;
     position: relative;
@@ -126,6 +135,39 @@ h1{
 
 .l5 a{
     color: #fff;
+}
+
+.gopro{
+    background-color: #111111;
+    color: #fff;
+}
+
+.gopro span{
+    font-weight: 600;
+}
+
+.gopro a{
+    color: #2fadf5;
+}
+
+.ff{
+    background-color: #479EE0;
+    color: #fff;
+}
+
+.ff span{
+    font-weight: 600;
+}
+
+.ff a{
+    color: #FFED00;
+}
+
+a.ffa{
+    color: #FFED00;
+    margin: 0 auto;
+    float: none;
+    text-align: left;
 }
 
 .cfp{
