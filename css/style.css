@@ -288,3 +288,19 @@ a#b:hover a#b{
     color:#0091FF;
 }
 
+/*BUDGETLIST STYLE*/
+
+.vlist{
+    margin-top: 40px
+}
+
+.welcome{
+    margin: 100px auto;
+
+}
+
+.md-margin{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
