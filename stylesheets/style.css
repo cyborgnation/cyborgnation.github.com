@@ -28,14 +28,15 @@ section {
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%;
-    height: 1500px;
+    height: 0;
     width: 100%;
     margin-top: 6rem;
+    padding-top: 146%;
     display: block;
     background-image: url("../img/headfront.png"), url("../img/fist.svg"), url("../img/headback.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: center, 460px 190px, center;
-    background-size: 50%, 25%, 50%;
+    background-position: center, 60% top, center;
+    background-size: 80%, 30%, 80%;
     background-clip: border-box, border-box, border-box; }
     section .heroimage:last-child {
       margin-right: 0; }
