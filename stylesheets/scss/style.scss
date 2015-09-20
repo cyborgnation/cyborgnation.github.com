@@ -1,14 +1,41 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
-body{
+body {
   background-color: #010101;
 }
 
 section {
   @include outer-container;
+  
   .title {
     @include span-columns(10);
-    margin-top: 15%
+    
+    margin: 5rem auto;
+  }
+  .heroimage {
+  @include span-columns(10);
+
+  height:     1500px;
+  width:      100%;
+  margin-top: 6rem;
+  display:    block;
+
+  background-image:     url("../img/headfront.png"),
+                        url("../img/fist.svg"),
+                        url("../img/headback.png");
+  background-repeat:    no-repeat,
+                        no-repeat,
+                        no-repeat;
+  background-position:  center,
+                        460px 190px,
+                        center;
+  background-size:      50%,
+                        25%,
+                        50%;
+  background-clip:      border-box,
+                        border-box,
+                        border-box;
   }
 }
+

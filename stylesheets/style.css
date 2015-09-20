@@ -20,8 +20,24 @@ section {
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%;
-    margin-top: 15%; }
+    margin: 5rem auto; }
     section .title:last-child {
+      margin-right: 0; }
+  section .heroimage {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    height: 1500px;
+    width: 100%;
+    margin-top: 6rem;
+    display: block;
+    background-image: url("../img/headfront.png"), url("../img/fist.svg"), url("../img/headback.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, 460px 190px, center;
+    background-size: 50%, 25%, 50%;
+    background-clip: border-box, border-box, border-box; }
+    section .heroimage:last-child {
       margin-right: 0; }
 
 /*# sourceMappingURL=style.css.map */
