@@ -1,8 +1,15 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700);
 
 body {
   background-color: #010101;
+  font-family: 'Work Sans', sans-serif;
+  color: #3778FF;
+}
+
+p{
+  font-size: 2em;
 }
 
 section {
@@ -13,15 +20,17 @@ section {
     
     margin: 5rem auto;
   }
-  .heroimage {
+  .hero {
   @include span-columns(10);
 
   height:     0;
   width:      100%;
   margin-top: 6rem;
   padding-top: 146%;
-  display:    block;
 
+  display:    block;
+  position:   relative;
+  
   background-image:     url("../img/headfront.png"),
                         url("../img/fist.svg"),
                         url("../img/headback.png");
@@ -37,6 +46,18 @@ section {
   background-clip:      border-box,
                         border-box,
                         border-box;
+  }
+  .about{
+    @include span-columns(8);
+    
+    position: absolute;
+    top: 45rem;
+
+    h1{
+      font-size: 5.5em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }   
   }
 }
 

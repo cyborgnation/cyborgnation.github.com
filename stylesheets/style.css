@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700);
 html {
   box-sizing: border-box; }
 
@@ -5,7 +6,12 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #010101; }
+  background-color: #010101;
+  font-family: 'Work Sans', sans-serif;
+  color: #3778FF; }
+
+p {
+  font-size: 2em; }
 
 section {
   max-width: 68em;
@@ -23,7 +29,7 @@ section {
     margin: 5rem auto; }
     section .title:last-child {
       margin-right: 0; }
-  section .heroimage {
+  section .hero {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -33,12 +39,26 @@ section {
     margin-top: 6rem;
     padding-top: 146%;
     display: block;
+    position: relative;
     background-image: url("../img/headfront.png"), url("../img/fist.svg"), url("../img/headback.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: center, 60% top, center;
     background-size: 80%, 30%, 80%;
     background-clip: border-box, border-box, border-box; }
-    section .heroimage:last-child {
+    section .hero:last-child {
       margin-right: 0; }
+  section .about {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    position: absolute;
+    top: 45rem; }
+    section .about:last-child {
+      margin-right: 0; }
+    section .about h1 {
+      font-size: 5.5em;
+      font-weight: 600;
+      text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */
