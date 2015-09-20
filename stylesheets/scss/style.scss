@@ -1,0 +1,14 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+body{
+  background-color: #010101;
+}
+
+section {
+  @include outer-container;
+  .title {
+    @include span-columns(10);
+    margin-top: 15%
+  }
+}
