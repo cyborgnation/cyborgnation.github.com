@@ -25,7 +25,18 @@ section {
   
   .title {
     @include span-columns(12);
-    margin: 5rem auto;
+    margin: 10% auto 0;
+  }
+  .titlesvg{
+    width:  100%;
+    height: 0;
+
+    background-image: url("../img/iamjoe.svg");
+    background-size: cover;
+    box-sizing:      content-box;
+
+    padding: 0;
+    padding-bottom: calc(100% * 3 / 20)
   }
   .hero {
     @include span-columns(12);
@@ -33,7 +44,7 @@ section {
 
     .head-img{
     width:    90%;
-    margin:   0 auto;
+    margin:   40% auto 0;
 
     overflow: visible;
     }
@@ -42,8 +53,10 @@ section {
     @include span-columns(8);
     
     clear:    both;    
-    position: absolute;
-    top:      55rem;
+    position: relative;
+    
+    margin-top: -32rem;
+    z-index:    100;
 
 
     h1{
@@ -52,31 +65,33 @@ section {
       text-transform: uppercase;
     }   
   }
-  .workbg{
-    @include outer-container(100%);
+}
 
-    position:   relative;
+.workbg{
+  @include outer-container(100%);
+
+  background: #ffffff;
+  
+  position:   relative;
+  margin-top: 8rem;
+
+  &:before{
+    content: '';
+  
+    @include transform (skewY(-3deg));
     background: #ffffff;
-    overflow:   hidden;
-
-    &:before{
-      content: '';
     
-      @include transform (skewY(-2deg));
-      background: #ffffff;
-      
-      width:    100%;
-      height:   5rem;
-      
-      position: absolute;
-      top:      -36px;
-      left:     0;
-    }
+    width:    100%;
+    height:   9rem;
+    
+    position: absolute;
+    top:      -5rem;
+    left:     0;
+  }
 
-    .work{
-      @include span-columns(10);
-      @include shift(1);
+  .work{
+    @include span-columns(10);
+    @include shift(1);
 
-    }
   }
 }

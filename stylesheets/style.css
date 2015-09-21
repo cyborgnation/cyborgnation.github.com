@@ -33,9 +33,17 @@ section {
     display: block;
     margin-right: 2.35765%;
     width: 100%;
-    margin: 5rem auto; }
+    margin: 10% auto 0; }
     section .title:last-child {
       margin-right: 0; }
+  section .titlesvg {
+    width: 100%;
+    height: 0;
+    background-image: url("../img/iamjoe.svg");
+    background-size: cover;
+    box-sizing: content-box;
+    padding: 0;
+    padding-bottom: calc(100% * 3 / 20); }
   section .hero {
     float: left;
     display: block;
@@ -46,7 +54,7 @@ section {
       margin-right: 0; }
     section .hero .head-img {
       width: 90%;
-      margin: 0 auto;
+      margin: 40% auto 0;
       overflow: visible; }
   section .about {
     float: left;
@@ -54,45 +62,47 @@ section {
     margin-right: 2.35765%;
     width: 65.88078%;
     clear: both;
-    position: absolute;
-    top: 55rem; }
+    position: relative;
+    margin-top: -32rem;
+    z-index: 100; }
     section .about:last-child {
       margin-right: 0; }
     section .about h1 {
       font-size: 5.5em;
       font-weight: 600;
       text-transform: uppercase; }
-  section .workbg {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+
+.workbg {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  position: relative;
+  margin-top: 8rem; }
+  .workbg::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .workbg:before {
+    content: '';
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    -o-transform: skewY(-3deg);
+    transform: skewY(-3deg);
     background: #ffffff;
-    overflow: hidden; }
-    section .workbg::after {
-      clear: both;
-      content: "";
-      display: table; }
-    section .workbg:before {
-      content: '';
-      -webkit-transform: skewY(-2deg);
-      -moz-transform: skewY(-2deg);
-      -ms-transform: skewY(-2deg);
-      -o-transform: skewY(-2deg);
-      transform: skewY(-2deg);
-      background: #ffffff;
-      width: 100%;
-      height: 5rem;
-      position: absolute;
-      top: -36px;
-      left: 0; }
-    section .workbg .work {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      margin-left: 8.5298%; }
-      section .workbg .work:last-child {
-        margin-right: 0; }
+    width: 100%;
+    height: 9rem;
+    position: absolute;
+    top: -5rem;
+    left: 0; }
+  .workbg .work {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%; }
+    .workbg .work:last-child {
+      margin-right: 0; }
 
 /*# sourceMappingURL=style.css.map */
