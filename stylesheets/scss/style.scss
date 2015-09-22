@@ -3,19 +3,42 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
-   $brightblue:  #3778FF;
+      $iamblue:  #3778FF;
         $black:  #010101;
 $headline-font: 'Inconsolata', Helvetica, Arial, sans-serif;
     $body-font: 'Work Sans', Helvetica, Arial, sans-serif;
 
 body {
-  color:      $brightblue;
+  color:      $iamblue;
   background: #010101;
-  font-family: $body-font
+  font-family: $body-font;
+  background: -webkit-linear-gradient(rgba(1,1,1,1) 50%, rgba(255,255,255,1) 50%);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 100% 50px;
+  -webkit-animation: stripes 2s linear infinite;
+  animation: stripes 2s linear infinite;
+}
+
+@-webkit-keyframes stripes {
+  100% {
+    background-position: 0 -50px;
+  }
+}
+
+@keyframes stripes {
+  100% {
+    background-position: 0 -50px;
+  }
 }
 
 p{
   font-size: 1.7em;
+}
+
+a{
+  text-decoration: none;
+  color: $iamblue
 }
 
 h1{
@@ -37,6 +60,7 @@ section {
     @include span-columns(12);
     margin: 10% auto 0;
   }
+
   .titlesvg{
     width:  100%;
     height: 0;
@@ -60,7 +84,7 @@ section {
     }
   }  
   .about{
-    @include span-columns(8);
+    @include span-columns(9);
     
     clear:    both;    
     position: relative;
@@ -70,8 +94,23 @@ section {
   }
 }
 .aboutme{
-  width: 75%;
+  ;@include span-columns(10);
+
+  a{
+    position: relative;
+
+    &::before{
+      position: absolute;
+      top: 96%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #ffffff;
+      content: '';
+    }
+  }
 }
+
 .workbg{
   @include outer-container(100%);
 
