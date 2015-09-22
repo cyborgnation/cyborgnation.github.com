@@ -1,20 +1,30 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
-$brightblue:  #3778FF;
-     $black:  #010101;
+   $brightblue:  #3778FF;
+        $black:  #010101;
+$headline-font: 'Inconsolata', Helvetica, Arial, sans-serif;
+    $body-font: 'Work Sans', Helvetica, Arial, sans-serif;
 
 body {
   color:      $brightblue;
   background: #010101;
-  
-  font-family:'Work Sans', Helvetica, sans-serif;
+  font-family: $body-font
 }
 
 p{
-  font-size: 2em;
+  font-size: 1.7em;
 }
+
+h1{
+  font-size:      6em;
+  font-weight:    700;
+  font-family: $headline-font;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+} 
 
 .row{
   @include row();
@@ -56,17 +66,12 @@ section {
     position: relative;
     
     margin-top: -32rem;
-    z-index:    100;
-
-
-    h1{
-      font-size:      5.5em;
-      font-weight:    600;
-      text-transform: uppercase;
-    }   
+    z-index:    100;  
   }
 }
-
+.aboutme{
+  width: 75%;
+}
 .workbg{
   @include outer-container(100%);
 

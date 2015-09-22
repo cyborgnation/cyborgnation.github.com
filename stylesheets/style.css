@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 html {
   box-sizing: border-box; }
 
@@ -8,10 +9,17 @@ html {
 body {
   color: #3778FF;
   background: #010101;
-  font-family: 'Work Sans', Helvetica, sans-serif; }
+  font-family: "Work Sans", Helvetica, Arial, sans-serif; }
 
 p {
-  font-size: 2em; }
+  font-size: 1.7em; }
+
+h1 {
+  font-size: 6em;
+  font-weight: 700;
+  font-family: "Inconsolata", Helvetica, Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase; }
 
 .row {
   display: block; }
@@ -60,17 +68,13 @@ section {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%;
+    width: 74.41059%;
     clear: both;
     position: relative;
     margin-top: -32rem;
     z-index: 100; }
     section .about:last-child {
       margin-right: 0; }
-    section .about h1 {
-      font-size: 5.5em;
-      font-weight: 600;
-      text-transform: uppercase; }
 
 .workbg {
   max-width: 100%;
