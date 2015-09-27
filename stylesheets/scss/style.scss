@@ -8,7 +8,7 @@
 $headline-font: 'Inconsolata', Helvetica, Arial, sans-serif;
     $body-font: 'Work Sans', Helvetica, Arial, sans-serif;
 
-body {
+body{
   color:        $iamblue;
   font-family:  $body-font;
   background:   #010101;
@@ -37,10 +37,10 @@ h1{
   @include row();
 }
 
-section {
+section{
   @include outer-container;
   
-  .title {
+  .title{
     @include span-columns(12);
     margin: 10% auto 0;
   }
@@ -56,7 +56,7 @@ section {
     padding: 0;
     padding-bottom: calc(100% * 3 / 20)
   }
-  .hero {
+  .hero{
     @include span-columns(12);
     position:   relative;
 
@@ -127,7 +127,7 @@ section {
     width: 108%;
 
     position: absolute;
-    top:      5%;
+    top:      7%;
     left:     -100%;
     right:    -100%;
     margin:   auto;
@@ -202,7 +202,7 @@ section {
 }
 
 .swappa{
-  background:  #3778FF;
+  background: #3778FF;
   color: #ffffff;
   
   .titlecentered h1{
@@ -218,6 +218,61 @@ section {
     background-image: url("../img/swappa.png");
   }
 }
+
+.ziibra{
+  background: #fff;
+  color: #343434;
+  
+  .titlecentered h1{
+    font-size: 31vw;
+  }
+  a{
+    color: #343434;
+  }
+  .arrow{
+    fill: #343434;
+  }
+  .images{
+    background-image: url("../img/ziibra.png");
+  }
+}
+
+.cactus{
+  background: #A3E04D;
+  color: #fff;
+  
+  .titlecentered h1{
+    font-size: 31vw;
+  }
+  a{
+    color: #fff;
+  }
+  .arrow{
+    fill: #fff;
+  }
+  .images{
+    background-image: url("../img/cactus.png");
+  }
+}
+
+.cfp{
+  background: #FF2C79;
+  color: #fff;
+  
+  .titlecentered h1{
+    font-size: 31vw;
+  }
+  a{
+    color: #fff;
+  }
+  .arrow{
+    fill: #fff;
+  }
+  .images{
+    background-image: url("../img/cfp.png");
+  }
+}
+
 
 // 
 // Footer Section

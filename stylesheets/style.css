@@ -121,7 +121,7 @@ section {
   .workbg .titlecentered {
     width: 108%;
     position: absolute;
-    top: 5%;
+    top: 7%;
     left: -100%;
     right: -100%;
     margin: auto; }
@@ -193,6 +193,42 @@ section {
     fill: #ffffff; }
   .swappa .images {
     background-image: url("../img/swappa.png"); }
+
+.ziibra {
+  background: #fff;
+  color: #343434; }
+  .ziibra .titlecentered h1 {
+    font-size: 31vw; }
+  .ziibra a {
+    color: #343434; }
+  .ziibra .arrow {
+    fill: #343434; }
+  .ziibra .images {
+    background-image: url("../img/ziibra.png"); }
+
+.cactus {
+  background: #A3E04D;
+  color: #fff; }
+  .cactus .titlecentered h1 {
+    font-size: 31vw; }
+  .cactus a {
+    color: #fff; }
+  .cactus .arrow {
+    fill: #fff; }
+  .cactus .images {
+    background-image: url("../img/cactus.png"); }
+
+.cfp {
+  background: #FF2C79;
+  color: #fff; }
+  .cfp .titlecentered h1 {
+    font-size: 31vw; }
+  .cfp a {
+    color: #fff; }
+  .cfp .arrow {
+    fill: #fff; }
+  .cfp .images {
+    background-image: url("../img/cfp.png"); }
 
 .footer {
   float: left;
