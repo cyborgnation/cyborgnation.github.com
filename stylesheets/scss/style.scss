@@ -112,20 +112,41 @@ section{
 // Work Section
 // 
 
-.workbg{
-  @include span-columns(10);
-  @include shift(1);
+.workintro{
+  @include span-columns(12);
 
-  height:     80vh;
-  overflow:   hidden;
+  margin-top: 5em;
 
-  position:   relative;
-  margin-top: 8rem;
+  .worksvg{
+    @include span-columns(4 of 12);
 
+    height:   33%;
+
+    background-image:   url("../img/work.svg");
+    background-size:    auto;
+    background-repeat:  no-repeat;
+    box-sizing:         content-box;
+    display:            block;
+  }
+  .divider{
+    @include span-columns(12);
+
+    height:   50%;
+
+    background-image:    url("../img/divider.svg");
+    background-size:    100%;
+    box-sizing:         content-box;
+    background-repeat:  no-repeat;
+    
+    display:        block;
+    margin-bottom:  5rem;
+    margin-top:     -10rem;
+  }
 }
 
+
 .work{
-  @include span-columns(12);
+
   @include transform-style(preserve-3d); //preventing .5px sizing for vertical center.
   @include pad();
 
@@ -168,8 +189,7 @@ section{
     h1{
       line-height: .5;
       font-size: 3em;
-      text-transform: none;
-      margin: 0; 
+      margin-bottom: .5em; 
     }
     
     a{
@@ -223,6 +243,12 @@ section{
 .cfp{
   .images{
     background-image: url("../img/cfp.png");
+  }
+}
+
+.other{
+  .images{
+    background-image: url("../img/other.png");
   }
 }
 

@@ -104,24 +104,44 @@ section {
     letter-spacing: .03em;
     line-height: 1.3; }
 
-.workbg {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
-  height: 80vh;
-  overflow: hidden;
-  position: relative;
-  margin-top: 8rem; }
-  .workbg:last-child {
-    margin-right: 0; }
-
-.work {
+.workintro {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
+  margin-top: 5em; }
+  .workintro:last-child {
+    margin-right: 0; }
+  .workintro .worksvg {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    height: 33%;
+    background-image: url("../img/work.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    display: block; }
+    .workintro .worksvg:last-child {
+      margin-right: 0; }
+  .workintro .divider {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    height: 50%;
+    background-image: url("../img/divider.svg");
+    background-size: 100%;
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    display: block;
+    margin-bottom: 5rem;
+    margin-top: -10rem; }
+    .workintro .divider:last-child {
+      margin-right: 0; }
+
+.work {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -134,8 +154,6 @@ section {
   color: #3778FF;
   position: relative;
   margin-top: 8rem; }
-  .work:last-child {
-    margin-right: 0; }
   .work .images {
     float: left;
     display: block;
@@ -169,8 +187,7 @@ section {
     .work .info h1 {
       line-height: .5;
       font-size: 3em;
-      text-transform: none;
-      margin: 0; }
+      margin-bottom: .5em; }
     .work .info a {
       font-family: "Inconsolata", Helvetica, Arial, sans-serif;
       font-size: 1.3em;
@@ -199,6 +216,9 @@ section {
 
 .cfp .images {
   background-image: url("../img/cfp.png"); }
+
+.other .images {
+  background-image: url("../img/other.png"); }
 
 .footer {
   float: left;
