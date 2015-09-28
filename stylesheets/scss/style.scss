@@ -15,9 +15,9 @@ body{
 }
 
 p{
-  font-size: 1.3em;
+  font-size: 1em;
   letter-spacing: .03em;
-  line-height: 1.1;
+  line-height: 1.3;
 }
 
 a{
@@ -26,7 +26,7 @@ a{
 }
 
 h1{
-  font-size:      6em;
+  font-size:      7em;
   font-weight:    700;
   font-family:    $headline-font;
   letter-spacing: .1em;
@@ -113,46 +113,42 @@ section{
 // 
 
 .workbg{
-  @include outer-container(100%);
-  @include omega();
+  @include span-columns(10);
+  @include shift(1);
 
-  height:     120vh;
-  position:   relative;
+  height:     80vh;
   overflow:   hidden;
 
-  &:first-of-type{
-    margin-top: 8rem;
-  }
-  .titlecentered{
-    width: 108%;
+  position:   relative;
+  margin-top: 8rem;
 
-    position: absolute;
-    top:      7%;
-    left:     -100%;
-    right:    -100%;
-    margin:   auto;
-  }
-
-  h1{
-    line-height:    .5;
-    text-transform: none;
-
-    margin: 0;
-  }
 }
 
 .work{
   @include span-columns(12);
+  @include transform-style(preserve-3d); //preventing .5px sizing for vertical center.
+  @include pad();
 
-  margin-top: 20%;
+  height:   45rem;
+  overflow: hidden;
+
+  background: #ffffff;
+  color:      #3778FF;  
+  
+  position:   relative;
+  margin-top: 8rem;
 
   .images{
-    @include span-columns(7);
+    @include span-columns(7 of 12);
 
     display:  block;
     position: relative;
     height:   60%;
     max-height: 600px;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 
     background-position:  center;
     background-repeat:    no-repeat;
@@ -162,19 +158,31 @@ section{
   }
   
   .info{
-    @include span-columns(3); 
-    
-    margin-top: 8%;
+    @include span-columns(5 of 12); 
+    @include pad();
 
+    position:   relative;
+    top:        50%;
+    transform:  translateY(-50%);
+    
+    h1{
+      line-height: .5;
+      font-size: 3em;
+      text-transform: none;
+      margin: 0; 
+    }
+    
     a{
       font-family:    $headline-font;
-      font-size:      1.7em;
+      font-size:      1.3em;
       letter-spacing: .03em;
 
       display:        inline-block;
       vertical-align: middle;
     }
-
+    p{
+      font-size: 1em;
+    }
     .worklink{
       white-space:  nowrap;
       overflow:     hidden;
@@ -189,85 +197,30 @@ section{
 // 
 
 .gopro{
-  background: #ffffff;
-  color:      #3778FF;
-  
-  .titlecentered h1{
-    font-size: 37vw;
-  }
-  
   .images{
     background-image: url("../img/gopro.png");
   }
 }
 
 .swappa{
-  background: #3778FF;
-  color: #ffffff;
-  
-  .titlecentered h1{
-    font-size: 31vw;
-  }
-  a{
-    color: #ffffff;
-  }
-  .arrow{
-    fill: #ffffff;
-  }
   .images{
     background-image: url("../img/swappa.png");
   }
 }
 
 .ziibra{
-  background: #fff;
-  color: #343434;
-  
-  .titlecentered h1{
-    font-size: 31vw;
-  }
-  a{
-    color: #343434;
-  }
-  .arrow{
-    fill: #343434;
-  }
   .images{
     background-image: url("../img/ziibra.png");
   }
 }
 
 .cactus{
-  background: #A3E04D;
-  color: #fff;
-  
-  .titlecentered h1{
-    font-size: 31vw;
-  }
-  a{
-    color: #fff;
-  }
-  .arrow{
-    fill: #fff;
-  }
   .images{
     background-image: url("../img/cactus.png");
   }
 }
 
 .cfp{
-  background: #FF2C79;
-  color: #fff;
-  
-  .titlecentered h1{
-    font-size: 31vw;
-  }
-  a{
-    color: #fff;
-  }
-  .arrow{
-    fill: #fff;
-  }
   .images{
     background-image: url("../img/cfp.png");
   }
