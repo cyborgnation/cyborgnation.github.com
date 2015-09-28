@@ -150,7 +150,6 @@ section {
   padding: 2.35765%;
   height: 45rem;
   overflow: hidden;
-  background: #ffffff;
   color: #3778FF;
   position: relative;
   margin-top: 8rem; }
@@ -161,11 +160,11 @@ section {
     width: 57.35098%;
     display: block;
     position: relative;
-    height: 60%;
-    max-height: 600px;
+    height: 80%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 100;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -177,10 +176,12 @@ section {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 40.29137%;
-    padding: 2.35765%;
-    position: relative;
+    width: 48.82117%;
+    background: #ffffff;
+    padding: 4%;
+    position: absolute;
     top: 50%;
+    right: 0;
     transform: translateY(-50%); }
     .work .info:last-child {
       margin-right: 0; }
@@ -212,7 +213,8 @@ section {
   background-image: url("../img/ziibra.png"); }
 
 .cactus .images {
-  background-image: url("../img/cactus.png"); }
+  background-image: url("../img/cactus.png");
+  height: 75%; }
 
 .cfp .images {
   background-image: url("../img/cfp.png"); }
@@ -225,11 +227,21 @@ section {
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
+  margin-left: 17.05961%;
   margin: 15rem 0 3rem; }
   .footer:last-child {
     margin-right: 0; }
   .footer p {
     font-size: 1em;
     color: black; }
+  .footer .tacosvg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/taco.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    display: block;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

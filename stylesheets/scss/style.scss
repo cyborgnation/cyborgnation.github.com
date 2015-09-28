@@ -153,7 +153,6 @@ section{
   height:   45rem;
   overflow: hidden;
 
-  background: #ffffff;
   color:      #3778FF;  
   
   position:   relative;
@@ -164,12 +163,12 @@ section{
 
     display:  block;
     position: relative;
-    height:   60%;
-    max-height: 600px;
+    height:   80%;
 
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    z-index:    100;
 
     background-position:  center;
     background-repeat:    no-repeat;
@@ -179,11 +178,14 @@ section{
   }
   
   .info{
-    @include span-columns(5 of 12); 
-    @include pad();
+    @include span-columns(6 of 12); 
 
-    position:   relative;
+
+    background: #ffffff;
+    padding:    4%;
+    position:   absolute;
     top:        50%;
+    right:      0;
     transform:  translateY(-50%);
     
     h1{
@@ -237,6 +239,7 @@ section{
 .cactus{
   .images{
     background-image: url("../img/cactus.png");
+    height: 75%;
   }
 }
 
@@ -259,11 +262,24 @@ section{
 
 .footer{
   @include span-columns(8);
-
+  @include shift(2);
   margin: 15rem 0 3rem;
 
   p{
     font-size:  1em;
     color:      black;
+  }
+
+  .tacosvg{
+  width:  100%;
+  height: 100%;
+
+  background-image:   url("../img/taco.svg");
+  background-size:    auto;
+  background-repeat:  no-repeat;
+  box-sizing:         content-box;
+  
+  display:  block;
+  margin:   0 auto;
   }
 }
