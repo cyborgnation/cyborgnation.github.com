@@ -1,0 +1,477 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"background",
+				"background-repeat"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"Font",
+				"font-family"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"backgou",
+				"background-color"
+			],
+			[
+				"width",
+				"width"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"backg",
+				"background-clip"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"woo",
+				"woocommerce_after_single_product"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"backgroudn",
+				"background-image"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"font-s",
+				"font-size"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 33851,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "stylesheets/scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 3760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/myscripts.js",
+			"settings":
+			{
+				"buffer_size": 67,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 135.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/joebarber/Sites/cyborgnation.github.com",
+		"/Users/joebarber/Sites/cyborgnation.github.com/js",
+		"/Users/joebarber/Sites/cyborgnation.github.com/stylesheets",
+		"/Users/joebarber/Sites/cyborgnation.github.com/stylesheets/scss"
+	],
+	"file_history":
+	[
+		"/Users/joebarber/Sites/cyborgnation.github.com/js/Readmore.js/readmore.js",
+		"/Users/joebarber/Sites/cyborgnation.github.com/stylesheets/normalize.css",
+		"/Users/joebarber/Desktop/arrow.svg",
+		"/Users/joebarber/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/joebarber/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/joebarber/Sites/cyborgnation.github.com/stylesheets/scss/style.scss",
+		"/Users/joebarber/Sites/cyborgnation.github.com/styles/style.scss",
+		"/Users/joebarber/Sites/cyborgnation.github.com/styles/style.scss.css",
+		"/Users/joebarber/Sites/cyborgnation.github.com/styles/style.css",
+		"/Users/joebarber/Sites/cyborgnation.github.com/css/style.css",
+		"/Users/joebarber/Sites/cyborgnation.github.com/index1.html",
+		"/Users/joebarber/Sites/cyborgnation.github.com/index.html",
+		"/Users/joebarber/Desktop/gifs.txt",
+		"/Users/joebarber/Downloads/themeforest-11811123-redwood-a-responsive-wordpress-blog-theme/redwood/footer.php",
+		"/Users/joebarber/Sites/grandunion/wp-content/themes/aurelia-child/style.css",
+		"/Users/joebarber/Sites/grandunion/wp-content/themes/aurelia-child/functions.php",
+		"/Users/joebarber/Sites/kcdesigners/client/kcdesignerscd.js",
+		"/Users/joebarber/Sites/kcdesigners/client/kcdesignerscd.scss",
+		"/Users/joebarber/Sites/kcdesigners/client/kcdesignerscd.html",
+		"/Users/joebarber/Downloads/kylie@bemyintention.com.duck",
+		"/Users/joebarber/Dropbox (Personal)/_FLAGS/notes",
+		"/Applications/MAMP/bin/phpMyAdmin/libraries/tcpdf/include/tcpdf_static.php",
+		"/Users/joebarber/Dropbox (Personal)/_FLAGS/Website/Style notes",
+		"/Users/joebarber/Sites/kickass/README.md",
+		"/Users/joebarber/Sites/kickass/index.html",
+		"/Users/joebarber/Sites/grandunion/wp-config.php",
+		"/Users/joebarber/Sites/grandunion/wp-content/themes/aurelia-child/content-single-product.php",
+		"/Users/joebarber/Library/Caches/code.js",
+		"/Users/joebarber/Desktop/Layer Name+Position.coffee",
+		"/Users/joebarber/Sites/grandunion/wp-content/themes/aurelia-child/woocommerce/single-product/tabs/description.php",
+		"/Users/joebarber/Sites/grandunion/wp-content/themes/aurelia-child/woocommerce/single-product/tabs/additional-information.php",
+		"/Users/joebarber/Sites/grandunion/wp-content/themes/aurelia-child/woocommerce/single-product/tabs/tabs.php",
+		"/Users/joebarber/Sites/grandunion/wp-content/themes/aurelia-child/template-homepage.php",
+		"/Users/joebarber/Downloads/Sketch-Mate-master/inventory.js",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/aurelia-child/functions.php",
+		"/Users/joebarber/Desktop/Generation Press Javascript",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/aurelia-child/style.css",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/aurelia/index.php",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/aurelia/content-search.php",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/aurelia/content-fullwidth.php",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/aurelia/content-single.php",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/storefront-child/style.css",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/storefront-child/functions.php",
+		"/Users/joebarber/Sites/granduniongoods/wp-content/themes/storefront-child/woocommerce/templates/single-product.php",
+		"/Users/joebarber/Sites/fortydigits-timbot/external-scripts.json",
+		"/Users/joebarber/Desktop/ddfix.sh",
+		"/Users/joebarber/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/joebarber/Sites/cyborgnation.github.com/shapes.html",
+		"/Users/joebarber/Dropbox (Personal)/SITES DUMP/TEST/node_modules/gulp-imagemin/node_modules/imagemin/node_modules/imagemin-svgo/node_modules/svgo/node_modules/js-yaml/dist/js-yaml.min.js",
+		"/Users/joebarber/Sites/kcdesigners/scss.json",
+		"/Users/joebarber/Sites/kcdesigners/client/kcdesignerscd.scss.css",
+		"/Users/joebarber/Sites/flagsdamnitflags.github.io/CNAME",
+		"/Users/joebarber/Sites/flagsdamnitflags.github.io/README.md",
+		"/Users/joebarber/Sites/flagsdamnitflags.github.io/index.html",
+		"/Users/joebarber/Desktop/test/style.css",
+		"/Users/joebarber/Desktop/test/index.html",
+		"/Users/joebarber/Sites/KCDStyles/css/style.css",
+		"/Users/joebarber/Sites/KCDStyles/styles/style.scss",
+		"/Users/joebarber/Sites/kcdesigners/client/kcdesignerscd.css"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"close",
+			"woocommerce-breadcrumb",
+			"doc",
+			"woocommerce"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/joebarber/Sites/cyborgnation.github.com"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2032,
+								2032
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 623.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "stylesheets/scss/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/myscripts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 67,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 142.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

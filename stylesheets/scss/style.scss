@@ -112,21 +112,8 @@ section{
 // Work Section
 // 
 
-.workbg{
-  @include span-columns(10);
-  @include shift(1);
-
-  height:     80vh;
-  overflow:   hidden;
-
-  position:   relative;
-  margin-top: 8rem;
-
-}
-
 .work{
   @include span-columns(12);
-  @include transform-style(preserve-3d); //preventing .5px sizing for vertical center.
   @include pad();
 
   height:   45rem;
@@ -137,6 +124,15 @@ section{
   
   position:   relative;
   margin-top: 8rem;
+
+  .summary{
+    @include transform-style(preserve-3d); //preventing .5px sizing for vertical center.
+    
+    width: 100%;
+    height: 45rem;
+    
+    position: relative;
+  }
 
   .images{
     @include span-columns(7 of 12);
@@ -190,8 +186,28 @@ section{
       margin-top:   10%;
     }
   }
+  .details{
+    @include fill-parent();
+
+    position: relative;
+    margin-top: 5em;
+    padding-bottom: 6em;
+
+    img{
+      text-align: center;
+
+      width: 100%;
+
+      margin:   2em auto;
+      display:  block;
+    }
+  }
 }
 
+//Setting Read More collapsed height
+.more{
+  max-height:   45rem;
+}
 // 
 // Individual Work Item Styling
 // 
