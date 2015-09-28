@@ -115,15 +115,15 @@ section{
 .workintro{
   @include span-columns(12);
 
-  margin-top: 5em;
+  margin-top: 25%;
 
   .worksvg{
     @include span-columns(4 of 12);
 
-    height:   33%;
+    height: 50%;
 
     background-image:   url("../img/work.svg");
-    background-size:    auto;
+    background-size:    100%;
     background-repeat:  no-repeat;
     box-sizing:         content-box;
     display:            block;
@@ -131,7 +131,7 @@ section{
   .divider{
     @include span-columns(12);
 
-    height:   50%;
+    height:   100%;
 
     background-image:    url("../img/divider.svg");
     background-size:    100%;
@@ -150,7 +150,7 @@ section{
   @include transform-style(preserve-3d); //preventing .5px sizing for vertical center.
   @include pad();
 
-  height:   45rem;
+  height:   720px;
   overflow: hidden;
 
   color:      #3778FF;  
@@ -160,14 +160,14 @@ section{
 
   .images{
     @include span-columns(7 of 12);
+    @include transform(translateY(-50%));
 
     display:  block;
     position: relative;
     height:   80%;
 
-    position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    
     z-index:    100;
 
     background-position:  center;
@@ -179,14 +179,13 @@ section{
   
   .info{
     @include span-columns(6 of 12); 
-
+    @include transform(translateY(-50%));
 
     background: #ffffff;
     padding:    4%;
     position:   absolute;
     top:        50%;
     right:      0;
-    transform:  translateY(-50%);
     
     h1{
       line-height: .5;
@@ -275,7 +274,7 @@ section{
   height: 100%;
 
   background-image:   url("../img/taco.svg");
-  background-size:    auto;
+  background-size:    100%;
   background-repeat:  no-repeat;
   box-sizing:         content-box;
   
