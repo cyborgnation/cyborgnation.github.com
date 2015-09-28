@@ -1,0 +1,285 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+      $iamblue:  #3778FF;
+        $black:  #010101;
+$headline-font: 'Inconsolata', Helvetica, Arial, sans-serif;
+    $body-font: 'Work Sans', Helvetica, Arial, sans-serif;
+
+body{
+  color:        $iamblue;
+  font-family:  $body-font;
+  background:   #010101;
+}
+
+p{
+  font-size: 1em;
+  letter-spacing: .03em;
+  line-height: 1.3;
+}
+
+a{
+  text-decoration:  none;
+  color: $iamblue
+}
+
+h1{
+  font-size:      7em;
+  font-weight:    700;
+  font-family:    $headline-font;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+} 
+
+.row{
+  @include row();
+}
+
+section{
+  @include outer-container;
+  
+  .title{
+    @include span-columns(12);
+    margin: 10% auto 0;
+  }
+
+  .titlesvg{
+    width:  100%;
+    height: 0;
+
+    background-image: url("../img/iamjoe.svg");
+    background-size: cover;
+    box-sizing:      content-box;
+
+    padding: 0;
+    padding-bottom: calc(100% * 3 / 20)
+  }
+  .hero{
+    @include span-columns(12);
+    position:   relative;
+
+    .head-img{
+    width:    90%;
+
+    margin:   40% auto 0;
+    overflow: visible;
+    }
+  }  
+  .about{
+    @include span-columns(9);
+    
+    clear:      both;    
+    position:   relative;
+    margin-top: -32rem;
+    z-index:    100;  
+  }
+}
+
+// 
+// About Me Text
+// 
+
+.aboutme{
+  ;@include span-columns(10);
+
+  a{
+    position: relative;
+
+    &::before{
+
+      width:  100%;
+      height: 3px;
+
+      background: #ffffff;
+
+      position: absolute;
+      top:      104%;
+      left:     0;
+      content:  '';
+    } 
+  }
+  p{
+    font-size: 1.7em;
+    letter-spacing: .03em;
+    line-height: 1.3;
+  }
+}
+
+
+// 
+// Work Section
+// 
+
+.workintro{
+  @include span-columns(12);
+
+  margin-top: 5em;
+
+  .worksvg{
+    @include span-columns(4 of 12);
+
+    height:   33%;
+
+    background-image:   url("../img/work.svg");
+    background-size:    auto;
+    background-repeat:  no-repeat;
+    box-sizing:         content-box;
+    display:            block;
+  }
+  .divider{
+    @include span-columns(12);
+
+    height:   50%;
+
+    background-image:    url("../img/divider.svg");
+    background-size:    100%;
+    box-sizing:         content-box;
+    background-repeat:  no-repeat;
+    
+    display:        block;
+    margin-bottom:  5rem;
+    margin-top:     -10rem;
+  }
+}
+
+
+.work{
+
+  @include transform-style(preserve-3d); //preventing .5px sizing for vertical center.
+  @include pad();
+
+  height:   45rem;
+  overflow: hidden;
+
+  color:      #3778FF;  
+  
+  position:   relative;
+  margin-top: 8rem;
+
+  .images{
+    @include span-columns(7 of 12);
+
+    display:  block;
+    position: relative;
+    height:   80%;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index:    100;
+
+    background-position:  center;
+    background-repeat:    no-repeat;
+    background-size:      contain;
+    box-sizing:           content-box;
+    overflow:             visible;
+  }
+  
+  .info{
+    @include span-columns(6 of 12); 
+
+
+    background: #ffffff;
+    padding:    4%;
+    position:   absolute;
+    top:        50%;
+    right:      0;
+    transform:  translateY(-50%);
+    
+    h1{
+      line-height: .5;
+      font-size: 3em;
+      margin-bottom: .5em; 
+    }
+    
+    a{
+      font-family:    $headline-font;
+      font-size:      1.3em;
+      letter-spacing: .03em;
+
+      display:        inline-block;
+      vertical-align: middle;
+    }
+    p{
+      font-size: 1em;
+    }
+    .worklink{
+      white-space:  nowrap;
+      overflow:     hidden;
+      float:        right;
+      margin-top:   10%;
+    }
+  }
+}
+
+// 
+// Individual Work Item Styling
+// 
+
+.gopro{
+  .images{
+    background-image: url("../img/gopro.png");
+  }
+}
+
+.swappa{
+  .images{
+    background-image: url("../img/swappa.png");
+  }
+}
+
+.ziibra{
+  .images{
+    background-image: url("../img/ziibra.png");
+  }
+}
+
+.cactus{
+  .images{
+    background-image: url("../img/cactus.png");
+    height: 75%;
+  }
+}
+
+.cfp{
+  .images{
+    background-image: url("../img/cfp.png");
+  }
+}
+
+.other{
+  .images{
+    background-image: url("../img/other.png");
+  }
+}
+
+
+// 
+// Footer Section
+// 
+
+.footer{
+  @include span-columns(8);
+  @include shift(2);
+  margin: 15rem 0 3rem;
+
+  p{
+    font-size:  1em;
+    color:      black;
+  }
+
+  .tacosvg{
+  width:  100%;
+  height: 100%;
+
+  background-image:   url("../img/taco.svg");
+  background-size:    auto;
+  background-repeat:  no-repeat;
+  box-sizing:         content-box;
+  
+  display:  block;
+  margin:   0 auto;
+  }
+}
