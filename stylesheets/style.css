@@ -185,6 +185,22 @@ h1 {
   margin: 0 auto;
 }
 
+/* Add to the footer section styles */
+.smile-decoration {
+  display: block;
+  width: 230px;
+  height: auto;
+  margin: 0 auto 2rem;
+  pointer-events: none;
+}
+
+/* Update responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .smile-decoration {
+    width: 160px;
+  }
+}
+
 /* ------------------- */
 /* projects section */
 /* ------------------- */
@@ -205,10 +221,12 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 10rem;
+  margin-top: 2em;
 }
 
 .project-item {
   display: flex;
+  align-items: center;
   gap: 2rem;
   margin-bottom: 0;
 }
@@ -237,11 +255,16 @@ h1 {
 
 .project-item .project-image {
   flex: 2;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.project-item .project-image img {
+.project-item .project-image img,
+.project-item .project-image video {
   width: 100%;
   height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 /* Update the projects section styles */
@@ -298,6 +321,90 @@ h1 {
   .project-item .project-info,
   .project-item .project-image {
     flex: 1;
+  }
+}
+
+/* Add these styles to the projects section */
+.project-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.1em;
+  color: #18160B;
+  text-decoration: none;
+  position: relative;
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;yy
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover::after {
+  transform: scaleX(1);
+}
+
+.project-item .project-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Add these styles to the footer section */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.mail-decoration {
+  width: 24px;
+  height: auto;
+  pointer-events: none;
+}
+
+.email-link {
+  color: #18160B;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.1em;
+}
+
+.email-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0.6);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.email-link:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .mail-decoration {
+    width: 20px;
+  }
+  
+  .email-link {
+    font-size: 1em;
   }
 }
 
