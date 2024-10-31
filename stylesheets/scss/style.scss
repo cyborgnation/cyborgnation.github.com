@@ -1,17 +1,84 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-      $iamblue:  #3778FF;
-        $black:  #010101;
-$headline-font: 'Inconsolata', Helvetica, Arial, sans-serif;
-    $body-font: 'Work Sans', Helvetica, Arial, sans-serif;
+      $iamblue:  #18160B;
+        $black:  #FFFEF8;
+$headline-font: 'DM Sans', Helvetica, Arial, sans-serif;
+    $body-font: 'DM Sans', Helvetica, Arial, sans-serif;
 
 body{
   color:        $iamblue;
   font-family:  $body-font;
-  background:   #010101;
+  background:   $black;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 25vh;
+  margin-bottom: 8rem;
+
+  h1 {
+    font-size: 80px;
+    font-family: $headline-font;
+    font-weight: 500;
+    margin: 0 0 1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-family: $headline-font;
+    font-weight: 400;
+    margin: 0 0 40px;
+    color: rgba($iamblue, 0.8);
+  }
+
+  .about {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $iamblue;
+      text-decoration: none;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.6;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 p{
@@ -82,7 +149,7 @@ section{
 // 
 
 .aboutme{
-  ;@include span-columns(10);
+  @include span-columns(10);
 
   a{
     position: relative;
@@ -108,9 +175,6 @@ section{
 }
 
 
-// 
-// Work Section
-// 
 
 .workintro{
   @include span-columns(12);
@@ -144,117 +208,6 @@ section{
   }
 }
 
-
-.work{
-
-  @include transform-style(preserve-3d); //preventing .5px sizing for vertical center.
-  @include pad();
-
-  height:   720px;
-  overflow: hidden;
-
-  color:      #3778FF;  
-  
-  position:   relative;
-  margin-top: 6%;
-
-  .images{
-    @include span-columns(7 of 12);
-    @include transform(translateY(-50%));
-
-    display:  block;
-    position: relative;
-    height:   80%;
-
-    top: 50%;
-    
-    z-index:    100;
-
-    background-position:  center;
-    background-repeat:    no-repeat;
-    background-size:      contain;
-    box-sizing:           content-box;
-    overflow:             visible;
-  }
-  
-  .info{
-    @include span-columns(6 of 12); 
-    @include transform(translateY(-50%));
-
-    background: #ffffff;
-    padding:    4%;
-    position:   absolute;
-    top:        50%;
-    right:      0;
-    
-    h1{
-      line-height: .5;
-      font-size: 3em;
-      margin-bottom: .5em; 
-    }
-    
-    a{
-      font-family:    $headline-font;
-      font-size:      1.3em;
-      letter-spacing: .03em;
-
-      display:        inline-block;
-      vertical-align: middle;
-    }
-    p{
-      font-size: 1em;
-    }
-    .worklink{
-      white-space:  nowrap;
-      overflow:     hidden;
-      float:        right;
-      margin-top:   10%;
-    }
-  }
-}
-
-// 
-// Individual Work Item Styling
-// 
-
-.gopro{
-  .images{
-    background-image: url("../img/gopro.png");
-  }
-}
-
-.swappa{
-  .images{
-    background-image: url("../img/swappa.png");
-  }
-}
-
-.ziibra{
-  .images{
-    background-image: url("../img/ziibra.png");
-  }
-}
-
-.cactus{
-  .images{
-    background-image: url("../img/cactus.png");
-    height: 75%;
-  }
-}
-
-.cfp{
-  .images{
-    background-image: url("../img/cfp.png");
-  }
-}
-
-.other{
-  .images{
-    background-image: url("../img/other.png");
-  }
-}
-
-
 // 
 // Footer Section
 // 
@@ -266,7 +219,7 @@ section{
 
   p{
     font-size:  1em;
-    color:      black;
+    color:      $iamblue;
   }
 
   .tacosvg{
@@ -280,5 +233,57 @@ section{
   
   display:  block;
   margin:   0 auto;
+  }
+}
+
+// Add new projects section styles
+.projects {
+  @include span-columns(12);
+  margin-top: 120px;
+  
+  h2 {
+    font-size: 4em;
+    font-weight: 700;
+    font-family: $headline-font;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
+}
+
+.project-item {
+  @include row();
+  margin-bottom: 6rem;
+  
+  .project-info {
+    @include span-columns(4);
+    
+    h3 {
+      font-family: $headline-font;
+      font-size: 2em;
+      margin-bottom: 1rem;
+    }
+    
+    .company {
+      font-family: $body-font;
+      font-size: 1.2em;
+      color: rgba($iamblue, 0.8);
+      margin-bottom: 1rem;
+    }
+    
+    .description {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+  }
+  
+  .project-image {
+    @include span-columns(7);
+    @include shift(1);
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  color: #18160B;
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  background: #FFFEF8;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 25vh;
+  margin-bottom: 8rem;
+}
+
+.hero h1 {
+  font-size: 80px;
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero h2 {
+  font-size: 24px;
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 40px;
+  color: rgba(24, 22, 11, 0.8);
+}
+
+.hero .about {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero .about p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero .about p:last-child {
+  margin-bottom: 0;
+}
+
+.hero .about a {
+  color: #18160B;
+  text-decoration: none;
+  position: relative;
+}
+
+.hero .about a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.hero .about a:hover::after {
+  opacity: 1;
+}
+
+p {
+  font-size: 1em;
+  letter-spacing: .03em;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+  color: #18160B;
+}
+
+h1 {
+  font-size: 7em;
+  font-weight: 700;
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.row {
+  display: block;
+}
+
+.row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+section {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+section .title {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin: 10% auto 0;
+}
+
+section .title:last-child {
+  margin-right: 0;
+}
+
+section .titlesvg {
+  width: 100%;
+  height: 0;
+  background-image: url("../img/iamjoe.svg");
+  background-size: cover;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0;
+  padding-bottom: calc(100% * 3 / 20);
+}
+
+section .hero {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  position: relative;
+}
+
+section .hero:last-child {
+  margin-right: 0;
+}
+
+section .hero .head-img {
+  width: 90%;
+  margin: 40% auto 0;
+  overflow: visible;
+}
+
+section .about {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  clear: both;
+  position: relative;
+  margin-top: -32rem;
+  z-index: 100;
+}
+
+section .about:last-child {
+  margin-right: 0;
+}
+
+.aboutme {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+}
+
+.aboutme:last-child {
+  margin-right: 0;
+}
+
+.aboutme a {
+  position: relative;
+}
+
+.aboutme a::before {
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  position: absolute;
+  top: 104%;
+  left: 0;
+  content: '';
+}
+
+.aboutme p {
+  font-size: 1.7em;
+  letter-spacing: .03em;
+  line-height: 1.3;
+}
+
+.workintro {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 15%;
+}
+
+.workintro:last-child {
+  margin-right: 0;
+}
+
+.workintro .worksvg {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  height: 30%;
+  background-image: url("../img/work.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: block;
+}
+
+.workintro .worksvg:last-child {
+  margin-right: 0;
+}
+
+.workintro .divider {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  height: 50%;
+  background-image: url("../img/divider.svg");
+  background-size: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-repeat: no-repeat;
+  display: block;
+  margin-bottom: 4%;
+  margin-top: -10%;
+}
+
+.workintro .divider:last-child {
+  margin-right: 0;
+}
+
+.work {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  padding: 2.35765%;
+  height: 720px;
+  overflow: hidden;
+  color: #3778FF;
+  position: relative;
+  margin-top: 6%;
+}
+
+.work .images {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+  position: relative;
+  height: 80%;
+  top: 50%;
+  z-index: 100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  overflow: visible;
+}
+
+.work .images:last-child {
+  margin-right: 0;
+}
+
+.work .info {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #ffffff;
+  padding: 4%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.work .info:last-child {
+  margin-right: 0;
+}
+
+.work .info h1 {
+  line-height: .5;
+  font-size: 3em;
+  margin-bottom: .5em;
+}
+
+.work .info a {
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  letter-spacing: .03em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.work .info p {
+  font-size: 1em;
+}
+
+.work .info .worklink {
+  white-space: nowrap;
+  overflow: hidden;
+  float: right;
+  margin-top: 10%;
+}
+
+.gopro .images {
+  background-image: url("../img/gopro.png");
+}
+
+.swappa .images {
+  background-image: url("../img/swappa.png");
+}
+
+.ziibra .images {
+  background-image: url("../img/ziibra.png");
+}
+
+.cactus .images {
+  background-image: url("../img/cactus.png");
+  height: 75%;
+}
+
+.cfp .images {
+  background-image: url("../img/cfp.png");
+}
+
+.other .images {
+  background-image: url("../img/other.png");
+}
+
+.footer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  margin: 15rem 0 3rem;
+}
+
+.footer:last-child {
+  margin-right: 0;
+}
+
+.footer p {
+  font-size: 1em;
+  color: #18160B;
+}
+
+.footer .tacosvg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/taco.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: block;
+  margin: 0 auto;
+}
+
+.projects {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.projects:last-child {
+  margin-right: 0;
+}
+
+.projects h2 {
+  font-size: 4em;
+  font-weight: 700;
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.project-item {
+  display: block;
+  margin-bottom: 6rem;
+}
+
+.project-item::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.project-item .project-info {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+
+.project-item .project-info:last-child {
+  margin-right: 0;
+}
+
+.project-item .project-info h3 {
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+.project-item .project-info .company {
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  color: rgba(24, 22, 11, 0.8);
+  margin-bottom: 1rem;
+}
+
+.project-item .project-info .description {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.project-item .project-image {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  margin-left: 8.5298%;
+}
+
+.project-item .project-image:last-child {
+  margin-right: 0;
+}
+
+.project-item .project-image img {
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=style.css.map */
