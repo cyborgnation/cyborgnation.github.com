@@ -4,23 +4,22 @@
   // ── Utilities ──────────────────────────────────────────────────────────────
 
   var CHARS = {
-    glitch: '!<>-_\\/[]{}—=+*^?#@$%&|~;:.',
-    hex:    '0123456789ABCDEF',
+    glitch: '!&^?#@$%~|.',
+    code:   '0123456789ABCDEF/.-',
   };
 
-  function randomChar(charSet) {
-    return charSet[Math.floor(Math.random() * charSet.length)];
+  function randomChar(set) {
+    return set[Math.floor(Math.random() * set.length)];
   }
 
-  function clamp(val, min, max) {
-    return Math.min(Math.max(val, min), max);
+  function clamp(v, min, max) {
+    return Math.min(Math.max(v, min), max);
   }
 
   function rafThrottle(fn) {
     var rafId = null;
     return function () {
-      var args = arguments;
-      var ctx  = this;
+      var args = arguments, ctx = this;
       if (rafId) return;
       rafId = requestAnimationFrame(function () {
         fn.apply(ctx, args);
@@ -31,27 +30,27 @@
 
   // ── TextScramble ───────────────────────────────────────────────────────────
 
-  function TextScramble(el, options) {
+  function TextScramble(el, opts) {
+    opts = opts || {};
     this.el            = el;
-    this.charSet       = (options && options.charSet)       || CHARS.glitch;
-    this.frameInterval = (options && options.frameInterval) || 40;
-    this.staggerDelay  = (options && options.staggerDelay)  || 30;
+    this.charSet       = opts.charSet || CHARS.glitch;
+    this.frameInterval = opts.frameInterval || 35;
+    this.staggerDelay  = opts.staggerDelay  || 22;
     this.rafId         = null;
-    this.resolve       = null;
-    this.chars         = [];
     this.startTime     = 0;
+    this.chars         = [];
+    this.resolve       = null;
   }
 
   TextScramble.prototype.scramble = function (finalText) {
     var self = this;
     return new Promise(function (resolve) {
       self.resolve = resolve;
-      var length = finalText.length;
-      self.chars = Array.from({ length: length }, function (_, i) {
+      var len = finalText.length;
+      self.chars = Array.from({ length: len }, function (_, i) {
         return {
           final:      finalText[i],
-          current:    randomChar(self.charSet),
-          stepsLeft:  Math.floor(Math.random() * 10) + 5,
+          stepsLeft:  Math.floor(Math.random() * 8) + 4,
           startDelay: i * self.staggerDelay,
           elapsed:    0,
           resolved:   false,
@@ -63,16 +62,19 @@
     });
   };
 
-  TextScramble.prototype._tick = function (timestamp) {
-    var self    = this;
-    var elapsed = timestamp - this.startTime;
-    var allResolved = true;
+  TextScramble.prototype._tick = function (ts) {
+    var self = this;
+    var elapsed = ts - this.startTime;
+    var done = true;
 
     var output = this.chars.map(function (ch) {
       if (ch.resolved) return ch.final;
 
+      // preserve whitespace
+      if (/\s/.test(ch.final)) { ch.resolved = true; return ch.final; }
+
       if (elapsed < ch.startDelay) {
-        allResolved = false;
+        done = false;
         return randomChar(self.charSet);
       }
 
@@ -80,7 +82,6 @@
       if (ch.elapsed >= self.frameInterval) {
         ch.elapsed = 0;
         ch.stepsLeft--;
-        ch.current = randomChar(self.charSet);
       }
 
       if (ch.stepsLeft <= 0) {
@@ -88,13 +89,13 @@
         return ch.final;
       }
 
-      allResolved = false;
-      return ch.current;
+      done = false;
+      return randomChar(self.charSet);
     });
 
     this.el.textContent = output.join('');
 
-    if (allResolved) {
+    if (done) {
       this.el.classList.remove('is-scrambling');
       this.el.textContent = this.chars.map(function (c) { return c.final; }).join('');
       if (this.resolve) this.resolve();
@@ -104,75 +105,98 @@
     this.rafId = requestAnimationFrame(this._tick.bind(this));
   };
 
-  TextScramble.prototype.cancel = function () {
-    if (this.rafId) cancelAnimationFrame(this.rafId);
-    this.el.classList.remove('is-scrambling');
-    var original = this.el.dataset.original;
-    if (original) this.el.textContent = original;
-  };
-
   // ── Hero Load Scramble ─────────────────────────────────────────────────────
 
   function initHeroScramble() {
-    var heroName = document.getElementById('js-scramble-hero');
-    if (!heroName) return;
-    var finalText = heroName.dataset.original || heroName.textContent.trim();
-    var scrambler = new TextScramble(heroName, {
+    var el = document.getElementById('js-scramble-hero');
+    if (!el) return;
+    var finalText = el.dataset.original || el.textContent.trim();
+    var scrambler = new TextScramble(el, {
       charSet:       CHARS.glitch,
-      frameInterval: 35,
-      staggerDelay:  20,
+      frameInterval: 30,
+      staggerDelay:  18,
     });
-    setTimeout(function () { scrambler.scramble(finalText); }, 300);
+    setTimeout(function () { scrambler.scramble(finalText); }, 250);
   }
 
   // ── Custom Cursor ──────────────────────────────────────────────────────────
 
   var CursorController = {
-    el:        null,
-    isVisible: false,
+    el: null,
+    visible: false,
 
     init: function () {
       this.el = document.getElementById('js-cursor');
       if (!this.el) return;
 
-      document.addEventListener('mousemove', rafThrottle(this.onMove.bind(this)));
-      document.addEventListener('mouseleave', this.hide.bind(this));
-      document.addEventListener('mouseenter', this.show.bind(this));
-      document.addEventListener('mouseover',  this.onOver.bind(this));
-      document.addEventListener('mouseout',   this.onOut.bind(this));
+      document.addEventListener('mousemove', rafThrottle(this._onMove.bind(this)));
+      document.addEventListener('mouseleave', this._hide.bind(this));
+      document.addEventListener('mouseenter', this._show.bind(this));
+      document.addEventListener('mouseover',  this._onOver.bind(this));
+      document.addEventListener('mouseout',   this._onOut.bind(this));
     },
 
-    onMove: function (e) {
-      if (!this.isVisible) this.show();
+    _onMove: function (e) {
+      if (!this.visible) this._show();
       this.el.style.left = e.clientX + 'px';
       this.el.style.top  = e.clientY + 'px';
     },
 
-    onOver: function (e) {
-      var target = e.target.closest('a, button, .project-item, [data-interactive]');
-      if (target) this.el.classList.add('cursor--hover');
+    _onOver: function (e) {
+      var t = e.target.closest('a, button, .project-item, [data-interactive]');
+      if (t) this.el.classList.add('cursor--hover');
     },
 
-    onOut: function (e) {
-      var target = e.target.closest('a, button, .project-item, [data-interactive]');
-      if (target) this.el.classList.remove('cursor--hover');
+    _onOut: function (e) {
+      var t = e.target.closest('a, button, .project-item, [data-interactive]');
+      if (t) this.el.classList.remove('cursor--hover');
     },
 
-    show: function () {
-      this.isVisible = true;
-      this.el.style.opacity = '1';
+    _show: function () { this.visible = true;  this.el.style.opacity = '1'; },
+    _hide: function () { this.visible = false; this.el.style.opacity = '0'; },
+  };
+
+  // ── Magnetic Hover ─────────────────────────────────────────────────────────
+
+  var MagneticHover = {
+    RANGE: 90,
+    PULL:  0.32,
+
+    init: function () {
+      this.elements = Array.from(document.querySelectorAll('.magnetic'));
+      if (!this.elements.length) return;
+      document.addEventListener('mousemove', rafThrottle(this._onMove.bind(this)));
     },
 
-    hide: function () {
-      this.isVisible = false;
-      this.el.style.opacity = '0';
+    _onMove: function (e) {
+      var range = this.RANGE, pull = this.PULL;
+
+      this.elements.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        var cx = r.left + r.width  / 2;
+        var cy = r.top  + r.height / 2;
+        var dx = e.clientX - cx;
+        var dy = e.clientY - cy;
+        var d  = Math.hypot(dx, dy);
+
+        if (d < range) {
+          var force = 1 - (d / range);
+          var tx = dx * pull * force;
+          var ty = dy * pull * force;
+          el.classList.add('is-magnetized');
+          el.style.transform = 'translate(' + tx + 'px, ' + ty + 'px)';
+        } else if (el.classList.contains('is-magnetized')) {
+          el.classList.remove('is-magnetized');
+          el.style.transform = 'translate(0, 0)';
+        }
+      });
     },
   };
 
   // ── Glitch on Hover ────────────────────────────────────────────────────────
 
   var GlitchController = {
-    DURATION: 600,
+    DURATION: 500,
 
     init: function () {
       var items = document.querySelectorAll('.project-item');
@@ -180,15 +204,13 @@
       var duration = this.DURATION;
 
       items.forEach(function (item) {
-        var timer = null;
-
+        var t = null;
         item.addEventListener('mouseenter', function () {
-          clearTimeout(timer);
+          clearTimeout(t);
           item.classList.add('is-glitching');
         });
-
         item.addEventListener('mouseleave', function () {
-          timer = setTimeout(function () {
+          t = setTimeout(function () {
             item.classList.remove('is-glitching');
           }, duration);
         });
@@ -196,111 +218,87 @@
     },
   };
 
-  // ── Mouse Parallax ─────────────────────────────────────────────────────────
+  // ── Hero Parallax (subtle drift on the name) ───────────────────────────────
 
-  var ParallaxController = {
-    layers:  [],
-    coordEl: null,
+  var HeroParallax = {
+    DEPTH: 0.012,
 
     init: function () {
       var hero = document.getElementById('hero');
-      if (!hero) return;
-
-      this.layers  = Array.from(document.querySelectorAll('[data-parallax-depth]'));
-      this.coordEl = document.querySelector('.sys-coord');
-      if (!this.layers.length) return;
+      var name = document.getElementById('js-scramble-hero');
+      if (!hero || !name) return;
+      this.hero = hero;
+      this.name = name;
 
       hero.addEventListener('mousemove', rafThrottle(this._onMove.bind(this)));
-      hero.addEventListener('mouseleave', this._onLeave.bind(this));
+      hero.addEventListener('mouseleave', this._reset.bind(this));
     },
 
     _onMove: function (e) {
-      var hero = document.getElementById('hero');
-      var rect = hero.getBoundingClientRect();
-      var normX = (e.clientX - rect.left  - rect.width  / 2) / rect.width;
-      var normY = (e.clientY - rect.top   - rect.height / 2) / rect.height;
-
-      this.layers.forEach(function (layer) {
-        var depth = parseFloat(layer.dataset.parallaxDepth) || 0.02;
-        var moveX = clamp(normX * depth * rect.width,  -30, 30);
-        var moveY = clamp(normY * depth * rect.height, -30, 30);
-        layer.style.transform = 'translate(' + moveX + 'px, ' + moveY + 'px)';
-      });
-
-      if (this.coordEl) {
-        var dx = String(Math.abs(Math.round(normX * 9999))).padStart(4, '0');
-        var dy = String(Math.abs(Math.round(normY * 9999))).padStart(4, '0');
-        this.coordEl.textContent = 'X:' + dx + ' Y:' + dy;
-      }
+      var r = this.hero.getBoundingClientRect();
+      var nx = (e.clientX - r.left - r.width  / 2) / r.width;
+      var ny = (e.clientY - r.top  - r.height / 2) / r.height;
+      var mx = clamp(nx * this.DEPTH * r.width,  -14, 14);
+      var my = clamp(ny * this.DEPTH * r.height, -10, 10);
+      this.name.style.transform = 'translate(' + mx + 'px, ' + my + 'px)';
     },
 
-    _onLeave: function () {
-      this.layers.forEach(function (layer) {
-        layer.style.transform = 'translate(0px, 0px)';
-      });
-      if (this.coordEl) this.coordEl.textContent = 'X:0000 Y:0000';
+    _reset: function () {
+      this.name.style.transform = 'translate(0, 0)';
     },
   };
 
   // ── Scroll Scramble ────────────────────────────────────────────────────────
 
-  var ScrollScrambleController = {
-    scrambled: null,
-
+  var ScrollScramble = {
     init: function () {
       var targets = document.querySelectorAll('.js-scroll-scramble');
-      if (!targets.length) return;
-      this.scrambled = new WeakSet();
-      var self = this;
+      if (!targets.length || !('IntersectionObserver' in window)) return;
+      var done = new WeakSet();
 
-      var observer = new IntersectionObserver(function (entries) {
+      var obs = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting && !self.scrambled.has(entry.target)) {
-            self.scrambled.add(entry.target);
-            observer.unobserve(entry.target);
-
-            var el        = entry.target;
+          if (entry.isIntersecting && !done.has(entry.target)) {
+            done.add(entry.target);
+            obs.unobserve(entry.target);
+            var el = entry.target;
             var finalText = el.dataset.original || el.textContent.trim();
-            var scrambler = new TextScramble(el, {
-              charSet:       CHARS.hex,
-              frameInterval: 30,
-              staggerDelay:  15,
+            var s = new TextScramble(el, {
+              charSet:       CHARS.code,
+              frameInterval: 28,
+              staggerDelay:  14,
             });
-            scrambler.scramble(finalText);
+            s.scramble(finalText);
           }
         });
-      }, { threshold: 0.2 });
+      }, { threshold: 0.25 });
 
-      targets.forEach(function (el) { observer.observe(el); });
+      targets.forEach(function (el) { obs.observe(el); });
     },
   };
 
-  // ── Easter Egg ─────────────────────────────────────────────────────────────
+  // ── Easter Egg: Page Invert ────────────────────────────────────────────────
 
-  var EasterEgg = {
-    overlay:   null,
-    isPlaying: false,
+  var InvertEgg = {
+    DURATION: 140,
+    locked:   false,
 
     init: function () {
-      this.overlay = document.getElementById('js-sys-error');
-      var trigger  = document.getElementById('js-scramble-hero');
-      if (!this.overlay || !trigger) return;
-
+      var trigger = document.getElementById('js-scramble-hero');
+      if (!trigger) return;
       var self = this;
-      trigger.addEventListener('click', function () { self.trigger(); });
-      trigger.title = '[CLASSIFIED]';
-
-      this.overlay.addEventListener('animationend', function () {
-        self.overlay.hidden = true;
-        self.isPlaying = false;
-      });
+      trigger.addEventListener('click', function () { self._fire(); });
     },
 
-    trigger: function () {
-      if (this.isPlaying) return;
-      this.isPlaying    = true;
-      this.overlay.hidden = false;
-      void this.overlay.offsetWidth; // force reflow to restart animation
+    _fire: function () {
+      if (this.locked) return;
+      this.locked = true;
+      var d = this.DURATION;
+      document.body.classList.add('is-inverted');
+      setTimeout(function () {
+        document.body.classList.remove('is-inverted');
+      }, d);
+      setTimeout(function () { InvertEgg.locked = false; }, d + 200);
     },
   };
 
@@ -308,15 +306,19 @@
 
   function init() {
     var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var isTouch        = window.matchMedia('(pointer: coarse)').matches;
 
-    CursorController.init();
-    EasterEgg.init();
+    if (!isTouch) CursorController.init();
+    InvertEgg.init();
 
     if (!prefersReduced) {
       initHeroScramble();
+      ScrollScramble.init();
       GlitchController.init();
-      ParallaxController.init();
-      ScrollScrambleController.init();
+      if (!isTouch) {
+        MagneticHover.init();
+        HeroParallax.init();
+      }
     }
   }
 
