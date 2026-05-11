@@ -43,7 +43,19 @@ export function RecipeDetailClient({ id }: RecipeDetailClientProps) {
     if (recipe && recipe.conversations.length > 0 && messages.length === 0) {
       setMessages(recipe.conversations)
     }
-  // Only run when recipe first loads
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [recipe?.id])
+
+  // Auto-generate if this is a stub recipe (created from meal planning but not yet built)
+  useEffect(() => {
+    if (
+      recipe &&
+      recipe.ingredients.length === 0 &&
+      recipe.steps.length === 0 &&
+      recipe.conversations.length === 0
+    ) {
+      send(`Please create a complete recipe for: ${recipe.title}`)
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recipe?.id])
 

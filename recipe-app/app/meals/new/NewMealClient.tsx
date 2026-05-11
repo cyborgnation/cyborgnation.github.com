@@ -8,6 +8,7 @@ import { ChatPanel } from "@/components/chat/ChatPanel"
 import { useMealChat, type ParsedMealPlan } from "@/lib/hooks/useMealChat"
 import { useRecipes } from "@/lib/hooks/useRecipes"
 import { createMeal } from "@/lib/db/meals"
+import { createRecipe } from "@/lib/db/recipes"
 import { toast } from "sonner"
 import type { RecipeRole } from "@/types/meal"
 
@@ -51,19 +52,39 @@ export function NewMealClient() {
     if (!activePlan) return
     setSaving(true)
     try {
-      const recipeRefs = activePlan.suggestions
-        .filter((s) => s.recipeId !== null)
-        .map((s) => ({ recipeId: s.recipeId!, role: s.role as RecipeRole }))
+      // Create stub recipes for any new suggestions so the meal isn't empty.
+      // Stubs have no ingredients/steps; navigating to them auto-triggers AI generation.
+      const resolvedRefs = await Promise.all(
+        activePlan.suggestions.map(async (s) => {
+          if (s.recipeId) {
+            return { recipeId: s.recipeId, role: s.role as RecipeRole }
+          }
+          const stub = await createRecipe({
+            title: s.title,
+            description: "",
+            servings: 0,
+            prepTime: 0,
+            cookTime: 0,
+            tags: [],
+            ingredients: [],
+            steps: [],
+            conversations: [],
+            modelId: providerConfig.modelId,
+            providerId: providerConfig.providerId,
+          })
+          return { recipeId: stub.id, role: s.role as RecipeRole }
+        })
+      )
 
       const meal = await createMeal({
         title: activePlan.title,
         description: activePlan.description,
-        recipeRefs,
+        recipeRefs: resolvedRefs,
         conversations: messages,
         modelId: providerConfig.modelId,
         providerId: providerConfig.providerId,
       })
-      toast.success("Meal saved!")
+      toast.success("Meal saved! Open each recipe to generate it.")
       router.push(`/meals/${meal.id}`)
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Save failed")
@@ -150,7 +171,7 @@ export function NewMealClient() {
                     )}
                     {s.isNew && (
                       <p className="text-xs mt-0.5" style={{ color: "var(--color-muted-foreground)" }}>
-                        New recipe needed
+                        Will be generated when you open it
                       </p>
                     )}
                   </div>
