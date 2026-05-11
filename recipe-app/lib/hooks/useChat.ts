@@ -26,6 +26,12 @@ export function useChat({ endpoint, onComplete, buildExtraBody }: UseChatOptions
   const [error, setError] = useState<string | null>(null)
   const abortRef = useRef<AbortController | null>(null)
 
+  // Refs so send() always calls the latest versions without being recreated on every render
+  const buildExtraBodyRef = useRef(buildExtraBody)
+  buildExtraBodyRef.current = buildExtraBody
+  const onCompleteRef = useRef(onComplete)
+  onCompleteRef.current = onComplete
+
   const send = useCallback(
     async (content: string) => {
       if (isStreaming) return
@@ -47,7 +53,7 @@ export function useChat({ endpoint, onComplete, buildExtraBody }: UseChatOptions
       abortRef.current = controller
 
       try {
-        const extraBody = buildExtraBody ? buildExtraBody() : {}
+        const extraBody = buildExtraBodyRef.current ? buildExtraBodyRef.current() : {}
         const res = await fetch(endpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -81,7 +87,7 @@ export function useChat({ endpoint, onComplete, buildExtraBody }: UseChatOptions
         const finalMessages = [...updatedMessages, assistantMessage]
         setMessages(finalMessages)
         setStreamingContent("")
-        onComplete?.(fullText, finalMessages)
+        onCompleteRef.current?.(fullText, finalMessages)
       } catch (err) {
         if ((err as Error).name === "AbortError") return
         const msg = err instanceof Error ? err.message : "Unknown error"
