@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { ArrowLeft, ChefHat } from "lucide-react"
 import Link from "next/link"
 import { useMeal } from "@/lib/hooks/useMeals"
@@ -18,6 +18,7 @@ interface MealDetailClientProps {
 export function MealDetailClient({ id }: MealDetailClientProps) {
   const meal = useMeal(id)
   const allRecipes = useRecipes()
+  const [mobileTab, setMobileTab] = useState<"recipes" | "chat">("recipes")
 
   const recipesMap = useMemo<Record<string, Recipe>>(() => {
     const map: Record<string, Recipe> = {}
@@ -108,10 +109,27 @@ export function MealDetailClient({ id }: MealDetailClientProps) {
         </Link>
       </div>
 
+      {/* Mobile tab switcher */}
+      <div className="flex border-b shrink-0 md:hidden" style={{ borderColor: "var(--color-border)" }}>
+        {(["recipes", "chat"] as const).map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setMobileTab(tab)}
+            className="flex-1 py-2.5 text-sm font-medium capitalize transition-colors"
+            style={mobileTab === tab ? {
+              color: "var(--color-primary)",
+              borderBottom: "2px solid var(--color-primary)",
+            } : { color: "var(--color-muted-foreground)" }}
+          >
+            {tab === "recipes" ? "Recipes" : "Chat"}
+          </button>
+        ))}
+      </div>
+
       {/* Split: recipe list + chat */}
       <div className="flex-1 flex overflow-hidden">
         {/* Recipe list */}
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className={mobileTab === "recipes" ? "flex flex-col flex-1 overflow-y-auto p-6" : "hidden md:flex md:flex-col md:flex-1 md:overflow-y-auto md:p-6"}>
           <h2 className="text-sm font-semibold uppercase tracking-wide mb-4"
             style={{ color: "var(--color-muted-foreground)" }}>
             Recipes in this meal
@@ -120,8 +138,10 @@ export function MealDetailClient({ id }: MealDetailClientProps) {
         </div>
 
         {/* Chat */}
-        <div className="w-96 shrink-0 border-l flex flex-col overflow-hidden"
-          style={{ borderColor: "var(--color-border)" }}>
+        <div
+          className={mobileTab === "chat" ? "flex flex-col flex-1 overflow-hidden md:w-96 md:flex-none md:border-l" : "hidden md:flex md:flex-col md:w-96 md:shrink-0 md:border-l md:overflow-hidden"}
+          style={{ borderColor: "var(--color-border)" }}
+        >
           <ChatPanel
             messages={messages}
             isStreaming={isStreaming}

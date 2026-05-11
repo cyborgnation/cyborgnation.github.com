@@ -52,26 +52,20 @@ export function MealCookClient({ id }: MealCookClientProps) {
 
   return (
     <CookingLayout title={meal.title}>
-      <div className="flex h-full">
-        {/* Recipe tab list */}
+      <div className="flex flex-col h-full">
+        {/* Mobile: horizontal scrolling dish tabs */}
         {mealRecipes.length > 1 && (
-          <div className="w-48 shrink-0 border-r overflow-y-auto p-3"
+          <div className="flex overflow-x-auto border-b shrink-0 lg:hidden px-2 py-1.5 gap-1"
             style={{ borderColor: "var(--color-border)" }}>
-            <p className="text-xs font-semibold uppercase tracking-wide mb-2 px-2"
-              style={{ color: "var(--color-muted-foreground)" }}>
-              Dishes
-            </p>
             {mealRecipes.map((recipe, i) => (
               <button
                 key={recipe.id}
                 onClick={() => setActiveRecipeIndex(i)}
-                className="w-full text-left px-3 py-2 rounded-xl text-sm font-medium mb-1 transition-colors"
+                className="shrink-0 px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-colors"
                 style={i === activeRecipeIndex ? {
                   backgroundColor: "var(--color-accent)",
                   color: "var(--color-primary)",
-                } : {
-                  color: "var(--color-muted-foreground)",
-                }}
+                } : { color: "var(--color-muted-foreground)" }}
               >
                 {recipe.title}
               </button>
@@ -79,17 +73,45 @@ export function MealCookClient({ id }: MealCookClientProps) {
           </div>
         )}
 
-        {/* Recipe view */}
-        <div className="flex-1 overflow-hidden">
-          {activeRecipe ? (
-            <CookingRecipeView recipe={activeRecipe} />
-          ) : (
-            <div className="flex items-center justify-center h-full">
-              <p style={{ color: "var(--color-muted-foreground)" }}>
-                No recipes found in this meal.
+        <div className="flex flex-1 overflow-hidden">
+          {/* Desktop: vertical sidebar */}
+          {mealRecipes.length > 1 && (
+            <div className="hidden lg:block w-48 shrink-0 border-r overflow-y-auto p-3"
+              style={{ borderColor: "var(--color-border)" }}>
+              <p className="text-xs font-semibold uppercase tracking-wide mb-2 px-2"
+                style={{ color: "var(--color-muted-foreground)" }}>
+                Dishes
               </p>
+              {mealRecipes.map((recipe, i) => (
+                <button
+                  key={recipe.id}
+                  onClick={() => setActiveRecipeIndex(i)}
+                  className="w-full text-left px-3 py-2 rounded-xl text-sm font-medium mb-1 transition-colors"
+                  style={i === activeRecipeIndex ? {
+                    backgroundColor: "var(--color-accent)",
+                    color: "var(--color-primary)",
+                  } : {
+                    color: "var(--color-muted-foreground)",
+                  }}
+                >
+                  {recipe.title}
+                </button>
+              ))}
             </div>
           )}
+
+          {/* Recipe view */}
+          <div className="flex-1 overflow-hidden">
+            {activeRecipe ? (
+              <CookingRecipeView recipe={activeRecipe} />
+            ) : (
+              <div className="flex items-center justify-center h-full">
+                <p style={{ color: "var(--color-muted-foreground)" }}>
+                  No recipes found in this meal.
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </CookingLayout>

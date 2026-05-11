@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { useRecipe } from "@/lib/hooks/useRecipes"
@@ -16,6 +16,7 @@ interface RecipeDetailClientProps {
 
 export function RecipeDetailClient({ id }: RecipeDetailClientProps) {
   const recipe = useRecipe(id)
+  const [mobileTab, setMobileTab] = useState<"recipe" | "chat">("recipe")
 
   const {
     messages,
@@ -45,6 +46,11 @@ export function RecipeDetailClient({ id }: RecipeDetailClientProps) {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recipe?.id])
+
+  // Switch to chat tab on mobile when a pending recipe appears
+  useEffect(() => {
+    if (pendingRecipe) setMobileTab("chat")
+  }, [pendingRecipe])
 
   // Auto-generate if this is a stub recipe (created from meal planning but not yet built)
   useEffect(() => {
@@ -93,16 +99,39 @@ export function RecipeDetailClient({ id }: RecipeDetailClientProps) {
         </h1>
       </div>
 
+      {/* Mobile tab switcher */}
+      <div className="flex border-b shrink-0 md:hidden" style={{ borderColor: "var(--color-border)" }}>
+        {(["recipe", "chat"] as const).map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setMobileTab(tab)}
+            className="flex-1 py-2.5 text-sm font-medium capitalize transition-colors relative"
+            style={mobileTab === tab ? {
+              color: "var(--color-primary)",
+              borderBottom: "2px solid var(--color-primary)",
+            } : { color: "var(--color-muted-foreground)" }}
+          >
+            {tab}
+            {tab === "chat" && pendingRecipe && mobileTab !== "chat" && (
+              <span className="absolute top-2.5 right-[calc(50%-2rem)] w-1.5 h-1.5 rounded-full"
+                style={{ backgroundColor: "var(--color-primary)" }} />
+            )}
+          </button>
+        ))}
+      </div>
+
       {/* Split pane */}
       <div className="flex-1 flex overflow-hidden">
-        {/* Recipe artifact — left */}
-        <div className="flex-1 overflow-hidden border-r"
-          style={{ borderColor: "var(--color-border)" }}>
+        {/* Recipe artifact — left (full width on mobile recipe tab) */}
+        <div
+          className={mobileTab === "recipe" ? "flex flex-col flex-1 overflow-hidden md:border-r" : "hidden md:flex md:flex-col md:flex-1 md:overflow-hidden md:border-r"}
+          style={{ borderColor: "var(--color-border)" }}
+        >
           <RecipeArtifact recipe={recipe} />
         </div>
 
-        {/* Chat panel — right */}
-        <div className="w-96 shrink-0 flex flex-col overflow-hidden">
+        {/* Chat panel — right (full width on mobile chat tab, w-96 on desktop) */}
+        <div className={mobileTab === "chat" ? "flex flex-col flex-1 overflow-hidden md:w-96 md:flex-none" : "hidden md:flex md:flex-col md:w-96 md:shrink-0 md:overflow-hidden"}>
           <ChatPanel
             messages={messages}
             isStreaming={isStreaming}

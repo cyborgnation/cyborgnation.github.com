@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowLeft, Plus, Check } from "lucide-react"
+import { ArrowLeft, Plus, Check, Utensils, X } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { ChatPanel } from "@/components/chat/ChatPanel"
@@ -17,6 +17,7 @@ export function NewMealClient() {
   const recipes = useRecipes()
   const [saving, setSaving] = useState(false)
   const [savedMealPlan, setSavedMealPlan] = useState<ParsedMealPlan | null>(null)
+  const [showPlanSheet, setShowPlanSheet] = useState(false)
 
   const existingRecipes = (recipes ?? []).map((r) => ({
     id: r.id,
@@ -129,71 +130,137 @@ export function NewMealClient() {
           />
         </div>
 
-        {/* Meal plan preview */}
+        {/* Meal plan preview — desktop sidebar */}
         {activePlan && (
-          <div className="w-80 shrink-0 border-l overflow-y-auto p-4"
+          <div className="hidden md:flex md:flex-col w-80 shrink-0 border-l overflow-y-auto p-4"
             style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-card)" }}>
-            <div className="flex items-start justify-between gap-2 mb-4">
-              <div>
-                <h2 className="text-sm font-semibold" style={{ color: "var(--color-foreground)" }}>
-                  {activePlan.title}
-                </h2>
-                <p className="text-xs mt-0.5" style={{ color: "var(--color-muted-foreground)" }}>
-                  {activePlan.description}
-                </p>
-              </div>
-              <button
-                onClick={clearPendingMealPlan}
-                className="text-xs px-2 py-1 rounded-md transition-colors hover:bg-muted"
-                style={{ color: "var(--color-muted-foreground)" }}
-              >
-                Clear
-              </button>
-            </div>
-
-            <div className="space-y-2 mb-4">
-              {activePlan.suggestions.map((s, i) => (
-                <div key={i} className="flex items-center gap-3 p-3 rounded-xl border"
-                  style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-background)" }}>
-                  <div className="flex-1 min-w-0">
-                    <span className="text-xs font-medium capitalize"
-                      style={{ color: "var(--color-muted-foreground)" }}>
-                      {s.role}
-                    </span>
-                    <p className="text-sm font-medium mt-0.5 truncate"
-                      style={{ color: "var(--color-foreground)" }}>
-                      {s.title}
-                    </p>
-                    {s.recipeId && (
-                      <p className="text-xs mt-0.5" style={{ color: "var(--color-primary)" }}>
-                        Using saved recipe
-                      </p>
-                    )}
-                    {s.isNew && (
-                      <p className="text-xs mt-0.5" style={{ color: "var(--color-muted-foreground)" }}>
-                        Will be generated when you open it
-                      </p>
-                    )}
-                  </div>
-                  {s.recipeId && (
-                    <Check size={14} className="shrink-0" style={{ color: "var(--color-primary)" }} />
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <button
-              onClick={handleSaveMeal}
-              disabled={saving}
-              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity disabled:opacity-60 hover:opacity-90"
-              style={{ backgroundColor: "#EA580C" }}
-            >
-              <Plus size={15} />
-              {saving ? "Saving…" : "Save Meal"}
-            </button>
+            <PlanContent
+              plan={activePlan}
+              saving={saving}
+              onClear={clearPendingMealPlan}
+              onSave={handleSaveMeal}
+            />
           </div>
         )}
       </div>
+
+      {/* Mobile: floating "View Plan" button */}
+      {activePlan && (
+        <button
+          onClick={() => setShowPlanSheet(true)}
+          className="md:hidden fixed bottom-20 right-4 flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold text-white shadow-lg z-30 transition-opacity hover:opacity-90"
+          style={{ backgroundColor: "#EA580C" }}
+        >
+          <Utensils size={15} />
+          View Plan ({activePlan.suggestions.length})
+        </button>
+      )}
+
+      {/* Mobile: plan bottom sheet */}
+      {showPlanSheet && activePlan && (
+        <div
+          className="md:hidden fixed inset-0 z-50 flex flex-col justify-end"
+          style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+          onClick={() => setShowPlanSheet(false)}
+        >
+          <div
+            className="rounded-t-2xl max-h-[80vh] overflow-y-auto p-4"
+            style={{ backgroundColor: "var(--color-card)" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-sm font-semibold" style={{ color: "var(--color-foreground)" }}>
+                Meal Plan
+              </span>
+              <button
+                onClick={() => setShowPlanSheet(false)}
+                className="p-1.5 rounded-lg"
+                style={{ color: "var(--color-muted-foreground)" }}
+              >
+                <X size={16} />
+              </button>
+            </div>
+            <PlanContent
+              plan={activePlan}
+              saving={saving}
+              onClear={() => { clearPendingMealPlan(); setShowPlanSheet(false) }}
+              onSave={handleSaveMeal}
+            />
+          </div>
+        </div>
+      )}
     </div>
+  )
+}
+
+interface PlanContentProps {
+  plan: ParsedMealPlan
+  saving: boolean
+  onClear: () => void
+  onSave: () => void
+}
+
+function PlanContent({ plan, saving, onClear, onSave }: PlanContentProps) {
+  return (
+    <>
+      <div className="flex items-start justify-between gap-2 mb-4">
+        <div>
+          <h2 className="text-sm font-semibold" style={{ color: "var(--color-foreground)" }}>
+            {plan.title}
+          </h2>
+          <p className="text-xs mt-0.5" style={{ color: "var(--color-muted-foreground)" }}>
+            {plan.description}
+          </p>
+        </div>
+        <button
+          onClick={onClear}
+          className="text-xs px-2 py-1 rounded-md transition-colors hover:bg-muted"
+          style={{ color: "var(--color-muted-foreground)" }}
+        >
+          Clear
+        </button>
+      </div>
+
+      <div className="space-y-2 mb-4">
+        {plan.suggestions.map((s, i) => (
+          <div key={i} className="flex items-center gap-3 p-3 rounded-xl border"
+            style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-background)" }}>
+            <div className="flex-1 min-w-0">
+              <span className="text-xs font-medium capitalize"
+                style={{ color: "var(--color-muted-foreground)" }}>
+                {s.role}
+              </span>
+              <p className="text-sm font-medium mt-0.5 truncate"
+                style={{ color: "var(--color-foreground)" }}>
+                {s.title}
+              </p>
+              {s.recipeId && (
+                <p className="text-xs mt-0.5" style={{ color: "var(--color-primary)" }}>
+                  Using saved recipe
+                </p>
+              )}
+              {s.isNew && (
+                <p className="text-xs mt-0.5" style={{ color: "var(--color-muted-foreground)" }}>
+                  Will be generated when you open it
+                </p>
+              )}
+            </div>
+            {s.recipeId && (
+              <Check size={14} className="shrink-0" style={{ color: "var(--color-primary)" }} />
+            )}
+          </div>
+        ))}
+      </div>
+
+      <button
+        onClick={onSave}
+        disabled={saving}
+        className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity disabled:opacity-60 hover:opacity-90"
+        style={{ backgroundColor: "#EA580C" }}
+      >
+        <Plus size={15} />
+        {saving ? "Saving…" : "Save Meal"}
+      </button>
+    </>
   )
 }
