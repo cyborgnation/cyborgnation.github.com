@@ -9,7 +9,7 @@ export function AppHeader() {
   const pathname = usePathname()
 
   const navLinks = [
-    { href: "/", label: "Recipes", icon: BookOpen, match: /^\/$|^\/recipes/ },
+    { href: "/", label: "Recipes", icon: BookOpen, match: /^\/\$|^\/recipes/ },
     { href: "/meals", label: "Meals", icon: Utensils, match: /^\/meals/ },
   ]
 
@@ -19,7 +19,7 @@ export function AppHeader() {
       <Link href="/" className="flex items-center gap-2 font-semibold text-sm shrink-0"
         style={{ color: "var(--color-primary)" }}>
         <ChefHat size={20} />
-        <span>Mise en Place</span>
+        <span className="hidden sm:inline">Mise en Place</span>
       </Link>
 
       <nav className="flex items-center gap-1 flex-1">
@@ -56,7 +56,7 @@ export function AppHeader() {
           style={{ backgroundColor: "var(--color-primary)" }}
         >
           <Plus size={14} />
-          New Recipe
+          <span className="hidden sm:inline">New Recipe</span>
         </Link>
       </div>
     </header>
