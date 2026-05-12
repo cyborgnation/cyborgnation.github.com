@@ -30,10 +30,11 @@ RECIPE JSON FORMAT (output exactly this structure when ready):
     { "order": 4, "instruction": "Cook pasta until al dente. Reserve 1 cup of pasta water before draining.", "duration": 10 },
     { "order": 5, "instruction": "Add hot pasta to the guanciale pan (off heat). Pour egg mixture over and toss quickly, adding pasta water a splash at a time to create a creamy sauce.", "duration": 3 },
     { "order": 6, "instruction": "Serve immediately topped with remaining pecorino and extra black pepper." }
-  ]
+  ],
+  "macros": { "calories": 620, "protein": 28, "carbs": 72, "fat": 24, "fiber": 3 }
 }
 \`\`\`
 
 After outputting the JSON, tell the user their recipe is ready to save by clicking "Save Recipe".
 
-IMPORTANT: prepTime and cookTime are integers in minutes. amounts are numbers. steps must have sequential order values starting at 1.`
+IMPORTANT: prepTime and cookTime are integers in minutes. amounts are numbers. steps must have sequential order values starting at 1. macros are always required and represent values PER SERVING (calories in kcal, protein/carbs/fat/fiber in grams). Estimate them as accurately as possible.`

@@ -64,6 +64,7 @@ function splitStreamingContent(content: string): {
     type === "recipe" ? "Building recipe…"
     : type === "recipe_update" ? "Updating recipe…"
     : type === "meal_plan" ? "Building meal plan…"
+    : type === "meal_prep_plan" ? "Building meal prep plan…"
     : "Generating…"
 
   return { text: before, isGenerating: true, generatingLabel: label }
