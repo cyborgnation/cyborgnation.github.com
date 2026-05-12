@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ChefHat, BookOpen, Utensils, Plus } from "lucide-react"
+import { ChefHat, BookOpen, Utensils, Dumbbell, Plus } from "lucide-react"
 import { cn } from "@/lib/utils/cn"
 
 export function AppHeader() {
@@ -11,6 +11,7 @@ export function AppHeader() {
   const navLinks = [
     { href: "/", label: "Recipes", icon: BookOpen, match: /^\/\$|^\/recipes/ },
     { href: "/meals", label: "Meals", icon: Utensils, match: /^\/meals/ },
+    { href: "/meal-prep", label: "Prep", icon: Dumbbell, match: /^\/meal-prep/ },
   ]
 
   return (

@@ -1,5 +1,13 @@
 import type { Message } from "./message"
 
+export interface Macros {
+  calories: number
+  protein: number
+  carbs: number
+  fat: number
+  fiber?: number
+}
+
 export interface Ingredient {
   name: string
   amount: number
@@ -26,6 +34,7 @@ export interface Recipe {
   conversations: Message[]
   modelId: string
   providerId: string
+  macros?: Macros
   createdAt: number
   updatedAt: number
 }
