@@ -3,6 +3,12 @@ import type { Message } from "./message"
 export interface MealPrepRecipeRef {
   recipeId: string
   servingsPerWeek: number
+  estimatedMacros?: {
+    calories: number
+    protein: number
+    carbs: number
+    fat: number
+  }
 }
 
 export interface MealPrep {

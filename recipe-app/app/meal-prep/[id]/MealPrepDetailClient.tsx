@@ -85,13 +85,14 @@ export function MealPrepDetailClient({ id }: MealPrepDetailClientProps) {
   const macroEntries = mealPrep.recipeRefs
     .map((ref) => {
       const recipe = recipesMap[ref.recipeId]
-      if (!recipe?.macros) return null
+      const macros = recipe?.macros ?? ref.estimatedMacros
+      if (!macros) return null
       return {
-        calories: recipe.macros.calories,
-        protein: recipe.macros.protein,
-        carbs: recipe.macros.carbs,
-        fat: recipe.macros.fat,
-        fiber: recipe.macros.fiber,
+        calories: macros.calories,
+        protein: macros.protein,
+        carbs: macros.carbs,
+        fat: macros.fat,
+        fiber: recipe?.macros?.fiber,
         servingsPerWeek: ref.servingsPerWeek,
       }
     })
@@ -145,7 +146,7 @@ export function MealPrepDetailClient({ id }: MealPrepDetailClientProps) {
           {macroEntries.length === 0 && mealPrep.recipeRefs.length > 0 && (
             <div className="rounded-2xl border p-4 text-sm"
               style={{ borderColor: "var(--color-border)", color: "var(--color-muted-foreground)" }}>
-              Macro data will appear here once recipes are generated.
+              No macro data available yet. Open a recipe and let the AI generate it to populate macros.
             </div>
           )}
           <div>

@@ -60,7 +60,7 @@ export function NewMealPrepClient() {
       const resolvedRefs = await Promise.all(
         activePlan.suggestions.map(async (s) => {
           if (s.recipeId) {
-            return { recipeId: s.recipeId, servingsPerWeek: s.servingsPerWeek }
+            return { recipeId: s.recipeId, servingsPerWeek: s.servingsPerWeek, estimatedMacros: s.estimatedMacros }
           }
           const stub = await createRecipe({
             title: s.title,
@@ -76,7 +76,7 @@ export function NewMealPrepClient() {
             providerId: providerConfig.providerId,
           })
           newStubs.push({ recipeId: stub.id, title: s.title })
-          return { recipeId: stub.id, servingsPerWeek: s.servingsPerWeek }
+          return { recipeId: stub.id, servingsPerWeek: s.servingsPerWeek, estimatedMacros: s.estimatedMacros }
         })
       )
 
