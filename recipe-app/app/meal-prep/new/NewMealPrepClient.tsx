@@ -158,7 +158,7 @@ export function NewMealPrepClient() {
         <button
           onClick={() => setShowPlanSheet(true)}
           className="md:hidden fixed bottom-20 right-4 flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold text-white shadow-lg z-30 transition-opacity hover:opacity-90"
-          style={{ background: "linear-gradient(135deg, #0891B2 0%, #0E7490 100%)" }}
+          style={{ background: "#0F766E" }}
         >
           <Dumbbell size={15} />
           View Plan ({activePlan.suggestions.length})
@@ -249,13 +249,13 @@ function PrepPlanContent({ plan, saving, onClear, onSave }: PrepPlanContentProps
                 </p>
               )}
               {s.recipeId && (
-                <p className="text-xs mt-0.5" style={{ color: "#0891B2" }}>
+                <p className="text-xs mt-0.5" style={{ color: "#0F766E" }}>
                   Using saved recipe
                 </p>
               )}
             </div>
             {s.recipeId && (
-              <Check size={14} className="shrink-0 mt-0.5" style={{ color: "#0891B2" }} />
+              <Check size={14} className="shrink-0 mt-0.5" style={{ color: "#0F766E" }} />
             )}
           </div>
         ))}
@@ -265,7 +265,7 @@ function PrepPlanContent({ plan, saving, onClear, onSave }: PrepPlanContentProps
         onClick={onSave}
         disabled={saving}
         className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity disabled:opacity-60 hover:opacity-90"
-        style={{ background: "linear-gradient(135deg, #0891B2 0%, #0E7490 100%)" }}
+        style={{ background: "#0F766E" }}
       >
         <Plus size={15} />
         {saving ? "Saving…" : "Save Meal Prep"}

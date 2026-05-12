@@ -20,11 +20,12 @@ export function MealPrepCard({ mealPrep }: MealPrepCardProps) {
     >
       <div className="flex items-start gap-3">
         <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-          style={{ backgroundColor: "rgba(6, 182, 212, 0.15)", color: "#22D3EE" }}>
+          style={{ backgroundColor: "#F0FDFA", color: "#0F766E" }}>
           <Dumbbell size={17} />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-semibold truncate" style={{ color: "var(--color-foreground)" }}>
+          <p className="text-sm font-semibold truncate"
+            style={{ fontFamily: '"Lora", Georgia, serif', color: "var(--color-foreground)" }}>
             {mealPrep.title}
           </p>
           {mealPrep.description && (
@@ -33,12 +34,10 @@ export function MealPrepCard({ mealPrep }: MealPrepCardProps) {
             </p>
           )}
           <div className="flex items-center gap-3 mt-2">
-            <span className="text-xs font-mono"
-              style={{ color: "#22D3EE" }}>
+            <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
               {recipeCount} dish{recipeCount !== 1 ? "es" : ""}
             </span>
-            <span className="text-xs font-mono"
-              style={{ color: "var(--color-muted-foreground)" }}>
+            <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
               {totalServings} servings/wk
             </span>
           </div>

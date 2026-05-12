@@ -29,23 +29,23 @@ export function MealPrepRecipeList({ recipeRefs, recipes }: MealPrepRecipeListPr
         return (
           <div key={i} className="flex items-start gap-3 p-3 rounded-xl border"
             style={{
-              borderColor: isStub ? "rgba(6,182,212,0.3)" : "var(--color-border)",
-              backgroundColor: isStub ? "rgba(6,182,212,0.06)" : "var(--color-muted)",
+              borderColor: isStub ? "#99F6E4" : "var(--color-border)",
+              backgroundColor: isStub ? "#F0FDFA" : "var(--color-card)",
             }}>
             <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
-              style={{ backgroundColor: "rgba(6,182,212,0.15)", color: "#22D3EE" }}>
+              style={{ backgroundColor: "#F0FDFA", color: "#0F766E" }}>
               <Dumbbell size={15} />
             </div>
 
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-xs font-medium px-2 py-0.5 rounded-full"
-                  style={{ backgroundColor: "rgba(6,182,212,0.15)", color: "#22D3EE" }}>
+                  style={{ backgroundColor: "#F0FDFA", color: "#0F766E" }}>
                   {ref.servingsPerWeek}×/week
                 </span>
                 {isStub && (
-                  <span className="text-xs font-medium" style={{ color: "#059669" }}>
-                    Not generated yet
+                  <span className="text-xs font-medium" style={{ color: "#0F766E" }}>
+                    Generating…
                   </span>
                 )}
               </div>
@@ -64,20 +64,18 @@ export function MealPrepRecipeList({ recipeRefs, recipes }: MealPrepRecipeListPr
               {macros && (
                 <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1">
                   <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
-                    <strong style={{ color: "#6366F1" }}>{macros.calories}</strong> kcal
+                    <strong style={{ color: "var(--color-foreground)" }}>{macros.calories}</strong> kcal
                   </span>
                   <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
-                    <strong style={{ color: "#059669" }}>{macros.protein}g</strong> protein
+                    <strong style={{ color: "var(--color-foreground)" }}>{macros.protein}g</strong> protein
                   </span>
                   <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
-                    <strong style={{ color: "#D97706" }}>{macros.carbs}g</strong> carbs
+                    <strong style={{ color: "var(--color-foreground)" }}>{macros.carbs}g</strong> carbs
                   </span>
                   <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
-                    <strong style={{ color: "#DC2626" }}>{macros.fat}g</strong> fat
+                    <strong style={{ color: "var(--color-foreground)" }}>{macros.fat}g</strong> fat
                   </span>
-                  <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
-                    per serving
-                  </span>
+                  <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>per serving</span>
                 </div>
               )}
             </div>
@@ -87,11 +85,10 @@ export function MealPrepRecipeList({ recipeRefs, recipes }: MealPrepRecipeListPr
                 href={`/recipes/${ref.recipeId}`}
                 className="shrink-0 flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors mt-0.5"
                 style={isStub ? {
-                  backgroundColor: "#0891B2",
+                  backgroundColor: "#0F766E",
                   color: "white",
                 } : {
                   color: "var(--color-muted-foreground)",
-                  backgroundColor: "var(--color-border)",
                 }}
                 title={isStub ? "Generate recipe" : "View recipe"}
                 onClick={(e) => e.stopPropagation()}
