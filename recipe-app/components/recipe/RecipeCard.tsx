@@ -28,22 +28,23 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
   return (
     <Link href={`/recipes/${recipe.id}`} className="block group">
       <div
-        className="rounded-2xl p-5 border transition-shadow hover:shadow-md relative overflow-hidden"
+        className="rounded-2xl p-5 border card-hover relative overflow-hidden"
         style={{ backgroundColor: "var(--color-card)", borderColor: "var(--color-border)" }}
       >
         <button
           onClick={handleDelete}
-          className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity p-1.5 rounded-lg hover:bg-red-50"
-          style={{ color: "var(--color-destructive)" }}
+          className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity p-1.5 rounded-lg"
+          style={{ color: "var(--color-destructive)", backgroundColor: "rgba(239,68,68,0.1)" }}
           title="Delete recipe"
         >
           <Trash2 size={14} />
         </button>
 
         <div className="flex items-start gap-3 mb-3">
-          <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-            style={{ backgroundColor: "var(--color-accent)", color: "var(--color-primary)" }}>
-            <ChefHat size={18} />
+          <div
+            className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 gradient-bg"
+          >
+            <ChefHat size={17} className="text-white" />
           </div>
           <div className="min-w-0">
             <h3 className="font-semibold text-sm leading-snug truncate pr-6"
@@ -82,8 +83,12 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
             {recipe.tags.slice(0, 4).map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-0.5 rounded-full text-xs"
-                style={{ backgroundColor: "var(--color-accent)", color: "var(--color-accent-foreground)" }}
+                className="px-2 py-0.5 rounded-full text-xs font-mono"
+                style={{
+                  backgroundColor: "rgba(139, 92, 246, 0.12)",
+                  color: "#C4B5FD",
+                  border: "1px solid rgba(139, 92, 246, 0.2)",
+                }}
               >
                 {tag}
               </span>

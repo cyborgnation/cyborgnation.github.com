@@ -55,7 +55,7 @@ export function MacroSummary({ entries }: MacroSummaryProps) {
 
   return (
     <div className="rounded-2xl border p-4"
-      style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-card)" }}>
+      style={{ borderColor: "rgba(139,92,246,0.2)", backgroundColor: "var(--color-card)" }}>
       <h3 className="text-xs font-semibold uppercase tracking-wide mb-3"
         style={{ color: "var(--color-muted-foreground)" }}>
         Daily Averages

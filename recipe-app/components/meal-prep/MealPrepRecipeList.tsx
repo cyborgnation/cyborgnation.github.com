@@ -29,18 +29,18 @@ export function MealPrepRecipeList({ recipeRefs, recipes }: MealPrepRecipeListPr
         return (
           <div key={i} className="flex items-start gap-3 p-3 rounded-xl border"
             style={{
-              borderColor: isStub ? "#A7F3D0" : "var(--color-border)",
-              backgroundColor: isStub ? "#ECFDF5" : "var(--color-card)",
+              borderColor: isStub ? "rgba(6,182,212,0.3)" : "var(--color-border)",
+              backgroundColor: isStub ? "rgba(6,182,212,0.06)" : "var(--color-muted)",
             }}>
             <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
-              style={{ backgroundColor: "#ECFDF5", color: "#059669" }}>
+              style={{ backgroundColor: "rgba(6,182,212,0.15)", color: "#22D3EE" }}>
               <Dumbbell size={15} />
             </div>
 
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-xs font-medium px-2 py-0.5 rounded-full"
-                  style={{ backgroundColor: "#ECFDF5", color: "#059669" }}>
+                  style={{ backgroundColor: "rgba(6,182,212,0.15)", color: "#22D3EE" }}>
                   {ref.servingsPerWeek}×/week
                 </span>
                 {isStub && (
@@ -87,10 +87,11 @@ export function MealPrepRecipeList({ recipeRefs, recipes }: MealPrepRecipeListPr
                 href={`/recipes/${ref.recipeId}`}
                 className="shrink-0 flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors mt-0.5"
                 style={isStub ? {
-                  backgroundColor: "#059669",
+                  backgroundColor: "#0891B2",
                   color: "white",
                 } : {
                   color: "var(--color-muted-foreground)",
+                  backgroundColor: "var(--color-border)",
                 }}
                 title={isStub ? "Generate recipe" : "View recipe"}
                 onClick={(e) => e.stopPropagation()}

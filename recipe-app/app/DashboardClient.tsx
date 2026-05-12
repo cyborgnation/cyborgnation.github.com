@@ -17,18 +17,24 @@ export function DashboardClient() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
+
       {/* Recipes section */}
-      <div className="mb-12">
+      <div className="mb-14">
         <div className="flex items-center justify-between mb-5">
-          <h2 className="text-xl font-bold" style={{ color: "var(--color-foreground)" }}>
+          <h2 className="text-xs font-mono font-black uppercase tracking-widest"
+            style={{ color: "var(--color-muted-foreground)" }}>
             Recipes
           </h2>
           <Link
             href="/recipes/new"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
-            style={{ color: "var(--color-primary)", backgroundColor: "var(--color-accent)" }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold font-mono uppercase tracking-wide transition-colors"
+            style={{
+              color: "#C4B5FD",
+              backgroundColor: "rgba(139, 92, 246, 0.12)",
+              border: "1px solid rgba(139, 92, 246, 0.25)",
+            }}
           >
-            <Plus size={14} />
+            <Plus size={13} />
             New Recipe
           </Link>
         </div>
@@ -44,7 +50,7 @@ export function DashboardClient() {
           <EmptyState
             icon={BookOpen}
             title="No recipes yet"
-            description="Start a conversation to create your first recipe. The AI will help you build it step by step."
+            description="Start a conversation to create your first recipe. AI will help you build it step by step."
             action={{ label: "Create first recipe", href: "/recipes/new" }}
           />
         ) : (
@@ -57,17 +63,22 @@ export function DashboardClient() {
       </div>
 
       {/* Meals section */}
-      <div className="mb-12">
+      <div className="mb-14">
         <div className="flex items-center justify-between mb-5">
-          <h2 className="text-xl font-bold" style={{ color: "var(--color-foreground)" }}>
+          <h2 className="text-xs font-mono font-black uppercase tracking-widest"
+            style={{ color: "var(--color-muted-foreground)" }}>
             Meals
           </h2>
           <Link
             href="/meals/new"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
-            style={{ color: "#C2410C", backgroundColor: "#FFF7ED" }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold font-mono uppercase tracking-wide transition-colors"
+            style={{
+              color: "#FB923C",
+              backgroundColor: "rgba(251, 146, 60, 0.1)",
+              border: "1px solid rgba(251, 146, 60, 0.25)",
+            }}
           >
-            <Plus size={14} />
+            <Plus size={13} />
             New Meal
           </Link>
         </div>
@@ -98,15 +109,20 @@ export function DashboardClient() {
       {/* Meal Prep section */}
       <div>
         <div className="flex items-center justify-between mb-5">
-          <h2 className="text-xl font-bold" style={{ color: "var(--color-foreground)" }}>
+          <h2 className="text-xs font-mono font-black uppercase tracking-widest"
+            style={{ color: "var(--color-muted-foreground)" }}>
             Meal Prep
           </h2>
           <Link
             href="/meal-prep/new"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
-            style={{ color: "#065F46", backgroundColor: "#ECFDF5" }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold font-mono uppercase tracking-wide transition-colors"
+            style={{
+              color: "#22D3EE",
+              backgroundColor: "rgba(6, 182, 212, 0.1)",
+              border: "1px solid rgba(6, 182, 212, 0.25)",
+            }}
           >
-            <Plus size={14} />
+            <Plus size={13} />
             New Prep
           </Link>
         </div>
