@@ -8,9 +8,11 @@ import { ChatPanel } from "@/components/chat/ChatPanel"
 import { useMealChat, type ParsedMealPlan } from "@/lib/hooks/useMealChat"
 import { useRecipes } from "@/lib/hooks/useRecipes"
 import { createMeal } from "@/lib/db/meals"
-import { createRecipe } from "@/lib/db/recipes"
+import { createRecipe, updateRecipe } from "@/lib/db/recipes"
+import { extractRecipeJSON } from "@/lib/utils/recipe-parser"
 import { toast } from "sonner"
 import type { RecipeRole } from "@/types/meal"
+import type { Message } from "@/types/message"
 
 export function NewMealClient() {
   const router = useRouter()
@@ -53,8 +55,8 @@ export function NewMealClient() {
     if (!activePlan) return
     setSaving(true)
     try {
-      // Create stub recipes for any new suggestions so the meal isn't empty.
-      // Stubs have no ingredients/steps; navigating to them auto-triggers AI generation.
+      const newStubs: Array<{ recipeId: string; title: string }> = []
+
       const resolvedRefs = await Promise.all(
         activePlan.suggestions.map(async (s) => {
           if (s.recipeId) {
@@ -73,6 +75,7 @@ export function NewMealClient() {
             modelId: providerConfig.modelId,
             providerId: providerConfig.providerId,
           })
+          newStubs.push({ recipeId: stub.id, title: s.title })
           return { recipeId: stub.id, role: s.role as RecipeRole }
         })
       )
@@ -85,7 +88,14 @@ export function NewMealClient() {
         modelId: providerConfig.modelId,
         providerId: providerConfig.providerId,
       })
-      toast.success("Meal saved! Open each recipe to generate it.")
+
+      // Kick off background generation for all new recipes — don't await
+      for (const { recipeId, title } of newStubs) {
+        generateRecipe(recipeId, title, providerConfig.providerId, providerConfig.modelId)
+          .catch(() => {}) // stub stays if generation fails; recipe page will retry
+      }
+
+      toast.success(`Meal saved! Generating ${newStubs.length} recipe${newStubs.length !== 1 ? "s" : ""} in the background…`)
       router.push(`/meals/${meal.id}`)
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Save failed")
@@ -263,4 +273,53 @@ function PlanContent({ plan, saving, onClear, onSave }: PlanContentProps) {
       </button>
     </>
   )
+}
+
+async function generateRecipe(
+  recipeId: string,
+  title: string,
+  providerId: string,
+  modelId: string,
+): Promise<void> {
+  const userMessage: Message = {
+    id: crypto.randomUUID(),
+    role: "user",
+    content: `Please create a complete recipe for: ${title}`,
+    timestamp: Date.now(),
+  }
+
+  const res = await fetch("/api/chat/recipe", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ messages: [userMessage], providerId, modelId, recipe: null }),
+  })
+
+  if (!res.ok || !res.body) return
+
+  const reader = res.body.getReader()
+  const decoder = new TextDecoder()
+  let fullText = ""
+
+  while (true) {
+    const { done, value } = await reader.read()
+    if (done) break
+    fullText += decoder.decode(value, { stream: true })
+  }
+
+  const parsed = extractRecipeJSON(fullText)
+  if (!parsed || parsed.type !== "recipe") return
+
+  const assistantMessage: Message = {
+    id: crypto.randomUUID(),
+    role: "assistant",
+    content: fullText,
+    timestamp: Date.now(),
+  }
+
+  await updateRecipe(recipeId, {
+    ...parsed.data,
+    conversations: [userMessage, assistantMessage],
+    modelId,
+    providerId,
+  })
 }
