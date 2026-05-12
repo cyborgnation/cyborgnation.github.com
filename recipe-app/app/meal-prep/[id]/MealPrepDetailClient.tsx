@@ -65,7 +65,7 @@ export function MealPrepDetailClient({ id }: MealPrepDetailClientProps) {
     return (
       <div className="flex items-center justify-center h-[calc(100vh-56px)]">
         <div className="w-8 h-8 rounded-full border-2 border-t-transparent animate-spin"
-          style={{ borderColor: "var(--color-border)", borderTopColor: "#059669" }} />
+          style={{ borderColor: "var(--color-border)", borderTopColor: "#0891B2" }} />
       </div>
     )
   }
@@ -74,7 +74,7 @@ export function MealPrepDetailClient({ id }: MealPrepDetailClientProps) {
     return (
       <div className="flex flex-col items-center justify-center h-[calc(100vh-56px)] gap-4">
         <p style={{ color: "var(--color-muted-foreground)" }}>Meal prep not found.</p>
-        <Link href="/" className="text-sm font-medium" style={{ color: "#059669" }}>
+        <Link href="/" className="text-sm font-medium" style={{ color: "#0891B2" }}>
           Back to dashboard
         </Link>
       </div>
@@ -127,8 +127,8 @@ export function MealPrepDetailClient({ id }: MealPrepDetailClientProps) {
             onClick={() => setMobileTab(tab)}
             className="flex-1 py-2.5 text-sm font-medium transition-colors"
             style={mobileTab === tab ? {
-              color: "#059669",
-              borderBottom: "2px solid #059669",
+              color: "#0891B2",
+              borderBottom: "2px solid #0891B2",
             } : { color: "var(--color-muted-foreground)" }}
           >
             {label}

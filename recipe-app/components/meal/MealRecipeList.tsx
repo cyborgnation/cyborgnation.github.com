@@ -17,11 +17,11 @@ const roleLabel: Record<string, string> = {
   drink: "Drink",
 }
 
-const roleColor: Record<string, { bg: string; text: string }> = {
-  main: { bg: "var(--color-accent)", text: "var(--color-primary)" },
-  side: { bg: "#F0F9FF", text: "#0369A1" },
-  dessert: { bg: "#FDF4FF", text: "#A21CAF" },
-  drink: { bg: "#FFF7ED", text: "#C2410C" },
+const roleColor: Record<string, { bg: string; text: string; border: string }> = {
+  main: { bg: "rgba(139,92,246,0.12)", text: "#C4B5FD", border: "rgba(139,92,246,0.25)" },
+  side: { bg: "rgba(14,165,233,0.12)", text: "#38BDF8", border: "rgba(14,165,233,0.25)" },
+  dessert: { bg: "rgba(192,38,211,0.12)", text: "#E879F9", border: "rgba(192,38,211,0.25)" },
+  drink: { bg: "rgba(251,146,60,0.12)", text: "#FB923C", border: "rgba(251,146,60,0.25)" },
 }
 
 export function MealRecipeList({ recipeRefs, recipes }: MealRecipeListProps) {
@@ -47,8 +47,8 @@ export function MealRecipeList({ recipeRefs, recipes }: MealRecipeListProps) {
         return (
           <div key={i} className="flex items-center gap-3 p-3 rounded-xl border"
             style={{
-              borderColor: isStub ? "#FED7AA" : "var(--color-border)",
-              backgroundColor: isStub ? "#FFF7ED" : "var(--color-card)",
+              borderColor: isStub ? "rgba(251,146,60,0.3)" : "var(--color-border)",
+              backgroundColor: isStub ? "rgba(251,146,60,0.06)" : "var(--color-muted)",
             }}>
             <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
               style={{ backgroundColor: colors.bg, color: colors.text }}>
@@ -56,13 +56,13 @@ export function MealRecipeList({ recipeRefs, recipes }: MealRecipeListProps) {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-medium px-2 py-0.5 rounded-full"
-                  style={{ backgroundColor: colors.bg, color: colors.text }}>
+                <span className="text-xs font-medium px-2 py-0.5 rounded-full font-mono"
+                  style={{ backgroundColor: colors.bg, color: colors.text, border: `1px solid ${colors.border}` }}>
                   {roleLabel[ref.role]}
                 </span>
                 {isStub && (
-                  <span className="text-xs font-medium" style={{ color: "#C2410C" }}>
-                    Not generated yet
+                  <span className="text-xs font-medium" style={{ color: "#FB923C" }}>
+                    Generating…
                   </span>
                 )}
               </div>
@@ -86,6 +86,7 @@ export function MealRecipeList({ recipeRefs, recipes }: MealRecipeListProps) {
                   color: "white",
                 } : {
                   color: "var(--color-muted-foreground)",
+                  backgroundColor: "var(--color-border)",
                 }}
                 title={isStub ? "Generate recipe" : "View recipe"}
                 onClick={(e) => e.stopPropagation()}

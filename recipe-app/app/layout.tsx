@@ -4,8 +4,8 @@ import { AppHeader } from "@/components/layout/AppHeader"
 import { Toaster } from "@/components/layout/Toaster"
 
 export const metadata: Metadata = {
-  title: "Mise en Place — AI Recipe & Meal Planner",
-  description: "Chat with AI to create, manage, and cook recipes and meals.",
+  title: "Mealbot3000 — AI Recipe & Meal Planner",
+  description: "AI-powered recipes, meals, and meal prep. Chat your way to better eating.",
 }
 
 export default function RootLayout({

@@ -17,8 +17,8 @@ export function MealsClient() {
         </h1>
         <Link
           href="/meals/new"
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
-          style={{ color: "#C2410C", backgroundColor: "#FFF7ED" }}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold font-mono uppercase tracking-wide transition-colors"
+          style={{ color: "#FB923C", backgroundColor: "rgba(251,146,60,0.1)", border: "1px solid rgba(251,146,60,0.25)" }}
         >
           <Plus size={14} />
           New Meal

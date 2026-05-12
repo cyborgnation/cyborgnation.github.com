@@ -15,13 +15,13 @@ export function MealPrepCard({ mealPrep }: MealPrepCardProps) {
   return (
     <Link
       href={`/meal-prep/${mealPrep.id}`}
-      className="block rounded-2xl border p-4 transition-colors hover:bg-muted/50"
+      className="block rounded-2xl border p-4 card-hover"
       style={{ borderColor: "var(--color-border)", backgroundColor: "var(--color-card)" }}
     >
       <div className="flex items-start gap-3">
-        <div className="p-2 rounded-lg shrink-0"
-          style={{ backgroundColor: "#ECFDF5", color: "#059669" }}>
-          <Dumbbell size={16} />
+        <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
+          style={{ backgroundColor: "rgba(6, 182, 212, 0.15)", color: "#22D3EE" }}>
+          <Dumbbell size={17} />
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold truncate" style={{ color: "var(--color-foreground)" }}>
@@ -33,11 +33,13 @@ export function MealPrepCard({ mealPrep }: MealPrepCardProps) {
             </p>
           )}
           <div className="flex items-center gap-3 mt-2">
-            <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
+            <span className="text-xs font-mono"
+              style={{ color: "#22D3EE" }}>
               {recipeCount} dish{recipeCount !== 1 ? "es" : ""}
             </span>
-            <span className="text-xs" style={{ color: "var(--color-muted-foreground)" }}>
-              {totalServings} servings/week
+            <span className="text-xs font-mono"
+              style={{ color: "var(--color-muted-foreground)" }}>
+              {totalServings} servings/wk
             </span>
           </div>
         </div>
