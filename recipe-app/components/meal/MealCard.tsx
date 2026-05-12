@@ -38,8 +38,8 @@ export function MealCard({ meal }: MealCardProps) {
       >
         <button
           onClick={handleDelete}
-          className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity p-1.5 rounded-lg"
-          style={{ color: "var(--color-destructive)", backgroundColor: "rgba(239,68,68,0.1)" }}
+          className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity p-1.5 rounded-lg hover:bg-red-50"
+          style={{ color: "var(--color-destructive)" }}
           title="Delete meal"
         >
           <Trash2 size={14} />
@@ -47,12 +47,12 @@ export function MealCard({ meal }: MealCardProps) {
 
         <div className="flex items-start gap-3 mb-3">
           <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-            style={{ backgroundColor: "rgba(251, 146, 60, 0.15)", color: "#FB923C" }}>
-            <Utensils size={17} />
+            style={{ backgroundColor: "#FEF3C7", color: "#92400E" }}>
+            <Utensils size={18} />
           </div>
           <div className="min-w-0">
             <h3 className="font-semibold text-sm leading-snug truncate pr-6"
-              style={{ color: "var(--color-foreground)" }}>
+              style={{ fontFamily: '"Lora", Georgia, serif', color: "var(--color-foreground)" }}>
               {meal.title}
             </h3>
             {meal.description && (
@@ -67,12 +67,8 @@ export function MealCard({ meal }: MealCardProps) {
         {meal.recipeRefs.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {meal.recipeRefs.map((ref, i) => (
-              <span key={i} className="text-xs px-2 py-0.5 rounded-full font-mono"
-                style={{
-                  backgroundColor: "rgba(251, 146, 60, 0.1)",
-                  color: "#FB923C",
-                  border: "1px solid rgba(251, 146, 60, 0.2)",
-                }}>
+              <span key={i} className="text-xs px-2 py-0.5 rounded-full"
+                style={{ backgroundColor: "#FEF3C7", color: "#92400E" }}>
                 {roleLabel[ref.role] ?? ref.role}
               </span>
             ))}

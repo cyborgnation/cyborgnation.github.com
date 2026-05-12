@@ -159,7 +159,7 @@ export function NewMealClient() {
         <button
           onClick={() => setShowPlanSheet(true)}
           className="md:hidden fixed bottom-20 right-4 flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold text-white shadow-lg z-30 transition-opacity hover:opacity-90"
-          style={{ background: "linear-gradient(135deg, #EA580C 0%, #DC2626 100%)" }}
+          style={{ backgroundColor: "#EA580C" }}
         >
           <Utensils size={15} />
           View Plan ({activePlan.suggestions.length})
@@ -266,7 +266,7 @@ function PlanContent({ plan, saving, onClear, onSave }: PlanContentProps) {
         onClick={onSave}
         disabled={saving}
         className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity disabled:opacity-60 hover:opacity-90"
-        style={{ background: "linear-gradient(135deg, #EA580C 0%, #DC2626 100%)" }}
+        style={{ backgroundColor: "#EA580C" }}
       >
         <Plus size={15} />
         {saving ? "Saving…" : "Save Meal"}

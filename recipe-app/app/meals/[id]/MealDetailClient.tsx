@@ -102,7 +102,7 @@ export function MealDetailClient({ id }: MealDetailClientProps) {
         <Link
           href={`/meals/${meal.id}/cook`}
           className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-sm font-medium text-white transition-opacity hover:opacity-90"
-          style={{ background: "linear-gradient(135deg, #EA580C 0%, #DC2626 100%)" }}
+          style={{ backgroundColor: "#EA580C" }}
         >
           <ChefHat size={14} />
           Cook

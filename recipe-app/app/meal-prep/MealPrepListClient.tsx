@@ -17,8 +17,8 @@ export function MealPrepListClient() {
         </h1>
         <Link
           href="/meal-prep/new"
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold font-mono uppercase tracking-wide transition-colors"
-          style={{ color: "#22D3EE", backgroundColor: "rgba(6,182,212,0.1)", border: "1px solid rgba(6,182,212,0.25)" }}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors"
+          style={{ color: "#0F766E", backgroundColor: "#F0FDFA" }}
         >
           <Plus size={14} />
           New Prep
